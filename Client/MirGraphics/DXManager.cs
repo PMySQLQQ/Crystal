@@ -1,4 +1,4 @@
-﻿using System.Drawing.Drawing2D;
+﻿﻿using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using Client.MirControls;
 using Client.MirScenes;
@@ -422,6 +422,18 @@ namespace Client.MirGraphics
             Device.PixelShader = MagicPixelShader;
             Device.SetPixelShaderConstant(0, new Vector4[] { new Vector4(1.0F, 1.0F, 1.0F, blend) });
             Device.SetPixelShaderConstant(1, new Vector4[] { new Vector4(tintcolor.R / 255, tintcolor.G / 255, tintcolor.B / 255, 1.0F) });
+            Sprite.Flush();
+        }
+
+        public static void SetGlow(float intensity, Color color)
+        {
+            if (Device.PixelShader == MagicPixelShader || MagicPixelShader == null)
+                return;
+
+            Sprite.Flush();
+            Device.PixelShader = MagicPixelShader;
+            Device.SetPixelShaderConstant(0, new Vector4[] { new Vector4(1.0F, 1.0F, 1.0F, intensity) });
+            Device.SetPixelShaderConstant(1, new Vector4[] { new Vector4(color.R / 255, color.G / 255, color.B / 255, 1.0F) });
             Sprite.Flush();
         }
 

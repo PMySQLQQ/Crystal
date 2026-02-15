@@ -1,4 +1,4 @@
-﻿using Client.MirControls;
+using Client.MirControls;
 using Client.MirGraphics;
 using Client.MirScenes;
 using Client.MirSounds;
@@ -130,7 +130,8 @@ namespace Client.MirObjects
         public MirLabel TempLabel;
 
         public static List<MirLabel> DamageLabelList = new List<MirLabel>();
-        public List<Damage> Damages = new List<Damage>();
+
+        public List<DamageInfo> DamageList = new List<DamageInfo>(); // New damage number list
 
         protected Point GlobalDisplayLocationOffset
         {
@@ -440,21 +441,57 @@ namespace Client.MirObjects
         }
         public void DrawDamages()
         {
-            for (int i = Damages.Count - 1; i >= 0; i--)
+            // Processing the new damage number system
+            int count = DamageList.Count;
+            if (count == 0) return;
+            
+            int displayX = DisplayRectangle.X;
+            int displayY = DisplayRectangle.Y;
+            
+            for (int i = 0; i < count; i++)
             {
-                Damage info = Damages[i];
-                if (CMain.Time > info.ExpireTime)
+                DamageInfo info = DamageList[i];
+                if (info.Visible)
                 {
-                    if (info.DamageLabel != null)
-                    {
-                        info.DamageLabel.Dispose();
-                    }
-
-                    Damages.RemoveAt(i);
+                    info.Draw(displayX, displayY);
                 }
-                else
+            }
+        }
+
+        // Update damage number animations
+        public void ProcessDamages()
+        {
+            // Implement the new damage number system
+            int count = DamageList.Count;
+            if (count == 0) return;
+            
+            DamageInfo previous = null;
+            DateTime now = DateTime.Now;
+
+            // First, handle the animations for all damage numbers
+            for (int i = 0; i < count; i++)
+            {
+                DamageInfo info = DamageList[i];
+                info.Process(previous);
+                if (info.Visible)
                 {
-                    info.Draw(DisplayRectangle.Location);
+                    previous = info;
+                }
+            }
+
+            // Then remove the invisible damage numbers.
+            for (int i = count - 1; i >= 0; i--)
+            {
+                DamageInfo info = DamageList[i];
+                if (!info.Visible)
+                {
+                    DamageInfoPool.Instance.Return(info);
+                    DamageList.RemoveAt(i);
+                }
+                // When the number of damage numbers exceeds 3, adjust the display time of subsequent damage numbers.
+                else if (DamageList.Count - i > 3 && now - info.StartTime > info.AppearDelay && now - info.StartTime < info.AppearDelay + info.ShowDelay)
+                {
+                    info.StartTime = now - info.AppearDelay - info.ShowDelay;
                 }
             }
         }

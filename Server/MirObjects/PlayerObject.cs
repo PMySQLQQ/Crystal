@@ -5829,12 +5829,19 @@ namespace Server.MirObjects
                     switch (item.Info.Shape)
                     {
                         case 0: //NormalPotion
-                            PotHealthAmount = (ushort)Math.Min(ushort.MaxValue, PotHealthAmount + item.Info.Stats[Stat.HP]);
+                            // Calculate total healing.
+                            int totalHP = item.Info.Stats[Stat.HP];
+                            // Keep the original multi‑time recovery mechanism.
+                            PotHealthAmount = (ushort)Math.Min(ushort.MaxValue, PotHealthAmount + totalHP);
                             PotManaAmount = (ushort)Math.Min(ushort.MaxValue, PotManaAmount + item.Info.Stats[Stat.MP]);
+                            // Send the total healing amount to the client at once.
+                            if (totalHP > 0)
+                                BroadcastDamageIndicator(DamageType.Hit, totalHP);
                             break;
                         case 1: //SunPotion
                             ChangeHP(item.Info.Stats[Stat.HP]);
                             ChangeMP(item.Info.Stats[Stat.MP]);
+                            BroadcastDamageIndicator(DamageType.Hit, item.Info.Stats[Stat.HP]);
                             break;
                         case 2: //MysteryWater
                             if (UnlockCurse)

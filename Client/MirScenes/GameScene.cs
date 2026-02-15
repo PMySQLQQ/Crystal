@@ -1,4 +1,4 @@
-﻿using Client.MirControls;
+﻿﻿using Client.MirControls;
 using Client.MirGraphics;
 using Client.MirNetwork;
 using Client.MirObjects;
@@ -3514,19 +3514,33 @@ namespace Client.MirScenes
             {
                 if (MapControl.Objects.TryGetValue(p.ObjectID, out var obj))
                 {
-                    if (obj.Damages.Count >= 10) return;
+ 
+                    if (obj.DamageList.Count >= 6) return;
 
                     switch (p.Type)
                     {
                         case DamageType.Hit: //add damage level colours
-                            obj.Damages.Add(new Damage(p.Damage.ToString("#,##0"), 1000, obj.Race == ObjectType.Player ? Color.Red : Color.White, 50));
+                            string damageText;
+                            if (p.Damage > 0)
+                                damageText = "+" + p.Damage.ToString("#,##0");
+                            else
+                                damageText = p.Damage.ToString("#,##0");
+                            
+                            int verticalIndex = obj.DamageList.Count;
+                            obj.DamageList.Add(new DamageInfo(damageText, p.Damage, DamageType.Hit, verticalIndex));
                             break;
                         case DamageType.Miss:
-                            obj.Damages.Add(new Damage(GameLanguage.ClientTextMap.GetLocalization(ClientTextKeys.Miss), 1200, obj.Race == ObjectType.Player ? Color.LightCoral : Color.LightGray, 50));
+                            string missText = GameLanguage.ClientTextMap.GetLocalization(ClientTextKeys.Miss);
+                            int verticalIndexMiss = obj.DamageList.Count;
+                            obj.DamageList.Add(new DamageInfo(missText, 0, DamageType.Miss, verticalIndexMiss));
                             break;
                         case DamageType.Critical:
-                            obj.Damages.Add(
-                                new Damage(GameLanguage.ClientTextMap.GetLocalization(ClientTextKeys.Crit), 1000, obj.Race == ObjectType.Player ? Color.DarkRed : Color.DarkRed, 50) { Offset = 15 });
+                            string critText = GameLanguage.ClientTextMap.GetLocalization(ClientTextKeys.Crit);
+                            int verticalIndexCrit = obj.DamageList.Count;
+                            DamageInfo critInfo = new DamageInfo(critText, p.Damage, DamageType.Critical, verticalIndexCrit);
+                            critInfo.AppearDelay = System.TimeSpan.FromMilliseconds(200); // The animation for critical hits takes a bit too long
+                            critInfo.ShowDelay = System.TimeSpan.FromMilliseconds(800);   // The critical hit effect stays on screen for too long
+                            obj.DamageList.Add(critInfo);
                             break;
                     }
                 }
@@ -10473,10 +10487,12 @@ namespace Client.MirScenes
         {
             Processdoors();
             User.Process();
+            User.ProcessDamages(); // Update the player's damage numbers.
             for (int i = ObjectsList.Count - 1; i >= 0; i--)
             {
                 if (ObjectsList[i] == User) continue;
                 ObjectsList[i].Process();
+                ObjectsList[i].ProcessDamages(); // Update the damage numbers for each object.
             }
 
             for (int i = Effects.Count - 1; i >= 0; i--)
@@ -10990,6 +11006,12 @@ namespace Client.MirScenes
 
             foreach (var ob in Objects.Values)
             {
+                // Apply glow shader for monsters when mouse is over
+                if (ob is MonsterObject monster && ob == MapObject.MouseObject)
+                {
+                    DXManager.SetGlow(0.5f, Color.Yellow);
+                }
+                
                 ob.DrawEffects(Settings.Effect);
 
                 if (Settings.NameView && !(ob is ItemObject) && !ob.Dead)
@@ -10999,6 +11021,12 @@ namespace Client.MirScenes
                 //ob.DrawHealth();
                 ob.DrawPoison();
                 ob.DrawDamages();
+                
+                // Reset shader to normal
+                if (ob is MonsterObject && ob == MapObject.MouseObject)
+                {
+                    DXManager.Device.PixelShader = null;
+                }
             }
 
             foreach (var ob in Objects.Values)

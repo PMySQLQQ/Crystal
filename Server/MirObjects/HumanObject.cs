@@ -635,7 +635,7 @@ namespace Server.MirObjects
             if (healthRegen > 0)
             {
                 ChangeHP(healthRegen);
-                BroadcastDamageIndicator(DamageType.Hit, healthRegen);
+
             }
 
             if (HP == Stats[Stat.HP])
