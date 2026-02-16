@@ -14808,7 +14808,7 @@ namespace Server.MirObjects
             if (Info.MyTeleportInfo.Count > 0 && Index >= 0 && Index < Info.MyTeleportInfo.Count)
             {
                 Info.MyTeleportInfo.RemoveAt(Index);
-                Envir.Main.SaveAccounts();
+                // 移除耗时的保存操作，改为定期自动保存
                 Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });
             }
         }

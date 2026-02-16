@@ -182,36 +182,50 @@ namespace Client.MirScenes.Dialogs
         }
         private void OnDeleteButtonClick()
         {
-
-            if (SelectedIndex < 0 || TeleportList == null || SelectedIndex >= TeleportList.Count)
+            // 快速返回，避免无效操作
+            if (TeleportList == null || TeleportList.Count == 0)
             {
                 return;
             }
             
-   
-            MirMessageBox messageBox = new MirMessageBox("Are you sure you want to delete the selected location?\nThis action cannot be undone.", MirMessageBoxButtons.YesNo);
-            messageBox.Show();
-   
+            // 保存当前选中的索引
             int deleteIndex = SelectedIndex;
             
+            // 如果没有选中的索引，默认选中第一个
+            if (deleteIndex < 0 || deleteIndex >= TeleportList.Count)
+            {
+                deleteIndex = 0;
+                SelectedIndex = 0;
+            }
+            
+            // 立即创建并显示消息框，不做任何可能导致延迟的操作
+            MirMessageBox messageBox = new MirMessageBox("Are you sure you want to delete the selected location?\nThis action cannot be undone.", MirMessageBoxButtons.YesNo);
+            messageBox.Show();
+            
+            // 为确认按钮添加点击事件处理
             messageBox.YesButton.Click += (sender, e) =>
             {
-                try
+                // 立即从本地列表中移除并更新UI，提供即时视觉反馈
+                if (TeleportList != null && deleteIndex >= 0 && deleteIndex < TeleportList.Count)
                 {
-                    Network.Enqueue(new DeleteMemoryLocation { SelectIndex = deleteIndex });
+                    // 保存要删除的传送点信息，以便在更新后重新选择合适的索引
+                    int oldCount = TeleportList.Count;
                     
-              
-                    if (TeleportList != null && deleteIndex >= 0 && deleteIndex < TeleportList.Count)
+                    // 立即从本地列表中移除
+                    TeleportList.RemoveAt(deleteIndex);
+                    
+                    // 立即更新UI，提供即时视觉反馈
+                    FastUpdateTeleportList();
+                    
+                    // 调整选中索引
+                    if (SelectedIndex >= TeleportList.Count && TeleportList.Count > 0)
                     {
-                        TeleportList.RemoveAt(deleteIndex);
-                        ReloadTeleportList();
+                        SelectedIndex = TeleportList.Count - 1;
                     }
                 }
-                catch (Exception ex)
-                {
-                   
-                    Console.WriteLine("Delete location error: " + ex.Message);
-                }
+                
+                // 发送删除请求到服务器
+                Network.Enqueue(new DeleteMemoryLocation { SelectIndex = deleteIndex });
             };
         }
         private void OnUpButtonClick()
@@ -302,36 +316,53 @@ namespace Client.MirScenes.Dialogs
             {
                 _scrollIndex = 0;
             }
-            if (_scrollIndex == _cachedScrollIndex)
+            if (_scrollIndex == _cachedScrollIndex || _moveCells == null)
             {
                 return; 
             }
             _cachedScrollIndex = _scrollIndex;
-            if (_moveCells != null)
+            
+            int startIndex = _scrollIndex;
+            int endIndex = Math.Min(_scrollIndex + PageRows, _moveCells.Length);
+            
+            // 只更新可见区域内的单元格，减少不必要的计算
+            for (int i = startIndex; i < endIndex; i++)
             {
-                int startIndex = _scrollIndex;
-                int endIndex = Math.Min(_scrollIndex + PageRows, _moveCells.Length);
-                
-                for (int i = Math.Max(0, startIndex - 1); i < Math.Min(endIndex + 1, _moveCells.Length); i++)
+                MoveCell cell = _moveCells[i];
+                if (cell == null || cell.IsDisposed)
                 {
-                    MoveCell cell = _moveCells[i];
-                    if (cell == null || cell.IsDisposed)
-                    {
-                        continue;
-                    }
-                    
-                    Point newLocation = new Point(15, 50 + i * 20 - _scrollIndex * 20 - 10);
-                    
-                    if (cell.Location != newLocation)
-                    {
-                        cell.Location = newLocation;
-                    }
-                    
-                    bool shouldBeVisible = i >= startIndex && i < endIndex;
-                    if (cell.Visible != shouldBeVisible)
-                    {
-                        cell.Visible = shouldBeVisible;
-                    }
+                    continue;
+                }
+                
+                Point newLocation = new Point(15, 50 + i * 20 - _scrollIndex * 20 - 10);
+                
+                if (cell.Location != newLocation)
+                {
+                    cell.Location = newLocation;
+                }
+                
+                if (!cell.Visible)
+                {
+                    cell.Visible = true;
+                }
+            }
+            
+            // 隐藏超出可见区域的单元格
+            for (int i = 0; i < startIndex; i++)
+            {
+                MoveCell cell = _moveCells[i];
+                if (cell != null && !cell.IsDisposed && cell.Visible)
+                {
+                    cell.Visible = false;
+                }
+            }
+            
+            for (int i = endIndex; i < _moveCells.Length; i++)
+            {
+                MoveCell cell = _moveCells[i];
+                if (cell != null && !cell.IsDisposed && cell.Visible)
+                {
+                    cell.Visible = false;
                 }
             }
         }
@@ -409,6 +440,7 @@ namespace Client.MirScenes.Dialogs
                 int count = TeleportList.Count;
                 _displayCount = count;
                 
+                // 优化：如果_moveCells数组大小与传送点数量不匹配，才重新创建数组
                 if (_moveCells == null || _moveCells.Length != count)
                 {
                     if (_moveCells != null)
@@ -441,6 +473,7 @@ namespace Client.MirScenes.Dialogs
                     _moveCells = new MoveCell[count];
                 }
                 
+                // 快速更新或创建MoveCell对象
                 for (int i = 0; i < count; i++)
                 {
                     var teleportInfo = TeleportList[i];
@@ -448,11 +481,12 @@ namespace Client.MirScenes.Dialogs
                     MoveCell cell = _moveCells[i];
                     if (cell == null || cell.IsDisposed)
                     {
+                        // 快速创建新的MoveCell对象
                         cell = new MoveCell
                         {
                             Parent = this,
                             Location = new Point(15, 50 + i * 20 - 10),
-                            Size = new Size(140, 20),
+                            Size = new Size(150, 20),
                             MoveLocation = teleportInfo.Location,
                             Name = teleportInfo.Name,
                             ColorIndex = teleportInfo.ColorIndex,
@@ -463,18 +497,21 @@ namespace Client.MirScenes.Dialogs
                     }
                     else
                     {
+                        // 快速更新现有MoveCell对象
                         cell.MoveLocation = teleportInfo.Location;
                         cell.Name = teleportInfo.Name;
                         cell.ColorIndex = teleportInfo.ColorIndex;
                         cell.Index = i;
                         cell.Location = new Point(15, 50 + i * 20 - 10);
-                        cell.Size = new Size(140, 20);
+                        cell.Size = new Size(150, 20);
                         cell.Visible = true;
                     }
                 }
-               
+                
+                // 快速更新MoveCell对象的位置和可见性
                 UpdateMoveCells();
                 
+                // 调整选中索引
                 if (SelectedIndex >= count)
                 {
                     SelectedIndex = count > 0 ? count - 1 : -1;
@@ -484,6 +521,173 @@ namespace Client.MirScenes.Dialogs
             {
                 Console.WriteLine("Reload teleport list error: " + ex.Message);
                 _displayCount = 0;
+            }
+        }
+        
+        /// <summary>
+        /// 快速更新传送点列表，用于删除单个传送点的情况
+        /// </summary>
+        public void FastUpdateTeleportList()
+        {
+            try
+            {
+                if (TeleportList == null || TeleportList.Count == 0)
+                {
+                    // 快速清空列表
+                    if (_moveCells != null)
+                    {
+                        foreach (MoveCell cell in _moveCells)
+                        {
+                            if (cell != null && !cell.IsDisposed)
+                            {
+                                cell.Visible = false;
+                            }
+                        }
+                    }
+                    _displayCount = 0;
+                    SelectedIndex = -1;
+                    UpdateMoveCells();
+                    return;
+                }
+                
+                int count = TeleportList.Count;
+                _displayCount = count;
+                
+                // 优化：即使_moveCells数组大小与传送点数量不匹配，也尝试快速更新
+                if (_moveCells == null || _moveCells.Length != count)
+                {
+                    // 只在必要时创建新的MoveCell对象
+                    MoveCell[] newMoveCells = new MoveCell[count];
+                    
+                    // 复用现有MoveCell对象
+                    int reuseCount = Math.Min(_moveCells?.Length ?? 0, count);
+                    for (int i = 0; i < reuseCount; i++)
+                    {
+                        if (_moveCells != null && _moveCells[i] != null && !_moveCells[i].IsDisposed)
+                        {
+                            newMoveCells[i] = _moveCells[i];
+                        }
+                    }
+                    
+                    // 创建新的MoveCell对象
+                    for (int i = reuseCount; i < count; i++)
+                    {
+                        var teleportInfo = TeleportList[i];
+                        MoveCell cell = new MoveCell
+                        {
+                            Parent = this,
+                            Size = new Size(150, 20),
+                            MoveLocation = teleportInfo.Location,
+                            ColorIndex = teleportInfo.ColorIndex,
+                            Index = i
+                        };
+                        // 延迟设置Name和Location，减少初始化时的开销
+                        cell.Name = teleportInfo.Name;
+                        cell.Location = new Point(15, 50 + i * 20 - 10);
+                        cell.MouseWheel += OnMouseWheel;
+                        newMoveCells[i] = cell;
+                    }
+                    
+                    // 隐藏并清理多余的MoveCell对象
+                    if (_moveCells != null && _moveCells.Length > count)
+                    {
+                        for (int i = count; i < _moveCells.Length; i++)
+                        {
+                            if (_moveCells[i] != null && !_moveCells[i].IsDisposed)
+                            {
+                                _moveCells[i].Visible = false;
+                                // 异步清理
+                                System.Threading.Tasks.Task.Run(() =>
+                                {
+                                    try
+                                    {
+                                        _moveCells[i].Dispose();
+                                    }
+                                    catch { }
+                                });
+                            }
+                        }
+                    }
+                    
+                    _moveCells = newMoveCells;
+                }
+                else
+                {
+                    // 快速更新现有MoveCell对象
+                    for (int i = 0; i < count; i++)
+                    {
+                        var teleportInfo = TeleportList[i];
+                        MoveCell cell = _moveCells[i];
+                        
+                        if (cell != null && !cell.IsDisposed)
+                        {
+                            // 只更新必要的属性，避免不必要的计算
+                            if (cell.MoveLocation != teleportInfo.Location)
+                            {
+                                cell.MoveLocation = teleportInfo.Location;
+                            }
+                            if (cell.Name != teleportInfo.Name)
+                            {
+                                cell.Name = teleportInfo.Name;
+                            }
+                            if (cell.ColorIndex != teleportInfo.ColorIndex)
+                            {
+                                cell.ColorIndex = teleportInfo.ColorIndex;
+                            }
+                            if (cell.Index != i)
+                            {
+                                cell.Index = i;
+                            }
+                            // 增加宽度以显示完整的坐标和地图名
+                            if (cell.Size.Width != 150)
+                            {
+                                cell.Size = new Size(150, 20);
+                            }
+                            // 计算新位置
+                            Point newLocation = new Point(15, 50 + i * 20 - 10);
+                            if (cell.Location != newLocation)
+                            {
+                                cell.Location = newLocation;
+                            }
+                            if (!cell.Visible)
+                            {
+                                cell.Visible = true;
+                            }
+                        }
+                    }
+                    
+                    // 隐藏超出范围的MoveCell对象
+                    for (int i = count; i < _moveCells.Length; i++)
+                    {
+                        MoveCell cell = _moveCells[i];
+                        if (cell != null && !cell.IsDisposed && cell.Visible)
+                        {
+                            cell.Visible = false;
+                        }
+                    }
+                }
+                
+                // 快速更新MoveCell对象的位置和可见性
+                UpdateMoveCells();
+                
+                // 调整选中索引
+                if (SelectedIndex >= count)
+                {
+                    SelectedIndex = count > 0 ? count - 1 : -1;
+                }
+                
+                // 调整滚动位置
+                if (_scrollIndex > Math.Max(0, _displayCount - PageRows))
+                {
+                    _scrollIndex = Math.Max(0, _displayCount - PageRows);
+                    UpdateScrollPosition();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Fast update teleport list error: " + ex.Message);
+                // 如果快速更新失败，使用完整的重新加载
+                ReloadTeleportList();
             }
         }
         public new void Show()
@@ -541,6 +745,18 @@ namespace Client.MirScenes.Dialogs
                 }
             }
         }
+        public new Size Size
+        {
+            get { return base.Size; }
+            set
+            {
+                base.Size = value;
+                if (_nameLabel != null && value.Width > 0)
+                {
+                    _nameLabel.Size = new Size(value.Width - 4, value.Height - 4);
+                }
+            }
+        }
         public MoveCell()
         {
             Border = false;
@@ -554,7 +770,7 @@ namespace Client.MirScenes.Dialogs
                 Location = new Point(0, 0),
                 Parent = this,
                 AutoSize = false,
-                Size = new Size(136, 16),
+                Size = new Size(146, 16),
                 DrawFormat = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter,
                 Font = new Font(Settings.FontName, 8.5f),
                 ForeColour = Color.White,
@@ -592,7 +808,7 @@ namespace Client.MirScenes.Dialogs
                     byteCount += 4;
                 }
                 
-                if (byteCount >= 30)
+                if (byteCount >= 50)
                 {
                     isTruncated = true;
                     return new string(charBuffer, 0, i);
@@ -752,7 +968,6 @@ namespace Client.MirScenes.Dialogs
         }
         private void OnOKButtonClick(object sender, EventArgs e)
         {
-   
             if (PositionMoveDialog.TeleportList != null && PositionMoveDialog.TeleportList.Count >= Globals.MaxPositionMove)
             {
                 MirMessageBox messageBox = new MirMessageBox("Cannot save more locations");
@@ -761,14 +976,16 @@ namespace Client.MirScenes.Dialogs
             }
 
             string name = InputTextBox.Text;
+            Point location = Point.Empty;
             if (GameScene.User != null && GameScene.Scene.MapControl != null)
             {
-                Point location = GameScene.User.CurrentLocation;
+                location = GameScene.User.CurrentLocation;
                 name = InputTextBox.Text + "   " + location.X + " : " + location.Y;
             }
+            
+            // 发送请求到服务器，等待服务器响应后再更新UI
             Network.Enqueue(new MemoryLocation { Name = name, ColorIndex = RememberMoveDialog.SelectedColorIndex });
             Dispose();
-            GameScene.Scene.PositionMoveDialog.UpdateMoveCells();
         }
 
         private void OnKeyPress(object sender, KeyPressEventArgs e)

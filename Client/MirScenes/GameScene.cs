@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿using Client.MirControls;
+﻿﻿﻿﻿using Client.MirControls;
 using Client.MirGraphics;
 using Client.MirNetwork;
 using Client.MirObjects;
@@ -2137,10 +2137,10 @@ namespace Client.MirScenes
             if (GameScene.User != null)
             {
                 // 转换Shared.PlayerTeleportInfo为Client.MirScenes.Dialogs.PlayerTeleportInfo
-                PositionMoveDialog.TeleportList = new List<Client.MirScenes.Dialogs.PlayerTeleportInfo>();
+                var newTeleportList = new List<Client.MirScenes.Dialogs.PlayerTeleportInfo>();
                 foreach (var info in p.Infos)
                 {
-                    PositionMoveDialog.TeleportList.Add(new Client.MirScenes.Dialogs.PlayerTeleportInfo
+                    newTeleportList.Add(new Client.MirScenes.Dialogs.PlayerTeleportInfo
                     {
                         Name = info.Name,
                         Location = info.Location,
@@ -2148,7 +2148,35 @@ namespace Client.MirScenes
                         MapIndex = -1 // 可以根据需要设置MapIndex
                     });
                 }
-                GameScene.Scene.PositionMoveDialog.ReloadTeleportList();
+                
+                // 只有当列表确实发生变化时才更新UI，避免不必要的刷新
+                bool listChanged = false;
+                if (PositionMoveDialog.TeleportList.Count != newTeleportList.Count)
+                {
+                    listChanged = true;
+                }
+                else
+                {
+                    // 检查每个传送点是否相同
+                    for (int i = 0; i < PositionMoveDialog.TeleportList.Count; i++)
+                    {
+                        var oldInfo = PositionMoveDialog.TeleportList[i];
+                        var newInfo = newTeleportList[i];
+                        if (oldInfo.Name != newInfo.Name || 
+                            oldInfo.Location != newInfo.Location || 
+                            oldInfo.ColorIndex != newInfo.ColorIndex)
+                        {
+                            listChanged = true;
+                            break;
+                        }
+                    }
+                }
+                
+                if (listChanged)
+                {
+                    PositionMoveDialog.TeleportList = newTeleportList;
+                    GameScene.Scene.PositionMoveDialog.FastUpdateTeleportList();
+                }
             }
         }
 
@@ -6482,6 +6510,24 @@ namespace Client.MirScenes
                     break;
                 case 10:
                     messageBox = new MirMessageBox("当前地图禁止定点传送.", MirMessageBoxButtons.OK);
+                    break;
+                case 11:
+                    messageBox = new MirMessageBox("Cannot save more locations", MirMessageBoxButtons.OK);
+                    // 从本地列表中移除最后添加的传送点
+                    if (PositionMoveDialog.TeleportList != null && PositionMoveDialog.TeleportList.Count > 0)
+                    {
+                        PositionMoveDialog.TeleportList.RemoveAt(PositionMoveDialog.TeleportList.Count - 1);
+                        GameScene.Scene.PositionMoveDialog.FastUpdateTeleportList();
+                    }
+                    break;
+                case 12:
+                    messageBox = new MirMessageBox("No Position Scroll", MirMessageBoxButtons.OK);
+                    // 从本地列表中移除最后添加的传送点
+                    if (PositionMoveDialog.TeleportList != null && PositionMoveDialog.TeleportList.Count > 0)
+                    {
+                        PositionMoveDialog.TeleportList.RemoveAt(PositionMoveDialog.TeleportList.Count - 1);
+                        GameScene.Scene.PositionMoveDialog.FastUpdateTeleportList();
+                    }
                     break;
 
             }
