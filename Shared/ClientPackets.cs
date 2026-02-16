@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 namespace ClientPackets
 {
@@ -2702,4 +2702,58 @@ namespace ClientPackets
             writer.Write(HeroInventory);
         }
     }
+
+    //Point-to-point
+    public sealed class PositionMove : Packet
+    {
+        public override short Index { get { return (short)ClientPacketIds.PositionMove; } }
+
+        public int SelectIndex;
+
+        protected override void ReadPacket(BinaryReader reader)
+        {
+            SelectIndex = reader.ReadInt32();
+        }
+        protected override void WritePacket(BinaryWriter writer)
+        {
+            writer.Write(SelectIndex);
+        }
+    }
+
+    //Point-to-point
+    public sealed class MemoryLocation : Packet
+    {
+        public override short Index { get { return (short)ClientPacketIds.MemoryLocation; } }
+
+        public string Name = string.Empty;
+        public int ColorIndex;
+        protected override void ReadPacket(BinaryReader reader)
+        {
+            Name = reader.ReadString();
+            ColorIndex = reader.ReadInt32();
+        }
+        protected override void WritePacket(BinaryWriter writer)
+        {
+            writer.Write(Name);
+            writer.Write(ColorIndex);
+        }
+    }
+
+    //Point-to-point
+    public sealed class DeleteMemoryLocation : Packet
+    {
+        public override short Index { get { return (short)ClientPacketIds.DeleteMemoryLocation; } }
+
+        public int SelectIndex;
+        protected override void ReadPacket(BinaryReader reader)
+        {
+            SelectIndex = reader.ReadInt32();
+        }
+        protected override void WritePacket(BinaryWriter writer)
+        {
+            writer.Write(SelectIndex);
+        }
+    }
+
+
 }

@@ -112,6 +112,8 @@ namespace Server
         public static float DropRate = 1F, ExpRate = 1F;
         public static int TeleportToNPCCost = 3000;
 
+        public static uint PositionMoveCost = 3000;
+
         public static int ItemTimeOut = 30,
                           PlayerDiedItemTimeOut = 120,
                           DropRange = 4,
@@ -156,7 +158,8 @@ namespace Server
                           RestedBuffLength = 10,
                           RestedExpBonus = 5,
                           RestedMaxBonus = 24,
-                          NewbieGuildMaxSize = 1000;
+                          NewbieGuildMaxSize = 1000,
+                          PositionMoves = 3000;
 
         public static string NewbieGuild = "NewbieGuild",
                              SkeletonName = "BoneFamiliar",
@@ -537,6 +540,8 @@ namespace Server
 
             AllowObserve = Reader.ReadBoolean("Observe", "AllowObserve", AllowObserve);
 
+            PositionMoves = Reader.ReadInt32("Game", "PositionMoves", PositionMoves);
+
             //Archive
             ArchiveInactiveCharacterAfterMonths = Math.Max(1, Reader.ReadInt32("Archive", "InactiveCharacterMonths", ArchiveInactiveCharacterAfterMonths));
             ArchiveDeletedCharacterAfterMonths = Math.Max(1, Reader.ReadInt32("Archive", "DeletedCharacterMonths", ArchiveDeletedCharacterAfterMonths));
@@ -832,6 +837,8 @@ namespace Server
             Reader.Write("Game", "TeleportToNPCCost", TeleportToNPCCost);
 
             Reader.Write("Game", "HeroName", HeroName);
+
+            Reader.Write("Game", "StartGold", PositionMoves);
 
             SaveAwakeAttribute();
         }

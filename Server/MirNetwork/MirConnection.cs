@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 using System.Net.Sockets;
 using Server.MirDatabase;
 using Server.MirEnvir;
@@ -751,12 +751,36 @@ namespace Server.MirNetwork
                 case (short)ClientPacketIds.DeleteItem:
                     DeleteItem((C.DeleteItem)p);
                     break;
+                case (short)ClientPacketIds.MemoryLocation:
+                    MemoryLocation((C.MemoryLocation)p);
+                    break;
+                case (short)ClientPacketIds.PositionMove:
+                    PositionMove((C.PositionMove)p);
+                    break;
+                case (short)ClientPacketIds.DeleteMemoryLocation:
+                    DeleteMemoryLocation((C.DeleteMemoryLocation)p);
+                    break;
                 default:
                     MessageQueue.Enqueue(GameLanguage.ServerTextMap.GetLocalization((ServerTextKeys.InvalidPacketReceived), p.Index));
                     break;
             }
         }
 
+        public void PositionMove(C.PositionMove p)
+        {
+            if (Stage != GameStage.Game) return;
+            Player.PositionMove(p.SelectIndex);
+        }
+        public void MemoryLocation(C.MemoryLocation p)
+        {
+            if (Stage != GameStage.Game) return;
+            Player.MemoryLocation(p.Name, p.ColorIndex);
+        }
+        public void DeleteMemoryLocation(C.DeleteMemoryLocation p)
+        {
+            if (Stage != GameStage.Game) return;
+            Player.DeleteMemoryLocation(p.SelectIndex);
+        }
         public void SoftDisconnect(byte reason)
         {
             Stage = GameStage.Disconnected;

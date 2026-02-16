@@ -1114,7 +1114,8 @@ public enum ClientTextKeys
     BadHostFormat,
     WarWizTao,
     WarWizTao_Assassin_Archer,
-    Max
+    Max,
+    PositionMoves
 }
 
 public enum ServerTextKeys

@@ -1213,6 +1213,7 @@ namespace Server.MirObjects
 
             SendBaseStats();
             GetObjectsPassive();
+            Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });//Point-to-point
             Enqueue(new S.TimeOfDay { Lights = Envir.Lights });
             Enqueue(new S.ChangeAMode { Mode = AMode });
             Enqueue(new S.ChangePMode { Mode = PMode });
@@ -2174,6 +2175,8 @@ namespace Server.MirObjects
 
                 switch (parts[0].ToUpper())
                 {
+
+
                     case "LOGIN":
                         GMLogin = true;
                         ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.EnterGmPassword), ChatType.Hint);
@@ -4144,6 +4147,36 @@ namespace Server.MirObjects
                         Enqueue(GetUpdateInfo());
                         Broadcast(GetUpdateInfo());
                         break;
+                    case "DELETEMEMORY"://Point-to-point
+                        try
+                        {
+                            // 检查消息长度是否足够
+                            if (message.Length > 13)
+                            {
+                                // 截取索引部分
+                                string indexStr = message.Substring(13).Trim();
+                                
+                                // 解析索引
+                                if (int.TryParse(indexStr, out int Index))
+                                {
+                                    // 检查索引是否在有效范围内
+                                    if (Info.MyTeleportInfo != null && Info.MyTeleportInfo.Count > 0 && Index >= 0 && Index < Info.MyTeleportInfo.Count)
+                                    {
+                                        // 移除传送点
+                                        Info.MyTeleportInfo.RemoveAt(Index);
+                                        
+                                        // 发送更新后的传送点列表到客户端
+                                        Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            // 记录错误，但不影响服务器运行
+                            Console.WriteLine("Delete memory error: " + ex.Message);
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -6078,6 +6111,21 @@ namespace Server.MirObjects
                         case 15: //Increase Hero Inventory
                             ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.MustBeUsedOnHero), ChatType.Hint);
                             Enqueue(p);
+                            break;
+                        case 16://Point-to-point
+                            if (Info.MyTeleportInfo.Count >= Globals.MaxPositionMove)
+                            {
+                                ReceiveChat(string.Format("You can mark up to {0} map coordinates.", Globals.MaxPositionMove), ChatType.Hint);
+                                Enqueue(p);
+                                return;
+                            }
+                            PlayerTeleportInfo info = new PlayerTeleportInfo();
+                            info.Name = CurrentMap.Info.Title + "   " + CurrentLocation.X + " : " + CurrentLocation.Y;
+                            info.MapName = CurrentMap.Info.FileName;
+                            info.Location = Info.CurrentLocation;
+                            info.ColorIndex = 0;
+                            Info.MyTeleportInfo.Add(info);
+                            Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });
                             break;
                     }
                     break;
@@ -14684,6 +14732,85 @@ namespace Server.MirObjects
         public void SendNPCGoods(List<UserItem> goods, float rate, PanelType panelType, bool hideAddedStats = false)
         {
             Enqueue(new S.NPCGoods { List = goods, Rate = rate, Type = panelType, HideAddedStats = hideAddedStats });
+        }
+
+        //Point-to-point
+        public void MemoryLocation(string name, int color)
+        {
+            if (Info.MyTeleportInfo.Count >= Globals.MaxPositionMove)
+            {
+                Enqueue(new S.Awakening { result = 11 });
+                return;
+            }
+
+            bool hasPositionScroll = false;
+            for (int i = 0; i < Info.Inventory.Length; i++)
+            {
+                UserItem item = Info.Inventory[i];
+                if (item == null || item.Info.Type != ItemType.Scroll) continue;
+                if (item.Info.Shape == 16)
+                {
+                    hasPositionScroll = true;
+                    Enqueue(new S.DeleteItem { UniqueID = item.UniqueID, Count = 1 });
+                    if (item.Count > 1)
+                    {
+                        item.Count--;
+                    }
+                    else
+                    {
+                        Info.Inventory[i] = null;
+                    }
+                    break;
+                }
+            }
+            if (hasPositionScroll)
+            {
+                PlayerTeleportInfo info = new PlayerTeleportInfo();
+                info.Name = name;
+                info.MapName = CurrentMap.Info.FileName;
+                info.Location = Info.CurrentLocation;
+                info.ColorIndex = color;
+                Info.MyTeleportInfo.Add(info);
+                Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });
+            }
+            else
+            {
+                Enqueue(new S.Awakening { result = 12 });
+                return;
+            }
+        }
+        //Point-to-point
+        public void PositionMove(int Index)
+        {
+
+            if (Account.Gold <= Settings.PositionMoves)
+            {
+                Enqueue(new S.Awakening { result = -3 });
+                return;
+            }
+            if (Info.MyTeleportInfo.Count > 0 && Index <= Info.MyTeleportInfo.Count)
+            {
+                Map tempmap = Envir.GetMapByNameAndInstance(Info.MyTeleportInfo[Index].MapName);
+
+
+                Info.AccountInfo.Gold -= (uint)Settings.PositionMoves;
+                Enqueue(new S.LoseGold { Gold = (uint)Settings.PositionMoves });
+
+                Point temploc = Info.MyTeleportInfo[Index].Location;
+                if (tempmap != null && tempmap.ValidPoint(temploc))
+                    Teleport(tempmap, temploc);
+            }
+
+        }
+        //Point-to-point
+        public void DeleteMemoryLocation(int Index)
+        {
+            if (Info.MyTeleportInfo.Count > 0 && Index >= 0 && Index < Info.MyTeleportInfo.Count)
+            {
+                Info.MyTeleportInfo.RemoveAt(Index);
+                Envir.Main.SaveAccounts();
+                Enqueue(new S.PlayerTeleportList { Infos = Info.MyTeleportInfo });
+            }
         }
     }
 }

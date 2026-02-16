@@ -1,4 +1,4 @@
-﻿﻿using Client.MirControls;
+﻿﻿﻿﻿﻿using Client.MirControls;
 using Client.MirGraphics;
 using Client.MirNetwork;
 using Client.MirObjects;
@@ -144,6 +144,7 @@ namespace Client.MirScenes
         public TimerDialog TimerControl;
         public CompassDialog CompassControl;
         public RollDialog RollControl;
+        public PositionMoveDialog PositionMoveDialog;//Point-to-point
 
 
         public static List<ItemInfo> ItemInfoList = new List<ItemInfo>();
@@ -395,6 +396,8 @@ namespace Client.MirScenes
             CompassControl = new CompassDialog { Parent = this, Visible = false };
             RollControl = new RollDialog { Parent = this, Visible = false };
 
+            PositionMoveDialog = new PositionMoveDialog { Parent = this, Visible = false };//Point-to-point
+
             for (int i = 0; i < OutputLines.Length; i++)
                 OutputLines[i] = new MirLabel
                 {
@@ -612,7 +615,10 @@ namespace Client.MirScenes
                         if (!MountDialog.Visible) MountDialog.Show();
                         else MountDialog.Hide();
                         break;
-
+                    case KeybindOptions.PositionMoves:
+                        if (!PositionMoveDialog.Visible) PositionMoveDialog.Show();
+                        else PositionMoveDialog.Hide();
+                        break;
                     case KeybindOptions.GameShop:
                         if (!GameShopDialog.Visible) GameShopDialog.Show();
                         else GameShopDialog.Hide();
@@ -2117,9 +2123,32 @@ namespace Client.MirScenes
                 case (short)ServerPacketIds.NewNPCInfo:
                     NewNPCInfo((S.NewNPCInfo)p);
                     break;
+                case (short)ServerPacketIds.PlayerTeleportList://定点传送
+                    PlayerTeleportList((S.PlayerTeleportList)p);
+                    break;
                 default:
                     base.ProcessPacket(p);
                     break;
+            }
+        }
+
+        public void PlayerTeleportList(S.PlayerTeleportList p)
+        {
+            if (GameScene.User != null)
+            {
+                // 转换Shared.PlayerTeleportInfo为Client.MirScenes.Dialogs.PlayerTeleportInfo
+                PositionMoveDialog.TeleportList = new List<Client.MirScenes.Dialogs.PlayerTeleportInfo>();
+                foreach (var info in p.Infos)
+                {
+                    PositionMoveDialog.TeleportList.Add(new Client.MirScenes.Dialogs.PlayerTeleportInfo
+                    {
+                        Name = info.Name,
+                        Location = info.Location,
+                        ColorIndex = info.ColorIndex,
+                        MapIndex = -1 // 可以根据需要设置MapIndex
+                    });
+                }
+                GameScene.Scene.PositionMoveDialog.ReloadTeleportList();
             }
         }
 
@@ -6450,6 +6479,9 @@ namespace Client.MirScenes
                     break;
                 case 1:
                     //messageBox = new MirMessageBox("Upgrade Success.", MirMessageBoxButtons.OK);
+                    break;
+                case 10:
+                    messageBox = new MirMessageBox("当前地图禁止定点传送.", MirMessageBoxButtons.OK);
                     break;
 
             }

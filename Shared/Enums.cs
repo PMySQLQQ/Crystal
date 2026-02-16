@@ -1,4 +1,6 @@
-﻿public enum MouseCursor : byte
+using System.Drawing;
+
+public enum MouseCursor : byte
 {
     None,
     Default,
@@ -1712,6 +1714,7 @@ public enum ServerPacketIds : short
     GuildTerritoryPage,
     StorageUnlockResult,
     StoragePasswordResult,
+    PlayerTeleportList,//Point-to-point
 }
 
 public enum ClientPacketIds : short
@@ -1876,6 +1879,9 @@ public enum ClientPacketIds : short
     UnlockStorage,
     SetStoragePassword,
     RemoveStoragePassword,
+    PositionMove,//Point-to-point
+    MemoryLocation,//Point-to-point
+    DeleteMemoryLocation,//Point-to-point
 }
 
 public enum ConquestType : byte
@@ -1950,3 +1956,5 @@ public enum MarketCollectionMode : byte
     Sold = 1,
     Expired = 2
 }
+
+

@@ -1,4 +1,4 @@
-﻿using C = ClientPackets;
+using C = ClientPackets;
 using S = ServerPackets;
 
 public abstract class Packet
@@ -399,6 +399,12 @@ public abstract class Packet
                 return new C.GuildTerritoryPage();
             case (short)ClientPacketIds.DeleteItem:
                 return new C.DeleteItem();
+            case (short)ClientPacketIds.PositionMove://Point-to-point
+                return new C.PositionMove();
+            case (short)ClientPacketIds.MemoryLocation://Point-to-point
+                return new C.MemoryLocation();
+            case (short)ClientPacketIds.DeleteMemoryLocation://Point-to-point
+                return new C.DeleteMemoryLocation();
             default:
                 return null;
         }
@@ -964,6 +970,8 @@ public abstract class Packet
                 return new S.SetCompass();
             case (short)ServerPacketIds.GuildTerritoryPage:
                 return new S.GuildTerritoryPage();
+            case (short)ServerPacketIds.PlayerTeleportList://Point-to-point
+                return new S.PlayerTeleportList();
             default:
                 return null;
         }
