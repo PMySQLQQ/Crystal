@@ -1,4 +1,4 @@
-﻿using ClientPackets;
+using ClientPackets;
 using Server.Library.MirDatabase;
 using Server.Library.Utils;
 using Server.MirDatabase;
@@ -53,7 +53,8 @@ namespace Server.MirEnvir
         public static object LoadLock = new object();
 
         public const int MinVersion = 60;
-        public const int Version = 118;
+        // 125: InstanceActivityInfo 增加 MonsterWaveCount 字段
+        public const int Version = 119;
         public const int CustomVersion = 0;
         public static readonly string DatabasePath = Path.Combine(".", "Server.MirDB");
         public static readonly string AccountPath = Path.Combine(".", "Server.MirADB");
@@ -68,7 +69,8 @@ namespace Server.MirEnvir
         public static int LoadVersion;
         public static int LoadCustomVersion;
 
-        private readonly DateTime _startTime = DateTime.UtcNow;
+        // 使用本地时间作为游戏时间基准，保证与配置界面看到的“本机时间”一致
+        private readonly DateTime _startTime = DateTime.Now;
         public readonly Stopwatch Stopwatch = Stopwatch.StartNew();
 
         public long Time { get; private set; }
@@ -107,7 +109,7 @@ namespace Server.MirEnvir
         public List<MirConnection> Connections = new List<MirConnection>();
 
         //Server DB
-        public int MapIndex, ItemIndex, MonsterIndex, NPCIndex, QuestIndex, GameshopIndex, ConquestIndex, RespawnIndex, ScriptIndex;
+        public int MapIndex, ItemIndex, MonsterIndex, NPCIndex, QuestIndex, GameshopIndex, ConquestIndex, RespawnIndex, ScriptIndex, InstanceActivityIndex;
         public List<MapInfo> MapInfoList = new List<MapInfo>();
         public List<ItemInfo> ItemInfoList = new List<ItemInfo>();
         public List<MonsterInfo> MonsterInfoList = new List<MonsterInfo>();
@@ -120,6 +122,7 @@ namespace Server.MirEnvir
         public List<BuffInfo> BuffInfoList = new List<BuffInfo>();
         public List<ConquestInfo> ConquestInfoList = new List<ConquestInfo>();
         public List<GTMap> GTMapList = new List<GTMap>();
+        public List<InstanceActivityInfo> InstanceActivityList = new List<InstanceActivityInfo>();
 
         //User DB
         public int NextAccountID, NextCharacterID, NextGuildID, NextHeroID;
@@ -176,6 +179,8 @@ namespace Server.MirEnvir
         public List<RankCharacterInfo>[] RankClass = new List<RankCharacterInfo>[5];
 
         static HttpServer http;
+
+        public InstanceActivityManager ActivityManager;
 
         static Envir()
         {
@@ -2141,6 +2146,8 @@ namespace Server.MirEnvir
 
                         DragonSystem?.Process();
 
+                        ActivityManager?.Process();
+
                         Process();
 
                         if (Time >= saveTime)
@@ -2449,6 +2456,7 @@ namespace Server.MirEnvir
                 writer.Write(GameshopIndex);
                 writer.Write(ConquestIndex);
                 writer.Write(RespawnIndex);
+                writer.Write(InstanceActivityIndex);
 
                 writer.Write(MapInfoList.Count);
                 for (var i = 0; i < MapInfoList.Count; i++)
@@ -2488,6 +2496,10 @@ namespace Server.MirEnvir
                 writer.Write(GTMapList.Count);
                 for (var i = 0; i < GTMapList.Count; i++)
                     GTMapList[i].Save(writer);
+
+                writer.Write(InstanceActivityList.Count);
+                for (var i = 0; i < InstanceActivityList.Count; i++)
+                    InstanceActivityList[i].Save(writer);
             }
         }
 
@@ -2842,6 +2854,9 @@ namespace Server.MirEnvir
                     if (LoadVersion >= 68)
                         RespawnIndex = reader.ReadInt32();
 
+                    if (LoadVersion >= 119)
+                        InstanceActivityIndex = reader.ReadInt32();
+
 
                     var count = reader.ReadInt32();
                     MapInfoList.Clear();
@@ -2912,6 +2927,26 @@ namespace Server.MirEnvir
 
                     if (LoadVersion > 67)
                         RespawnTick = new RespawnTimer(reader);
+
+                    if (LoadVersion >= 67)
+                    {
+                        GTMapList.Clear();
+                        count = reader.ReadInt32();
+                        for (var i = 0; i < count; i++)
+                        {
+                            GTMapList.Add(new GTMap(reader));
+                        }
+                    }
+
+                    if (LoadVersion >= 119)
+                    {
+                        InstanceActivityList.Clear();
+                        count = reader.ReadInt32();
+                        for (var i = 0; i < count; i++)
+                        {
+                            InstanceActivityList.Add(new InstanceActivityInfo(reader, LoadVersion, LoadCustomVersion));
+                        }
+                    }
                 }
                 Settings.LinkGuildCreationItems(ItemInfoList);
             }
@@ -3295,6 +3330,7 @@ namespace Server.MirEnvir
             CustomCommands.Clear();
             Heroes.Clear();
             MonsterCount = 0;
+            ActivityManager = new InstanceActivityManager(this);
 
             LoadDB();
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,10 +28,10 @@ namespace Server.Account
             if (!Directory.Exists(namelistsPath))
             {
                 NamelistView.Items.Clear();
-                NamelistView.Items.Add("Namelists directory not found.");
-                NamelistCount.Text = "Namelist Count: 0";
-                TotalPlayerLabel.Text = "Total Players: 0 (In all Namelists)";
-                TotalUniquePlayerLabel.Text = "Total Unique Players: 0 (In all Namelists)";
+                NamelistView.Items.Add("未找到 Namelists 目录。");
+                NamelistCount.Text = "名单数量：0";
+                TotalPlayerLabel.Text = "所有名单中玩家总数：0";
+                TotalUniquePlayerLabel.Text = "所有名单中不重复玩家总数：0";
                 return;
             }
 
@@ -127,7 +127,7 @@ namespace Server.Account
             {
                 NamelistView.Items.Clear();
                 NamelistView.Items.Add("Namelists directory not found.");
-                NamelistCountLabel.Text = "Found in: 0 Namelists";
+                NamelistCountLabel.Text = "出现在：0 个名单中";
                 return;
             }
 
@@ -141,7 +141,7 @@ namespace Server.Account
             if (string.IsNullOrEmpty(playerName))
             {
                 UpdateNamelists();
-                NamelistCountLabel.Text = "Found in: 0 Namelists";
+                NamelistCountLabel.Text = "出现在：0 个名单中";
                 return;
             }
 

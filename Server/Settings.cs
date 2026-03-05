@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using Server.MirDatabase;
 using Server.MirObjects;
@@ -232,6 +232,10 @@ namespace Server
         public static bool DropGold = true;
 
         public static string CreatureBlackStoneName = "BlackCreatureStone";
+
+        // Instance activity settings
+        // 通关后在副本内停留的时间（秒），客户端只负责显示倒计时
+        public static int InstanceActivityExitDelaySeconds = 10;
 
         //Fishing Settings
         public static int FishingAttempts = 30;
@@ -537,6 +541,9 @@ namespace Server
             RangeAccuracyBonus = Reader.ReadByte("Bonus", "RangeAccuracyBonus", RangeAccuracyBonus);
 
             CreatureBlackStoneName = Reader.ReadString("IntelligentCreatures", "CreatureBlackStoneName", CreatureBlackStoneName);
+
+            // Instance activity
+            InstanceActivityExitDelaySeconds = Reader.ReadInt32("InstanceActivity", "ExitDelaySeconds", InstanceActivityExitDelaySeconds);
 
             AllowObserve = Reader.ReadBoolean("Observe", "AllowObserve", AllowObserve);
 

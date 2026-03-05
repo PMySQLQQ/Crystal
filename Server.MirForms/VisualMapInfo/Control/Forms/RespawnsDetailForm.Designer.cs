@@ -1,4 +1,4 @@
-﻿namespace Server.MirForms.VisualMapInfo.Control.Forms
+namespace Server.MirForms.VisualMapInfo.Control.Forms
 {
     partial class RespawnsDetailForm
     {
@@ -238,7 +238,7 @@
             this.MaximizeBox = false;
             this.Name = "RespawnsDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Respawns";
+            this.Text = "刷新点";
             this.ResumeLayout(false);
             this.PerformLayout();
 

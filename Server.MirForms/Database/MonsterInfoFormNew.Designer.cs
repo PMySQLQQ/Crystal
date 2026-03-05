@@ -1,4 +1,4 @@
-﻿
+
 namespace Server.Database
 {
     partial class MonsterInfoFormNew
@@ -87,7 +87,7 @@ namespace Server.Database
             monsterInfoGridView.Margin = new Padding(4, 3, 4, 3);
             monsterInfoGridView.Name = "monsterInfoGridView";
             monsterInfoGridView.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            monsterInfoGridView.Size = new Size(1115, 500);
+            monsterInfoGridView.Size = new Size(1115, 567);
             monsterInfoGridView.TabIndex = 0;
             monsterInfoGridView.CellValidating += monsterInfoGridView_CellValidating;
             monsterInfoGridView.DataError += monsterInfoGridView_DataError;
@@ -99,34 +99,34 @@ namespace Server.Database
             Modified.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             Modified.DataPropertyName = "Modified";
             Modified.Frozen = true;
-            Modified.HeaderText = "Modified";
+            Modified.HeaderText = "已修改";
             Modified.Name = "Modified";
             Modified.ReadOnly = true;
-            Modified.Width = 61;
+            Modified.Width = 50;
             // 
             // MonsterIndex
             // 
             MonsterIndex.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             MonsterIndex.DataPropertyName = "MonsterIndex";
             MonsterIndex.Frozen = true;
-            MonsterIndex.HeaderText = "Index";
+            MonsterIndex.HeaderText = "编号";
             MonsterIndex.Name = "MonsterIndex";
             MonsterIndex.ReadOnly = true;
-            MonsterIndex.Width = 60;
+            MonsterIndex.Width = 57;
             // 
             // MonsterName
             // 
             MonsterName.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             MonsterName.DataPropertyName = "MonsterName";
             MonsterName.Frozen = true;
-            MonsterName.HeaderText = "Name";
+            MonsterName.HeaderText = "名称";
             MonsterName.Name = "MonsterName";
-            MonsterName.Width = 64;
+            MonsterName.Width = 57;
             // 
             // MonsterImage
             // 
             MonsterImage.DataPropertyName = "MonsterImage";
-            MonsterImage.HeaderText = "Image";
+            MonsterImage.HeaderText = "图像";
             MonsterImage.Name = "MonsterImage";
             MonsterImage.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
@@ -139,55 +139,55 @@ namespace Server.Database
             // MonsterEffect
             // 
             MonsterEffect.DataPropertyName = "MonsterEffect";
-            MonsterEffect.HeaderText = "Effect";
+            MonsterEffect.HeaderText = "特效";
             MonsterEffect.Name = "MonsterEffect";
             // 
             // MonsterLevel
             // 
             MonsterLevel.DataPropertyName = "MonsterLevel";
-            MonsterLevel.HeaderText = "Level";
+            MonsterLevel.HeaderText = "等级";
             MonsterLevel.Name = "MonsterLevel";
             // 
             // MonsterLight
             // 
             MonsterLight.DataPropertyName = "MonsterLight";
-            MonsterLight.HeaderText = "Light";
+            MonsterLight.HeaderText = "光照";
             MonsterLight.Name = "MonsterLight";
             // 
             // MonsterAttackSpeed
             // 
             MonsterAttackSpeed.DataPropertyName = "MonsterAttackSpeed";
-            MonsterAttackSpeed.HeaderText = "Attack Speed";
+            MonsterAttackSpeed.HeaderText = "攻击速度";
             MonsterAttackSpeed.Name = "MonsterAttackSpeed";
             // 
             // MonsterMoveSpeed
             // 
             MonsterMoveSpeed.DataPropertyName = "MonsterMoveSpeed";
-            MonsterMoveSpeed.HeaderText = "Move Speed";
+            MonsterMoveSpeed.HeaderText = "移动速度";
             MonsterMoveSpeed.Name = "MonsterMoveSpeed";
             // 
             // MonsterViewRange
             // 
             MonsterViewRange.DataPropertyName = "MonsterViewRange";
-            MonsterViewRange.HeaderText = "View Range";
+            MonsterViewRange.HeaderText = "视野范围";
             MonsterViewRange.Name = "MonsterViewRange";
             // 
             // MonsterCoolEye
             // 
             MonsterCoolEye.DataPropertyName = "MonsterCoolEye";
-            MonsterCoolEye.HeaderText = "Cool Eye";
+            MonsterCoolEye.HeaderText = "冷眼";
             MonsterCoolEye.Name = "MonsterCoolEye";
             // 
             // MonsterExperience
             // 
             MonsterExperience.DataPropertyName = "MonsterExperience";
-            MonsterExperience.HeaderText = "Experience";
+            MonsterExperience.HeaderText = "经验";
             MonsterExperience.Name = "MonsterExperience";
             // 
             // MonsterCanPush
             // 
             MonsterCanPush.DataPropertyName = "MonsterCanPush";
-            MonsterCanPush.HeaderText = "Can Push";
+            MonsterCanPush.HeaderText = "可推动";
             MonsterCanPush.Name = "MonsterCanPush";
             MonsterCanPush.Resizable = DataGridViewTriState.True;
             MonsterCanPush.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -195,7 +195,7 @@ namespace Server.Database
             // MonsterAutoRev
             // 
             MonsterAutoRev.DataPropertyName = "MonsterAutoRev";
-            MonsterAutoRev.HeaderText = "Auto Rev";
+            MonsterAutoRev.HeaderText = "自动复活";
             MonsterAutoRev.Name = "MonsterAutoRev";
             MonsterAutoRev.Resizable = DataGridViewTriState.True;
             MonsterAutoRev.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -203,7 +203,7 @@ namespace Server.Database
             // MonsterUndead
             // 
             MonsterUndead.DataPropertyName = "MonsterUndead";
-            MonsterUndead.HeaderText = "Undead";
+            MonsterUndead.HeaderText = "不死";
             MonsterUndead.Name = "MonsterUndead";
             MonsterUndead.Resizable = DataGridViewTriState.True;
             MonsterUndead.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -211,7 +211,7 @@ namespace Server.Database
             // MonsterCanTame
             // 
             MonsterCanTame.DataPropertyName = "MonsterCanTame";
-            MonsterCanTame.HeaderText = "Can Tame";
+            MonsterCanTame.HeaderText = "可魅惑";
             MonsterCanTame.Name = "MonsterCanTame";
             MonsterCanTame.Resizable = DataGridViewTriState.True;
             MonsterCanTame.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -219,7 +219,7 @@ namespace Server.Database
             // MonsterIsBoss
             // 
             MonsterIsBoss.DataPropertyName = "MonsterIsBoss";
-            MonsterIsBoss.HeaderText = "Boss/Sub";
+            MonsterIsBoss.HeaderText = "Boss/小B";
             MonsterIsBoss.Name = "MonsterIsBoss";
             MonsterIsBoss.Resizable = DataGridViewTriState.True;
             MonsterIsBoss.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -227,7 +227,7 @@ namespace Server.Database
             // MonsterRecall
             // 
             MonsterRecall.DataPropertyName = "MonsterRecall";
-            MonsterRecall.HeaderText = "Recall User";
+            MonsterRecall.HeaderText = "召回玩家";
             MonsterRecall.Name = "MonsterRecall";
             MonsterRecall.Resizable = DataGridViewTriState.True;
             MonsterRecall.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -236,9 +236,9 @@ namespace Server.Database
             // 
             MonsterDropPath.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             MonsterDropPath.DataPropertyName = "MonsterDropPath";
-            MonsterDropPath.HeaderText = "Drop Path";
+            MonsterDropPath.HeaderText = "爆率路径";
             MonsterDropPath.Name = "MonsterDropPath";
-            MonsterDropPath.Width = 85;
+            MonsterDropPath.Width = 81;
             // 
             // panel1
             // 
@@ -247,7 +247,7 @@ namespace Server.Database
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1115, 54);
+            panel1.Size = new Size(1115, 61);
             panel1.TabIndex = 1;
             // 
             // panel3
@@ -260,28 +260,28 @@ namespace Server.Database
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(4, 3, 4, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1115, 54);
+            panel3.Size = new Size(1115, 61);
             panel3.TabIndex = 5;
             // 
             // btnExport
             // 
-            btnExport.Location = new Point(808, 25);
+            btnExport.Location = new Point(808, 28);
             btnExport.Margin = new Padding(4, 3, 4, 3);
             btnExport.Name = "btnExport";
-            btnExport.Size = new Size(88, 27);
+            btnExport.Size = new Size(88, 31);
             btnExport.TabIndex = 6;
-            btnExport.Text = "Export";
+            btnExport.Text = "导出";
             btnExport.UseVisualStyleBackColor = true;
             btnExport.Click += btnExport_Click;
             // 
             // btnImport
             // 
-            btnImport.Location = new Point(713, 25);
+            btnImport.Location = new Point(713, 28);
             btnImport.Margin = new Padding(4, 3, 4, 3);
             btnImport.Name = "btnImport";
-            btnImport.Size = new Size(88, 27);
+            btnImport.Size = new Size(88, 31);
             btnImport.TabIndex = 5;
-            btnImport.Text = "Import";
+            btnImport.Text = "导入";
             btnImport.UseVisualStyleBackColor = true;
             btnImport.Click += btnImport_Click;
             // 
@@ -294,43 +294,43 @@ namespace Server.Database
             groupView.Margin = new Padding(4, 3, 4, 3);
             groupView.Name = "groupView";
             groupView.Padding = new Padding(4, 3, 4, 3);
-            groupView.Size = new Size(156, 48);
+            groupView.Size = new Size(156, 54);
             groupView.TabIndex = 4;
             groupView.TabStop = false;
-            groupView.Text = "View Mode";
+            groupView.Text = "查看模式";
             // 
             // rbtnViewAll
             // 
             rbtnViewAll.AutoSize = true;
             rbtnViewAll.Checked = true;
-            rbtnViewAll.Location = new Point(31, 22);
+            rbtnViewAll.Location = new Point(31, 25);
             rbtnViewAll.Margin = new Padding(4, 3, 4, 3);
             rbtnViewAll.Name = "rbtnViewAll";
-            rbtnViewAll.Size = new Size(39, 19);
+            rbtnViewAll.Size = new Size(50, 21);
             rbtnViewAll.TabIndex = 0;
             rbtnViewAll.TabStop = true;
-            rbtnViewAll.Text = "All";
+            rbtnViewAll.Text = "全部";
             rbtnViewAll.UseVisualStyleBackColor = true;
             rbtnViewAll.CheckedChanged += rbtnViewAll_CheckedChanged;
             // 
             // rbtnViewBasic
             // 
             rbtnViewBasic.AutoSize = true;
-            rbtnViewBasic.Location = new Point(80, 22);
+            rbtnViewBasic.Location = new Point(89, 25);
             rbtnViewBasic.Margin = new Padding(4, 3, 4, 3);
             rbtnViewBasic.Name = "rbtnViewBasic";
-            rbtnViewBasic.Size = new Size(52, 19);
+            rbtnViewBasic.Size = new Size(50, 21);
             rbtnViewBasic.TabIndex = 1;
-            rbtnViewBasic.Text = "Basic";
+            rbtnViewBasic.Text = "基础";
             rbtnViewBasic.UseVisualStyleBackColor = true;
             rbtnViewBasic.CheckedChanged += rbtnViewBasic_CheckedChanged;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(541, 27);
+            txtSearch.Location = new Point(541, 31);
             txtSearch.Margin = new Padding(4, 3, 4, 3);
             txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Search...";
+            txtSearch.PlaceholderText = "搜索…";
             txtSearch.Size = new Size(164, 23);
             txtSearch.TabIndex = 0;
             txtSearch.KeyDown += txtSearch_KeyDown;
@@ -339,22 +339,22 @@ namespace Server.Database
             // 
             panel2.Controls.Add(monsterInfoGridView);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 54);
+            panel2.Location = new Point(0, 61);
             panel2.Margin = new Padding(4, 3, 4, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1115, 500);
+            panel2.Size = new Size(1115, 567);
             panel2.TabIndex = 2;
             // 
             // MonsterInfoFormNew
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1115, 554);
+            ClientSize = new Size(1115, 628);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "MonsterInfoFormNew";
-            Text = "MonsterInfoFormNew";
+            Text = "怪物信息(新)";
             FormClosed += monsterInfoFormNew_FormClosed;
             ((System.ComponentModel.ISupportInitialize)monsterInfoGridView).EndInit();
             panel1.ResumeLayout(false);

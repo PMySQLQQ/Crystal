@@ -1,4 +1,4 @@
-﻿namespace LibraryViewer
+namespace LibraryViewer
 {
     partial class LMain
     {
@@ -300,7 +300,7 @@
             this.Controls.Add(this.MainMenu);
             this.MainMenuStrip = this.MainMenu;
             this.Name = "LMain";
-            this.Text = "C# Library Viewer";
+            this.Text = "资源库查看器";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

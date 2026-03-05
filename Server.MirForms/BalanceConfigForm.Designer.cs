@@ -1,4 +1,4 @@
-﻿namespace Server
+namespace Server
 {
     partial class BalanceConfigForm
     {
@@ -28,1756 +28,1884 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MagicResistWeigttextbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PoisonResistWeighttextbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CritialRateWeighttextbox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CriticalDamagetextbox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.classGridView = new System.Windows.Forms.DataGridView();
-            this.BaseStatType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.BaseStatFormula = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.BaseStatBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaseStatGain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaseStatGainRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaseStatMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassComboBox = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.classCapGridView = new System.Windows.Forms.DataGridView();
-            this.CapType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabHero = new System.Windows.Forms.TabPage();
-            this.panelHeroLeft = new System.Windows.Forms.Panel();
-            this.heroGridView = new System.Windows.Forms.DataGridView();
-            this.HeroBaseStatType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HeroBaseStatFormula = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HeroBaseStatBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeroBaseStatGain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeroBaseStatGainRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeroBaseStatMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeroClassComboBox = new System.Windows.Forms.ComboBox();
-            this.panelHeroRight = new System.Windows.Forms.Panel();
-            this.heroCapGridView = new System.Windows.Forms.DataGridView();
-            this.HeroCapType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HeroCapValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ManaRegenWeighttextBox = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.HealthRegenWeighttextBox = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CanFreezecheckBox = new System.Windows.Forms.CheckBox();
-            this.CanResistPoisoncheckBox = new System.Windows.Forms.CheckBox();
-            this.CanResistMagiccheckBox = new System.Windows.Forms.CheckBox();
-            this.PoisonAttackWeighttextbox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.FreezingWeighttextbox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.RISDeleteIndexbutton = new System.Windows.Forms.Button();
-            this.RISAddIndexbutton = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.RISSlotMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISLuckMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISAttackSpeedMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonAttackMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISFreezingMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalDamageMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalRateMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonRecovMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMpRecovMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISHpRecovMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonResistMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMagicResistMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISStrongMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMpMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxHpMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAgilMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAccMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxScMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMcMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDcMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMacMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAcMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDuraMaxStattextBox = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.RISSlotStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISLuckStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDuraStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISAttackSpeedStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAcStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonAttackStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMacStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISFreezingStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDcStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalDamageStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMcStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalRateStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxScStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonRecovStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAccStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMpRecovStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAgilStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISHpRecovStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxHpStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonResistStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMpStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMagicResistStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISStrongStatChancetextBox = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.RISCurseChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISSlotChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISLuckChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISAttackSpeedChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonAttackChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISFreezingChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalDamageChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISCriticalRateChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonRecovChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMpRecovChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISHpRecovChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISPoisonResistChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMagicResistChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISStrongChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMpChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxHpChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAgilChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAccChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxScChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMcChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDcChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxMacChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxAcChancetextBox = new System.Windows.Forms.TextBox();
-            this.RISMaxDuraChancetextBox = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.RISIndexcomboBox = new System.Windows.Forms.ComboBox();
-            this.lblClassStatExample = new System.Windows.Forms.Label();
-            this.lblHeroStatExample = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.classGridView)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.classCapGridView)).BeginInit();
-            this.tabHero.SuspendLayout();
-            this.panelHeroLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.heroGridView)).BeginInit();
-            this.panelHeroRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.heroCapGridView)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.SuspendLayout();
+            MagicResistWeigttextbox = new TextBox();
+            label2 = new Label();
+            PoisonResistWeighttextbox = new TextBox();
+            label3 = new Label();
+            CritialRateWeighttextbox = new TextBox();
+            label5 = new Label();
+            CriticalDamagetextbox = new TextBox();
+            label7 = new Label();
+            tabControl1 = new TabControl();
+            tabPage3 = new TabPage();
+            panel2 = new Panel();
+            classGridView = new DataGridView();
+            BaseStatType = new DataGridViewComboBoxColumn();
+            BaseStatFormula = new DataGridViewComboBoxColumn();
+            BaseStatBase = new DataGridViewTextBoxColumn();
+            BaseStatGain = new DataGridViewTextBoxColumn();
+            BaseStatGainRate = new DataGridViewTextBoxColumn();
+            BaseStatMax = new DataGridViewTextBoxColumn();
+            ClassComboBox = new ComboBox();
+            panel1 = new Panel();
+            classCapGridView = new DataGridView();
+            CapType = new DataGridViewComboBoxColumn();
+            Value = new DataGridViewTextBoxColumn();
+            tabHero = new TabPage();
+            panelHeroLeft = new Panel();
+            heroGridView = new DataGridView();
+            HeroBaseStatType = new DataGridViewComboBoxColumn();
+            HeroBaseStatFormula = new DataGridViewComboBoxColumn();
+            HeroBaseStatBase = new DataGridViewTextBoxColumn();
+            HeroBaseStatGain = new DataGridViewTextBoxColumn();
+            HeroBaseStatGainRate = new DataGridViewTextBoxColumn();
+            HeroBaseStatMax = new DataGridViewTextBoxColumn();
+            HeroClassComboBox = new ComboBox();
+            panelHeroRight = new Panel();
+            heroCapGridView = new DataGridView();
+            HeroCapType = new DataGridViewComboBoxColumn();
+            HeroCapValue = new DataGridViewTextBoxColumn();
+            tabPage2 = new TabPage();
+            ManaRegenWeighttextBox = new TextBox();
+            label37 = new Label();
+            HealthRegenWeighttextBox = new TextBox();
+            label35 = new Label();
+            groupBox2 = new GroupBox();
+            CanFreezecheckBox = new CheckBox();
+            CanResistPoisoncheckBox = new CheckBox();
+            CanResistMagiccheckBox = new CheckBox();
+            PoisonAttackWeighttextbox = new TextBox();
+            label11 = new Label();
+            FreezingWeighttextbox = new TextBox();
+            label10 = new Label();
+            tabPage4 = new TabPage();
+            RISDeleteIndexbutton = new Button();
+            RISAddIndexbutton = new Button();
+            groupBox3 = new GroupBox();
+            label64 = new Label();
+            label63 = new Label();
+            label62 = new Label();
+            label61 = new Label();
+            label60 = new Label();
+            label59 = new Label();
+            label58 = new Label();
+            label57 = new Label();
+            label56 = new Label();
+            label55 = new Label();
+            label54 = new Label();
+            label53 = new Label();
+            label52 = new Label();
+            label51 = new Label();
+            label50 = new Label();
+            label49 = new Label();
+            label48 = new Label();
+            label47 = new Label();
+            label46 = new Label();
+            label45 = new Label();
+            label44 = new Label();
+            label43 = new Label();
+            label42 = new Label();
+            label41 = new Label();
+            groupBox6 = new GroupBox();
+            RISSlotMaxStattextBox = new TextBox();
+            RISLuckMaxStattextBox = new TextBox();
+            RISAttackSpeedMaxStattextBox = new TextBox();
+            RISPoisonAttackMaxStattextBox = new TextBox();
+            RISFreezingMaxStattextBox = new TextBox();
+            RISCriticalDamageMaxStattextBox = new TextBox();
+            RISCriticalRateMaxStattextBox = new TextBox();
+            RISPoisonRecovMaxStattextBox = new TextBox();
+            RISMpRecovMaxStattextBox = new TextBox();
+            RISHpRecovMaxStattextBox = new TextBox();
+            RISPoisonResistMaxStattextBox = new TextBox();
+            RISMagicResistMaxStattextBox = new TextBox();
+            RISStrongMaxStattextBox = new TextBox();
+            RISMaxMpMaxStattextBox = new TextBox();
+            RISMaxHpMaxStattextBox = new TextBox();
+            RISMaxAgilMaxStattextBox = new TextBox();
+            RISMaxAccMaxStattextBox = new TextBox();
+            RISMaxScMaxStattextBox = new TextBox();
+            RISMaxMcMaxStattextBox = new TextBox();
+            RISMaxDcMaxStattextBox = new TextBox();
+            RISMaxMacMaxStattextBox = new TextBox();
+            RISMaxAcMaxStattextBox = new TextBox();
+            RISMaxDuraMaxStattextBox = new TextBox();
+            groupBox5 = new GroupBox();
+            RISSlotStatChancetextBox = new TextBox();
+            RISLuckStatChancetextBox = new TextBox();
+            RISMaxDuraStatChancetextBox = new TextBox();
+            RISAttackSpeedStatChancetextBox = new TextBox();
+            RISMaxAcStatChancetextBox = new TextBox();
+            RISPoisonAttackStatChancetextBox = new TextBox();
+            RISMaxMacStatChancetextBox = new TextBox();
+            RISFreezingStatChancetextBox = new TextBox();
+            RISMaxDcStatChancetextBox = new TextBox();
+            RISCriticalDamageStatChancetextBox = new TextBox();
+            RISMaxMcStatChancetextBox = new TextBox();
+            RISCriticalRateStatChancetextBox = new TextBox();
+            RISMaxScStatChancetextBox = new TextBox();
+            RISPoisonRecovStatChancetextBox = new TextBox();
+            RISMaxAccStatChancetextBox = new TextBox();
+            RISMpRecovStatChancetextBox = new TextBox();
+            RISMaxAgilStatChancetextBox = new TextBox();
+            RISHpRecovStatChancetextBox = new TextBox();
+            RISMaxHpStatChancetextBox = new TextBox();
+            RISPoisonResistStatChancetextBox = new TextBox();
+            RISMaxMpStatChancetextBox = new TextBox();
+            RISMagicResistStatChancetextBox = new TextBox();
+            RISStrongStatChancetextBox = new TextBox();
+            groupBox4 = new GroupBox();
+            RISCurseChancetextBox = new TextBox();
+            RISSlotChancetextBox = new TextBox();
+            RISLuckChancetextBox = new TextBox();
+            RISAttackSpeedChancetextBox = new TextBox();
+            RISPoisonAttackChancetextBox = new TextBox();
+            RISFreezingChancetextBox = new TextBox();
+            RISCriticalDamageChancetextBox = new TextBox();
+            RISCriticalRateChancetextBox = new TextBox();
+            RISPoisonRecovChancetextBox = new TextBox();
+            RISMpRecovChancetextBox = new TextBox();
+            RISHpRecovChancetextBox = new TextBox();
+            RISPoisonResistChancetextBox = new TextBox();
+            RISMagicResistChancetextBox = new TextBox();
+            RISStrongChancetextBox = new TextBox();
+            RISMaxMpChancetextBox = new TextBox();
+            RISMaxHpChancetextBox = new TextBox();
+            RISMaxAgilChancetextBox = new TextBox();
+            RISMaxAccChancetextBox = new TextBox();
+            RISMaxScChancetextBox = new TextBox();
+            RISMaxMcChancetextBox = new TextBox();
+            RISMaxDcChancetextBox = new TextBox();
+            RISMaxMacChancetextBox = new TextBox();
+            RISMaxAcChancetextBox = new TextBox();
+            RISMaxDuraChancetextBox = new TextBox();
+            label40 = new Label();
+            RISIndexcomboBox = new ComboBox();
+            lblClassStatExample = new Label();
+            lblHeroStatExample = new Label();
+            tabControl1.SuspendLayout();
+            tabPage3.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)classGridView).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)classCapGridView).BeginInit();
+            tabHero.SuspendLayout();
+            panelHeroLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)heroGridView).BeginInit();
+            panelHeroRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)heroCapGridView).BeginInit();
+            tabPage2.SuspendLayout();
+            groupBox2.SuspendLayout();
+            tabPage4.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
+            SuspendLayout();
             // 
             // MagicResistWeigttextbox
             // 
-            this.MagicResistWeigttextbox.Location = new System.Drawing.Point(121, 34);
-            this.MagicResistWeigttextbox.MaxLength = 3;
-            this.MagicResistWeigttextbox.Name = "MagicResistWeigttextbox";
-            this.MagicResistWeigttextbox.Size = new System.Drawing.Size(38, 20);
-            this.MagicResistWeigttextbox.TabIndex = 3;
-            this.MagicResistWeigttextbox.TextChanged += new System.EventHandler(this.MagicResistWeigttextbox_TextChanged);
+            MagicResistWeigttextbox.Location = new Point(167, 42);
+            MagicResistWeigttextbox.Margin = new Padding(4, 4, 4, 4);
+            MagicResistWeigttextbox.MaxLength = 3;
+            MagicResistWeigttextbox.Name = "MagicResistWeigttextbox";
+            MagicResistWeigttextbox.Size = new Size(44, 23);
+            MagicResistWeigttextbox.TabIndex = 3;
+            MagicResistWeigttextbox.TextChanged += MagicResistWeigttextbox_TextChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "MagicResist Weight";
+            label2.AutoSize = true;
+            label2.Location = new Point(18, 48);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(123, 17);
+            label2.TabIndex = 2;
+            label2.Text = "MagicResist Weight";
             // 
             // PoisonResistWeighttextbox
             // 
-            this.PoisonResistWeighttextbox.Location = new System.Drawing.Point(121, 60);
-            this.PoisonResistWeighttextbox.MaxLength = 3;
-            this.PoisonResistWeighttextbox.Name = "PoisonResistWeighttextbox";
-            this.PoisonResistWeighttextbox.Size = new System.Drawing.Size(38, 20);
-            this.PoisonResistWeighttextbox.TabIndex = 7;
-            this.PoisonResistWeighttextbox.TextChanged += new System.EventHandler(this.PoisonResistWeighttextbox_TextChanged);
+            PoisonResistWeighttextbox.Location = new Point(167, 76);
+            PoisonResistWeighttextbox.Margin = new Padding(4, 4, 4, 4);
+            PoisonResistWeighttextbox.MaxLength = 3;
+            PoisonResistWeighttextbox.Name = "PoisonResistWeighttextbox";
+            PoisonResistWeighttextbox.Size = new Size(44, 23);
+            PoisonResistWeighttextbox.TabIndex = 7;
+            PoisonResistWeighttextbox.TextChanged += PoisonResistWeighttextbox_TextChanged;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "PoisonResist Weight";
+            label3.AutoSize = true;
+            label3.Location = new Point(18, 82);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(126, 17);
+            label3.TabIndex = 6;
+            label3.Text = "PoisonResist Weight";
             // 
             // CritialRateWeighttextbox
             // 
-            this.CritialRateWeighttextbox.Location = new System.Drawing.Point(121, 86);
-            this.CritialRateWeighttextbox.MaxLength = 3;
-            this.CritialRateWeighttextbox.Name = "CritialRateWeighttextbox";
-            this.CritialRateWeighttextbox.Size = new System.Drawing.Size(38, 20);
-            this.CritialRateWeighttextbox.TabIndex = 11;
-            this.CritialRateWeighttextbox.TextChanged += new System.EventHandler(this.CritialRateWeighttextbox_TextChanged);
+            CritialRateWeighttextbox.Location = new Point(167, 110);
+            CritialRateWeighttextbox.Margin = new Padding(4, 4, 4, 4);
+            CritialRateWeighttextbox.MaxLength = 3;
+            CritialRateWeighttextbox.Name = "CritialRateWeighttextbox";
+            CritialRateWeighttextbox.Size = new Size(44, 23);
+            CritialRateWeighttextbox.TabIndex = 11;
+            CritialRateWeighttextbox.TextChanged += CritialRateWeighttextbox_TextChanged;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "CriticalRate Weight";
+            label5.AutoSize = true;
+            label5.Location = new Point(18, 116);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(118, 17);
+            label5.TabIndex = 10;
+            label5.Text = "CriticalRate Weight";
             // 
             // CriticalDamagetextbox
             // 
-            this.CriticalDamagetextbox.Location = new System.Drawing.Point(121, 112);
-            this.CriticalDamagetextbox.MaxLength = 3;
-            this.CriticalDamagetextbox.Name = "CriticalDamagetextbox";
-            this.CriticalDamagetextbox.Size = new System.Drawing.Size(38, 20);
-            this.CriticalDamagetextbox.TabIndex = 15;
-            this.CriticalDamagetextbox.TextChanged += new System.EventHandler(this.CriticalDamagetextbox_TextChanged);
+            CriticalDamagetextbox.Location = new Point(167, 144);
+            CriticalDamagetextbox.Margin = new Padding(4, 4, 4, 4);
+            CriticalDamagetextbox.MaxLength = 3;
+            CriticalDamagetextbox.Name = "CriticalDamagetextbox";
+            CriticalDamagetextbox.Size = new Size(44, 23);
+            CriticalDamagetextbox.TabIndex = 15;
+            CriticalDamagetextbox.TextChanged += CriticalDamagetextbox_TextChanged;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "CriticalDmg Weight";
+            label7.AutoSize = true;
+            label7.Location = new Point(18, 150);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(120, 17);
+            label7.TabIndex = 14;
+            label7.Text = "CriticalDmg Weight";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabHero);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(713, 731);
-            this.tabControl1.TabIndex = 16;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabHero);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Location = new Point(14, 16);
+            tabControl1.Margin = new Padding(4, 4, 4, 4);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(832, 956);
+            tabControl1.TabIndex = 16;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(705, 705);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Class";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            tabPage3.Controls.Add(panel2);
+            tabPage3.Controls.Add(panel1);
+            tabPage3.Location = new Point(4, 26);
+            tabPage3.Margin = new Padding(4, 4, 4, 4);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(4, 4, 4, 4);
+            tabPage3.Size = new Size(824, 926);
+            tabPage3.TabIndex = 4;
+            tabPage3.Text = "职业基础";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.classGridView);
-            this.panel2.Controls.Add(this.ClassComboBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 699);
-            this.panel2.TabIndex = 9;
+            panel2.Controls.Add(classGridView);
+            panel2.Controls.Add(ClassComboBox);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(4, 4);
+            panel2.Margin = new Padding(4, 4, 4, 4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(575, 918);
+            panel2.TabIndex = 9;
             // 
             // classGridView
             // 
-            this.classGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.classGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BaseStatType,
-            this.BaseStatFormula,
-            this.BaseStatBase,
-            this.BaseStatGain,
-            this.BaseStatGainRate,
-            this.BaseStatMax});
-            this.classGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.classGridView.Location = new System.Drawing.Point(0, 30);
-            this.classGridView.Name = "classGridView";
-            this.classGridView.Size = new System.Drawing.Size(493, 669);
-            this.classGridView.TabIndex = 0;
-            this.classGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.classGridView_CellValidating);
-            this.classGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.classGridView_CellValueChanged);
-            this.classGridView.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.classGridView_DefaultValuesNeeded);
-            this.classGridView.SelectionChanged += new System.EventHandler(this.classGridView_SelectionChanged);
-            this.classGridView.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.classGridView_UserDeletedRow);
+            classGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            classGridView.Columns.AddRange(new DataGridViewColumn[] { BaseStatType, BaseStatFormula, BaseStatBase, BaseStatGain, BaseStatGainRate, BaseStatMax });
+            classGridView.Dock = DockStyle.Bottom;
+            classGridView.Location = new Point(0, 43);
+            classGridView.Margin = new Padding(4, 4, 4, 4);
+            classGridView.Name = "classGridView";
+            classGridView.Size = new Size(575, 875);
+            classGridView.TabIndex = 0;
+            classGridView.CellValidating += classGridView_CellValidating;
+            classGridView.CellValueChanged += classGridView_CellValueChanged;
+            classGridView.DefaultValuesNeeded += classGridView_DefaultValuesNeeded;
+            classGridView.SelectionChanged += classGridView_SelectionChanged;
+            classGridView.UserDeletedRow += classGridView_UserDeletedRow;
             // 
             // BaseStatType
             // 
-            this.BaseStatType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatType.HeaderText = "Type";
-            this.BaseStatType.Name = "BaseStatType";
-            this.BaseStatType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BaseStatType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            BaseStatType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatType.HeaderText = "Type";
+            BaseStatType.Name = "BaseStatType";
+            BaseStatType.Resizable = DataGridViewTriState.True;
+            BaseStatType.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // BaseStatFormula
             // 
-            this.BaseStatFormula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatFormula.HeaderText = "Formula";
-            this.BaseStatFormula.Name = "BaseStatFormula";
-            this.BaseStatFormula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BaseStatFormula.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            BaseStatFormula.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatFormula.HeaderText = "Formula";
+            BaseStatFormula.Name = "BaseStatFormula";
+            BaseStatFormula.Resizable = DataGridViewTriState.True;
+            BaseStatFormula.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // BaseStatBase
             // 
-            this.BaseStatBase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatBase.HeaderText = "Base";
-            this.BaseStatBase.Name = "BaseStatBase";
+            BaseStatBase.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatBase.HeaderText = "Base";
+            BaseStatBase.Name = "BaseStatBase";
             // 
             // BaseStatGain
             // 
-            this.BaseStatGain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatGain.HeaderText = "Gain";
-            this.BaseStatGain.Name = "BaseStatGain";
+            BaseStatGain.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatGain.HeaderText = "Gain";
+            BaseStatGain.Name = "BaseStatGain";
             // 
             // BaseStatGainRate
             // 
-            this.BaseStatGainRate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatGainRate.HeaderText = "GainRate";
-            this.BaseStatGainRate.Name = "BaseStatGainRate";
+            BaseStatGainRate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatGainRate.HeaderText = "GainRate";
+            BaseStatGainRate.Name = "BaseStatGainRate";
             // 
             // BaseStatMax
             // 
-            this.BaseStatMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BaseStatMax.HeaderText = "Max";
-            this.BaseStatMax.Name = "BaseStatMax";
+            BaseStatMax.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BaseStatMax.HeaderText = "Max";
+            BaseStatMax.Name = "BaseStatMax";
             // 
             // ClassComboBox
             // 
-            this.ClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ClassComboBox.FormattingEnabled = true;
-            this.ClassComboBox.Location = new System.Drawing.Point(3, 3);
-            this.ClassComboBox.Name = "ClassComboBox";
-            this.ClassComboBox.Size = new System.Drawing.Size(92, 21);
-            this.ClassComboBox.TabIndex = 7;
-            this.ClassComboBox.SelectedIndexChanged += new System.EventHandler(this.ClassComboBox_SelectedIndexChanged);
+            ClassComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            ClassComboBox.FormattingEnabled = true;
+            ClassComboBox.Location = new Point(4, 4);
+            ClassComboBox.Margin = new Padding(4, 4, 4, 4);
+            ClassComboBox.Name = "ClassComboBox";
+            ClassComboBox.Size = new Size(107, 25);
+            ClassComboBox.TabIndex = 7;
+            ClassComboBox.SelectedIndexChanged += ClassComboBox_SelectedIndexChanged;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.classCapGridView);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(502, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 699);
-            this.panel1.TabIndex = 8;
+            panel1.Controls.Add(classCapGridView);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(587, 4);
+            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(233, 918);
+            panel1.TabIndex = 8;
             // 
             // classCapGridView
             // 
-            this.classCapGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.classCapGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CapType,
-            this.Value});
-            this.classCapGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.classCapGridView.Location = new System.Drawing.Point(0, 30);
-            this.classCapGridView.Name = "classCapGridView";
-            this.classCapGridView.Size = new System.Drawing.Size(200, 669);
-            this.classCapGridView.TabIndex = 0;
-            this.classCapGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.classCapGridView_CellValidating);
-            this.classCapGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.classCapGridView_CellValueChanged);
-            this.classCapGridView.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.classCapGridView_DefaultValuesNeeded);
-            this.classCapGridView.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.classCapGridView_UserDeletedRow);
+            classCapGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            classCapGridView.Columns.AddRange(new DataGridViewColumn[] { CapType, Value });
+            classCapGridView.Dock = DockStyle.Bottom;
+            classCapGridView.Location = new Point(0, 43);
+            classCapGridView.Margin = new Padding(4, 4, 4, 4);
+            classCapGridView.Name = "classCapGridView";
+            classCapGridView.Size = new Size(233, 875);
+            classCapGridView.TabIndex = 0;
+            classCapGridView.CellValidating += classCapGridView_CellValidating;
+            classCapGridView.CellValueChanged += classCapGridView_CellValueChanged;
+            classCapGridView.DefaultValuesNeeded += classCapGridView_DefaultValuesNeeded;
+            classCapGridView.UserDeletedRow += classCapGridView_UserDeletedRow;
             // 
             // CapType
             // 
-            this.CapType.HeaderText = "Cap Type";
-            this.CapType.Name = "CapType";
+            CapType.HeaderText = "Cap Type";
+            CapType.Name = "CapType";
             // 
             // Value
             // 
-            this.Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Value.HeaderText = "Value";
-            this.Value.Name = "Value";
+            Value.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Value.HeaderText = "Value";
+            Value.Name = "Value";
             // 
             // tabHero
             // 
-            this.tabHero.Controls.Add(this.panelHeroLeft);
-            this.tabHero.Controls.Add(this.panelHeroRight);
-            this.tabHero.Location = new System.Drawing.Point(4, 22);
-            this.tabHero.Name = "tabHero";
-            this.tabHero.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHero.Size = new System.Drawing.Size(705, 705);
-            this.tabHero.TabIndex = 5;
-            this.tabHero.Text = "Hero";
-            this.tabHero.UseVisualStyleBackColor = true;
+            tabHero.Controls.Add(panelHeroLeft);
+            tabHero.Controls.Add(panelHeroRight);
+            tabHero.Location = new Point(4, 26);
+            tabHero.Margin = new Padding(4, 4, 4, 4);
+            tabHero.Name = "tabHero";
+            tabHero.Padding = new Padding(4, 4, 4, 4);
+            tabHero.Size = new Size(824, 926);
+            tabHero.TabIndex = 5;
+            tabHero.Text = "英雄基础";
+            tabHero.UseVisualStyleBackColor = true;
             // 
             // panelHeroLeft
             // 
-            this.panelHeroLeft.Controls.Add(this.heroGridView);
-            this.panelHeroLeft.Controls.Add(this.HeroClassComboBox);
-            this.panelHeroLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelHeroLeft.Location = new System.Drawing.Point(3, 3);
-            this.panelHeroLeft.Name = "panelHeroLeft";
-            this.panelHeroLeft.Size = new System.Drawing.Size(493, 699);
-            this.panelHeroLeft.TabIndex = 10;
+            panelHeroLeft.Controls.Add(heroGridView);
+            panelHeroLeft.Controls.Add(HeroClassComboBox);
+            panelHeroLeft.Dock = DockStyle.Left;
+            panelHeroLeft.Location = new Point(4, 4);
+            panelHeroLeft.Margin = new Padding(4, 4, 4, 4);
+            panelHeroLeft.Name = "panelHeroLeft";
+            panelHeroLeft.Size = new Size(575, 918);
+            panelHeroLeft.TabIndex = 10;
             // 
             // heroGridView
             // 
-            this.heroGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.heroGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HeroBaseStatType,
-            this.HeroBaseStatFormula,
-            this.HeroBaseStatBase,
-            this.HeroBaseStatGain,
-            this.HeroBaseStatGainRate,
-            this.HeroBaseStatMax});
-            this.heroGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.heroGridView.Location = new System.Drawing.Point(0, 30);
-            this.heroGridView.Name = "heroGridView";
-            this.heroGridView.Size = new System.Drawing.Size(493, 669);
-            this.heroGridView.TabIndex = 0;
-            this.heroGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.heroGridView_CellValidating);
-            this.heroGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.heroGridView_CellValueChanged);
-            this.heroGridView.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.heroGridView_DefaultValuesNeeded);
-            this.heroGridView.SelectionChanged += new System.EventHandler(this.heroGridView_SelectionChanged);
-            this.heroGridView.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.heroGridView_UserDeletedRow);
+            heroGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            heroGridView.Columns.AddRange(new DataGridViewColumn[] { HeroBaseStatType, HeroBaseStatFormula, HeroBaseStatBase, HeroBaseStatGain, HeroBaseStatGainRate, HeroBaseStatMax });
+            heroGridView.Dock = DockStyle.Bottom;
+            heroGridView.Location = new Point(0, 43);
+            heroGridView.Margin = new Padding(4, 4, 4, 4);
+            heroGridView.Name = "heroGridView";
+            heroGridView.Size = new Size(575, 875);
+            heroGridView.TabIndex = 0;
+            heroGridView.CellValidating += heroGridView_CellValidating;
+            heroGridView.CellValueChanged += heroGridView_CellValueChanged;
+            heroGridView.DefaultValuesNeeded += heroGridView_DefaultValuesNeeded;
+            heroGridView.SelectionChanged += heroGridView_SelectionChanged;
+            heroGridView.UserDeletedRow += heroGridView_UserDeletedRow;
             // 
             // HeroBaseStatType
             // 
-            this.HeroBaseStatType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatType.HeaderText = "Type";
-            this.HeroBaseStatType.Name = "HeroBaseStatType";
-            this.HeroBaseStatType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HeroBaseStatType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            HeroBaseStatType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatType.HeaderText = "Type";
+            HeroBaseStatType.Name = "HeroBaseStatType";
+            HeroBaseStatType.Resizable = DataGridViewTriState.True;
+            HeroBaseStatType.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // HeroBaseStatFormula
             // 
-            this.HeroBaseStatFormula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatFormula.HeaderText = "Formula";
-            this.HeroBaseStatFormula.Name = "HeroBaseStatFormula";
-            this.HeroBaseStatFormula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HeroBaseStatFormula.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            HeroBaseStatFormula.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatFormula.HeaderText = "Formula";
+            HeroBaseStatFormula.Name = "HeroBaseStatFormula";
+            HeroBaseStatFormula.Resizable = DataGridViewTriState.True;
+            HeroBaseStatFormula.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // HeroBaseStatBase
             // 
-            this.HeroBaseStatBase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatBase.HeaderText = "Base";
-            this.HeroBaseStatBase.Name = "HeroBaseStatBase";
+            HeroBaseStatBase.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatBase.HeaderText = "Base";
+            HeroBaseStatBase.Name = "HeroBaseStatBase";
             // 
             // HeroBaseStatGain
             // 
-            this.HeroBaseStatGain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatGain.HeaderText = "Gain";
-            this.HeroBaseStatGain.Name = "HeroBaseStatGain";
+            HeroBaseStatGain.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatGain.HeaderText = "Gain";
+            HeroBaseStatGain.Name = "HeroBaseStatGain";
             // 
             // HeroBaseStatGainRate
             // 
-            this.HeroBaseStatGainRate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatGainRate.HeaderText = "GainRate";
-            this.HeroBaseStatGainRate.Name = "HeroBaseStatGainRate";
+            HeroBaseStatGainRate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatGainRate.HeaderText = "GainRate";
+            HeroBaseStatGainRate.Name = "HeroBaseStatGainRate";
             // 
             // HeroBaseStatMax
             // 
-            this.HeroBaseStatMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroBaseStatMax.HeaderText = "Max";
-            this.HeroBaseStatMax.Name = "HeroBaseStatMax";
+            HeroBaseStatMax.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroBaseStatMax.HeaderText = "Max";
+            HeroBaseStatMax.Name = "HeroBaseStatMax";
             // 
             // HeroClassComboBox
             // 
-            this.HeroClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.HeroClassComboBox.FormattingEnabled = true;
-            this.HeroClassComboBox.Location = new System.Drawing.Point(3, 3);
-            this.HeroClassComboBox.Name = "HeroClassComboBox";
-            this.HeroClassComboBox.Size = new System.Drawing.Size(92, 21);
-            this.HeroClassComboBox.TabIndex = 7;
-            this.HeroClassComboBox.SelectedIndexChanged += new System.EventHandler(this.HeroClassComboBox_SelectedIndexChanged);
+            HeroClassComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            HeroClassComboBox.FormattingEnabled = true;
+            HeroClassComboBox.Location = new Point(4, 4);
+            HeroClassComboBox.Margin = new Padding(4, 4, 4, 4);
+            HeroClassComboBox.Name = "HeroClassComboBox";
+            HeroClassComboBox.Size = new Size(107, 25);
+            HeroClassComboBox.TabIndex = 7;
+            HeroClassComboBox.SelectedIndexChanged += HeroClassComboBox_SelectedIndexChanged;
             // 
             // panelHeroRight
             // 
-            this.panelHeroRight.Controls.Add(this.heroCapGridView);
-            this.panelHeroRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelHeroRight.Location = new System.Drawing.Point(502, 3);
-            this.panelHeroRight.Name = "panelHeroRight";
-            this.panelHeroRight.Size = new System.Drawing.Size(200, 699);
-            this.panelHeroRight.TabIndex = 9;
+            panelHeroRight.Controls.Add(heroCapGridView);
+            panelHeroRight.Dock = DockStyle.Right;
+            panelHeroRight.Location = new Point(587, 4);
+            panelHeroRight.Margin = new Padding(4, 4, 4, 4);
+            panelHeroRight.Name = "panelHeroRight";
+            panelHeroRight.Size = new Size(233, 918);
+            panelHeroRight.TabIndex = 9;
             // 
             // heroCapGridView
             // 
-            this.heroCapGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.heroCapGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HeroCapType,
-            this.HeroCapValue});
-            this.heroCapGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.heroCapGridView.Location = new System.Drawing.Point(0, 30);
-            this.heroCapGridView.Name = "heroCapGridView";
-            this.heroCapGridView.Size = new System.Drawing.Size(200, 669);
-            this.heroCapGridView.TabIndex = 0;
-            this.heroCapGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.heroCapGridView_CellValidating);
-            this.heroCapGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.heroCapGridView_CellValueChanged);
-            this.heroCapGridView.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.heroCapGridView_DefaultValuesNeeded);
-            this.heroCapGridView.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.heroCapGridView_UserDeletedRow);
+            heroCapGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            heroCapGridView.Columns.AddRange(new DataGridViewColumn[] { HeroCapType, HeroCapValue });
+            heroCapGridView.Dock = DockStyle.Bottom;
+            heroCapGridView.Location = new Point(0, 43);
+            heroCapGridView.Margin = new Padding(4, 4, 4, 4);
+            heroCapGridView.Name = "heroCapGridView";
+            heroCapGridView.Size = new Size(233, 875);
+            heroCapGridView.TabIndex = 0;
+            heroCapGridView.CellValidating += heroCapGridView_CellValidating;
+            heroCapGridView.CellValueChanged += heroCapGridView_CellValueChanged;
+            heroCapGridView.DefaultValuesNeeded += heroCapGridView_DefaultValuesNeeded;
+            heroCapGridView.UserDeletedRow += heroCapGridView_UserDeletedRow;
             // 
             // HeroCapType
             // 
-            this.HeroCapType.HeaderText = "Cap Type";
-            this.HeroCapType.Name = "HeroCapType";
+            HeroCapType.HeaderText = "Cap Type";
+            HeroCapType.Name = "HeroCapType";
             // 
             // HeroCapValue
             // 
-            this.HeroCapValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HeroCapValue.HeaderText = "Value";
-            this.HeroCapValue.Name = "HeroCapValue";
+            HeroCapValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HeroCapValue.HeaderText = "Value";
+            HeroCapValue.Name = "HeroCapValue";
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.ManaRegenWeighttextBox);
-            this.tabPage2.Controls.Add(this.label37);
-            this.tabPage2.Controls.Add(this.HealthRegenWeighttextBox);
-            this.tabPage2.Controls.Add(this.label35);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.PoisonAttackWeighttextbox);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.FreezingWeighttextbox);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.CriticalDamagetextbox);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.MagicResistWeigttextbox);
-            this.tabPage2.Controls.Add(this.CritialRateWeighttextbox);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.PoisonResistWeighttextbox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(705, 705);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Itemstats";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(ManaRegenWeighttextBox);
+            tabPage2.Controls.Add(label37);
+            tabPage2.Controls.Add(HealthRegenWeighttextBox);
+            tabPage2.Controls.Add(label35);
+            tabPage2.Controls.Add(groupBox2);
+            tabPage2.Controls.Add(PoisonAttackWeighttextbox);
+            tabPage2.Controls.Add(label11);
+            tabPage2.Controls.Add(FreezingWeighttextbox);
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(CriticalDamagetextbox);
+            tabPage2.Controls.Add(label7);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(MagicResistWeigttextbox);
+            tabPage2.Controls.Add(CritialRateWeighttextbox);
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(PoisonResistWeighttextbox);
+            tabPage2.Location = new Point(4, 26);
+            tabPage2.Margin = new Padding(4, 4, 4, 4);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(4, 4, 4, 4);
+            tabPage2.Size = new Size(824, 926);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "物品属性";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // ManaRegenWeighttextBox
             // 
-            this.ManaRegenWeighttextBox.Location = new System.Drawing.Point(121, 216);
-            this.ManaRegenWeighttextBox.MaxLength = 3;
-            this.ManaRegenWeighttextBox.Name = "ManaRegenWeighttextBox";
-            this.ManaRegenWeighttextBox.Size = new System.Drawing.Size(38, 20);
-            this.ManaRegenWeighttextBox.TabIndex = 32;
-            this.ManaRegenWeighttextBox.TextChanged += new System.EventHandler(this.ManaRegenWeighttextBox_TextChanged);
+            ManaRegenWeighttextBox.Location = new Point(167, 280);
+            ManaRegenWeighttextBox.Margin = new Padding(4, 4, 4, 4);
+            ManaRegenWeighttextBox.MaxLength = 3;
+            ManaRegenWeighttextBox.Name = "ManaRegenWeighttextBox";
+            ManaRegenWeighttextBox.Size = new Size(44, 23);
+            ManaRegenWeighttextBox.TabIndex = 32;
+            ManaRegenWeighttextBox.TextChanged += ManaRegenWeighttextBox_TextChanged;
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(15, 219);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(95, 13);
-            this.label37.TabIndex = 31;
-            this.label37.Text = "MP Regen Weight";
+            label37.AutoSize = true;
+            label37.Location = new Point(18, 286);
+            label37.Margin = new Padding(4, 0, 4, 0);
+            label37.Name = "label37";
+            label37.Size = new Size(113, 17);
+            label37.TabIndex = 31;
+            label37.Text = "MP Regen Weight";
             // 
             // HealthRegenWeighttextBox
             // 
-            this.HealthRegenWeighttextBox.Location = new System.Drawing.Point(121, 190);
-            this.HealthRegenWeighttextBox.MaxLength = 3;
-            this.HealthRegenWeighttextBox.Name = "HealthRegenWeighttextBox";
-            this.HealthRegenWeighttextBox.Size = new System.Drawing.Size(38, 20);
-            this.HealthRegenWeighttextBox.TabIndex = 28;
-            this.HealthRegenWeighttextBox.TextChanged += new System.EventHandler(this.HealthRegenWeighttextBox_TextChanged);
+            HealthRegenWeighttextBox.Location = new Point(167, 246);
+            HealthRegenWeighttextBox.Margin = new Padding(4, 4, 4, 4);
+            HealthRegenWeighttextBox.MaxLength = 3;
+            HealthRegenWeighttextBox.Name = "HealthRegenWeighttextBox";
+            HealthRegenWeighttextBox.Size = new Size(44, 23);
+            HealthRegenWeighttextBox.TabIndex = 28;
+            HealthRegenWeighttextBox.TextChanged += HealthRegenWeighttextBox_TextChanged;
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(15, 193);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(94, 13);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "HP Regen Weight";
+            label35.AutoSize = true;
+            label35.Location = new Point(18, 252);
+            label35.Margin = new Padding(4, 0, 4, 0);
+            label35.Name = "label35";
+            label35.Size = new Size(110, 17);
+            label35.TabIndex = 27;
+            label35.Text = "HP Regen Weight";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.CanFreezecheckBox);
-            this.groupBox2.Controls.Add(this.CanResistPoisoncheckBox);
-            this.groupBox2.Controls.Add(this.CanResistMagiccheckBox);
-            this.groupBox2.Location = new System.Drawing.Point(394, 10);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(227, 94);
-            this.groupBox2.TabIndex = 24;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pvp only";
+            groupBox2.Controls.Add(CanFreezecheckBox);
+            groupBox2.Controls.Add(CanResistPoisoncheckBox);
+            groupBox2.Controls.Add(CanResistMagiccheckBox);
+            groupBox2.Location = new Point(460, 13);
+            groupBox2.Margin = new Padding(4, 4, 4, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 4, 4, 4);
+            groupBox2.Size = new Size(265, 123);
+            groupBox2.TabIndex = 24;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Pvp only";
             // 
             // CanFreezecheckBox
             // 
-            this.CanFreezecheckBox.AutoSize = true;
-            this.CanFreezecheckBox.Location = new System.Drawing.Point(18, 67);
-            this.CanFreezecheckBox.Name = "CanFreezecheckBox";
-            this.CanFreezecheckBox.Size = new System.Drawing.Size(80, 17);
-            this.CanFreezecheckBox.TabIndex = 2;
-            this.CanFreezecheckBox.Text = "Can Freeze";
-            this.CanFreezecheckBox.UseVisualStyleBackColor = true;
-            this.CanFreezecheckBox.CheckedChanged += new System.EventHandler(this.CanFreezecheckBox_CheckedChanged);
+            CanFreezecheckBox.AutoSize = true;
+            CanFreezecheckBox.Location = new Point(21, 88);
+            CanFreezecheckBox.Margin = new Padding(4, 4, 4, 4);
+            CanFreezecheckBox.Name = "CanFreezecheckBox";
+            CanFreezecheckBox.Size = new Size(91, 21);
+            CanFreezecheckBox.TabIndex = 2;
+            CanFreezecheckBox.Text = "Can Freeze";
+            CanFreezecheckBox.UseVisualStyleBackColor = true;
+            CanFreezecheckBox.CheckedChanged += CanFreezecheckBox_CheckedChanged;
             // 
             // CanResistPoisoncheckBox
             // 
-            this.CanResistPoisoncheckBox.AutoSize = true;
-            this.CanResistPoisoncheckBox.Location = new System.Drawing.Point(18, 44);
-            this.CanResistPoisoncheckBox.Name = "CanResistPoisoncheckBox";
-            this.CanResistPoisoncheckBox.Size = new System.Drawing.Size(112, 17);
-            this.CanResistPoisoncheckBox.TabIndex = 1;
-            this.CanResistPoisoncheckBox.Text = "Can Resist Poison";
-            this.CanResistPoisoncheckBox.UseVisualStyleBackColor = true;
-            this.CanResistPoisoncheckBox.CheckedChanged += new System.EventHandler(this.CanResistPoisoncheckBox_CheckedChanged);
+            CanResistPoisoncheckBox.AutoSize = true;
+            CanResistPoisoncheckBox.Location = new Point(21, 58);
+            CanResistPoisoncheckBox.Margin = new Padding(4, 4, 4, 4);
+            CanResistPoisoncheckBox.Name = "CanResistPoisoncheckBox";
+            CanResistPoisoncheckBox.Size = new Size(130, 21);
+            CanResistPoisoncheckBox.TabIndex = 1;
+            CanResistPoisoncheckBox.Text = "Can Resist Poison";
+            CanResistPoisoncheckBox.UseVisualStyleBackColor = true;
+            CanResistPoisoncheckBox.CheckedChanged += CanResistPoisoncheckBox_CheckedChanged;
             // 
             // CanResistMagiccheckBox
             // 
-            this.CanResistMagiccheckBox.AutoSize = true;
-            this.CanResistMagiccheckBox.Location = new System.Drawing.Point(18, 21);
-            this.CanResistMagiccheckBox.Name = "CanResistMagiccheckBox";
-            this.CanResistMagiccheckBox.Size = new System.Drawing.Size(109, 17);
-            this.CanResistMagiccheckBox.TabIndex = 0;
-            this.CanResistMagiccheckBox.Text = "Can Resist Magic";
-            this.CanResistMagiccheckBox.UseVisualStyleBackColor = true;
-            this.CanResistMagiccheckBox.CheckedChanged += new System.EventHandler(this.CanResistMagiccheckBox_CheckedChanged);
+            CanResistMagiccheckBox.AutoSize = true;
+            CanResistMagiccheckBox.Location = new Point(21, 27);
+            CanResistMagiccheckBox.Margin = new Padding(4, 4, 4, 4);
+            CanResistMagiccheckBox.Name = "CanResistMagiccheckBox";
+            CanResistMagiccheckBox.Size = new Size(127, 21);
+            CanResistMagiccheckBox.TabIndex = 0;
+            CanResistMagiccheckBox.Text = "Can Resist Magic";
+            CanResistMagiccheckBox.UseVisualStyleBackColor = true;
+            CanResistMagiccheckBox.CheckedChanged += CanResistMagiccheckBox_CheckedChanged;
             // 
             // PoisonAttackWeighttextbox
             // 
-            this.PoisonAttackWeighttextbox.Location = new System.Drawing.Point(121, 164);
-            this.PoisonAttackWeighttextbox.MaxLength = 3;
-            this.PoisonAttackWeighttextbox.Name = "PoisonAttackWeighttextbox";
-            this.PoisonAttackWeighttextbox.Size = new System.Drawing.Size(38, 20);
-            this.PoisonAttackWeighttextbox.TabIndex = 23;
-            this.PoisonAttackWeighttextbox.TextChanged += new System.EventHandler(this.PoisonAttackWeighttextbox_TextChanged);
+            PoisonAttackWeighttextbox.Location = new Point(167, 212);
+            PoisonAttackWeighttextbox.Margin = new Padding(4, 4, 4, 4);
+            PoisonAttackWeighttextbox.MaxLength = 3;
+            PoisonAttackWeighttextbox.Name = "PoisonAttackWeighttextbox";
+            PoisonAttackWeighttextbox.Size = new Size(44, 23);
+            PoisonAttackWeighttextbox.TabIndex = 23;
+            PoisonAttackWeighttextbox.TextChanged += PoisonAttackWeighttextbox_TextChanged;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 167);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "PoisonAtk Weight";
+            label11.AutoSize = true;
+            label11.Location = new Point(18, 218);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(111, 17);
+            label11.TabIndex = 22;
+            label11.Text = "PoisonAtk Weight";
             // 
             // FreezingWeighttextbox
             // 
-            this.FreezingWeighttextbox.Location = new System.Drawing.Point(121, 138);
-            this.FreezingWeighttextbox.MaxLength = 3;
-            this.FreezingWeighttextbox.Name = "FreezingWeighttextbox";
-            this.FreezingWeighttextbox.Size = new System.Drawing.Size(38, 20);
-            this.FreezingWeighttextbox.TabIndex = 19;
-            this.FreezingWeighttextbox.TextChanged += new System.EventHandler(this.FreezingWeighttextbox_TextChanged);
+            FreezingWeighttextbox.Location = new Point(167, 178);
+            FreezingWeighttextbox.Margin = new Padding(4, 4, 4, 4);
+            FreezingWeighttextbox.MaxLength = 3;
+            FreezingWeighttextbox.Name = "FreezingWeighttextbox";
+            FreezingWeighttextbox.Size = new Size(44, 23);
+            FreezingWeighttextbox.TabIndex = 19;
+            FreezingWeighttextbox.TextChanged += FreezingWeighttextbox_TextChanged;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Freezing Weight";
+            label10.AutoSize = true;
+            label10.Location = new Point(18, 184);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 17);
+            label10.TabIndex = 18;
+            label10.Text = "Freezing Weight";
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.RISDeleteIndexbutton);
-            this.tabPage4.Controls.Add(this.RISAddIndexbutton);
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Controls.Add(this.label40);
-            this.tabPage4.Controls.Add(this.RISIndexcomboBox);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(705, 705);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Random Item Stats";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            tabPage4.Controls.Add(RISDeleteIndexbutton);
+            tabPage4.Controls.Add(RISAddIndexbutton);
+            tabPage4.Controls.Add(groupBox3);
+            tabPage4.Controls.Add(label40);
+            tabPage4.Controls.Add(RISIndexcomboBox);
+            tabPage4.Location = new Point(4, 26);
+            tabPage4.Margin = new Padding(4, 4, 4, 4);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(4, 4, 4, 4);
+            tabPage4.Size = new Size(824, 926);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "随机物品属性";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // RISDeleteIndexbutton
             // 
-            this.RISDeleteIndexbutton.Location = new System.Drawing.Point(211, 3);
-            this.RISDeleteIndexbutton.Name = "RISDeleteIndexbutton";
-            this.RISDeleteIndexbutton.Size = new System.Drawing.Size(21, 21);
-            this.RISDeleteIndexbutton.TabIndex = 12;
-            this.RISDeleteIndexbutton.Text = "-";
-            this.RISDeleteIndexbutton.UseVisualStyleBackColor = true;
-            this.RISDeleteIndexbutton.Click += new System.EventHandler(this.RISDeleteIndexbutton_Click);
+            RISDeleteIndexbutton.Location = new Point(246, 4);
+            RISDeleteIndexbutton.Margin = new Padding(4, 4, 4, 4);
+            RISDeleteIndexbutton.Name = "RISDeleteIndexbutton";
+            RISDeleteIndexbutton.Size = new Size(24, 27);
+            RISDeleteIndexbutton.TabIndex = 12;
+            RISDeleteIndexbutton.Text = "-";
+            RISDeleteIndexbutton.UseVisualStyleBackColor = true;
+            RISDeleteIndexbutton.Click += RISDeleteIndexbutton_Click;
             // 
             // RISAddIndexbutton
             // 
-            this.RISAddIndexbutton.Location = new System.Drawing.Point(182, 3);
-            this.RISAddIndexbutton.Name = "RISAddIndexbutton";
-            this.RISAddIndexbutton.Size = new System.Drawing.Size(21, 21);
-            this.RISAddIndexbutton.TabIndex = 10;
-            this.RISAddIndexbutton.Text = "+";
-            this.RISAddIndexbutton.UseVisualStyleBackColor = true;
-            this.RISAddIndexbutton.Click += new System.EventHandler(this.RISAddIndexbutton_Click);
+            RISAddIndexbutton.Location = new Point(212, 4);
+            RISAddIndexbutton.Margin = new Padding(4, 4, 4, 4);
+            RISAddIndexbutton.Name = "RISAddIndexbutton";
+            RISAddIndexbutton.Size = new Size(24, 27);
+            RISAddIndexbutton.TabIndex = 10;
+            RISAddIndexbutton.Text = "+";
+            RISAddIndexbutton.UseVisualStyleBackColor = true;
+            RISAddIndexbutton.Click += RISAddIndexbutton_Click;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label64);
-            this.groupBox3.Controls.Add(this.label63);
-            this.groupBox3.Controls.Add(this.label62);
-            this.groupBox3.Controls.Add(this.label61);
-            this.groupBox3.Controls.Add(this.label60);
-            this.groupBox3.Controls.Add(this.label59);
-            this.groupBox3.Controls.Add(this.label58);
-            this.groupBox3.Controls.Add(this.label57);
-            this.groupBox3.Controls.Add(this.label56);
-            this.groupBox3.Controls.Add(this.label55);
-            this.groupBox3.Controls.Add(this.label54);
-            this.groupBox3.Controls.Add(this.label53);
-            this.groupBox3.Controls.Add(this.label52);
-            this.groupBox3.Controls.Add(this.label51);
-            this.groupBox3.Controls.Add(this.label50);
-            this.groupBox3.Controls.Add(this.label49);
-            this.groupBox3.Controls.Add(this.label48);
-            this.groupBox3.Controls.Add(this.label47);
-            this.groupBox3.Controls.Add(this.label46);
-            this.groupBox3.Controls.Add(this.label45);
-            this.groupBox3.Controls.Add(this.label44);
-            this.groupBox3.Controls.Add(this.label43);
-            this.groupBox3.Controls.Add(this.label42);
-            this.groupBox3.Controls.Add(this.label41);
-            this.groupBox3.Controls.Add(this.groupBox6);
-            this.groupBox3.Controls.Add(this.groupBox5);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Location = new System.Drawing.Point(6, 30);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(600, 694);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Random settings";
+            groupBox3.Controls.Add(label64);
+            groupBox3.Controls.Add(label63);
+            groupBox3.Controls.Add(label62);
+            groupBox3.Controls.Add(label61);
+            groupBox3.Controls.Add(label60);
+            groupBox3.Controls.Add(label59);
+            groupBox3.Controls.Add(label58);
+            groupBox3.Controls.Add(label57);
+            groupBox3.Controls.Add(label56);
+            groupBox3.Controls.Add(label55);
+            groupBox3.Controls.Add(label54);
+            groupBox3.Controls.Add(label53);
+            groupBox3.Controls.Add(label52);
+            groupBox3.Controls.Add(label51);
+            groupBox3.Controls.Add(label50);
+            groupBox3.Controls.Add(label49);
+            groupBox3.Controls.Add(label48);
+            groupBox3.Controls.Add(label47);
+            groupBox3.Controls.Add(label46);
+            groupBox3.Controls.Add(label45);
+            groupBox3.Controls.Add(label44);
+            groupBox3.Controls.Add(label43);
+            groupBox3.Controls.Add(label42);
+            groupBox3.Controls.Add(label41);
+            groupBox3.Controls.Add(groupBox6);
+            groupBox3.Controls.Add(groupBox5);
+            groupBox3.Controls.Add(groupBox4);
+            groupBox3.Location = new Point(7, 39);
+            groupBox3.Margin = new Padding(4, 4, 4, 4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(4, 4, 4, 4);
+            groupBox3.Size = new Size(700, 908);
+            groupBox3.TabIndex = 9;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Random settings";
             // 
             // label64
             // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(6, 640);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(30, 13);
-            this.label64.TabIndex = 40;
-            this.label64.Text = "Slots";
+            label64.AutoSize = true;
+            label64.Location = new Point(7, 837);
+            label64.Margin = new Padding(4, 0, 4, 0);
+            label64.Name = "label64";
+            label64.Size = new Size(36, 17);
+            label64.TabIndex = 40;
+            label64.Text = "Slots";
             // 
             // label63
             // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(6, 614);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(76, 13);
-            this.label63.TabIndex = 39;
-            this.label63.Text = "Curse chance:";
+            label63.AutoSize = true;
+            label63.Location = new Point(7, 803);
+            label63.Margin = new Padding(4, 0, 4, 0);
+            label63.Name = "label63";
+            label63.Size = new Size(88, 17);
+            label63.TabIndex = 39;
+            label63.Text = "Curse chance:";
             // 
             // label62
             // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(6, 588);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(31, 13);
-            this.label62.TabIndex = 38;
-            this.label62.Text = "Luck";
+            label62.AutoSize = true;
+            label62.Location = new Point(7, 769);
+            label62.Margin = new Padding(4, 0, 4, 0);
+            label62.Name = "label62";
+            label62.Size = new Size(34, 17);
+            label62.TabIndex = 38;
+            label62.Text = "Luck";
             // 
             // label61
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(6, 562);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(72, 13);
-            this.label61.TabIndex = 37;
-            this.label61.Text = "Attack Speed";
+            label61.AutoSize = true;
+            label61.Location = new Point(7, 735);
+            label61.Margin = new Padding(4, 0, 4, 0);
+            label61.Name = "label61";
+            label61.Size = new Size(85, 17);
+            label61.TabIndex = 37;
+            label61.Text = "Attack Speed";
             // 
             // label60
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(6, 536);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(73, 13);
-            this.label60.TabIndex = 36;
-            this.label60.Text = "Poison Attack";
+            label60.AutoSize = true;
+            label60.Location = new Point(7, 701);
+            label60.Margin = new Padding(4, 0, 4, 0);
+            label60.Name = "label60";
+            label60.Size = new Size(87, 17);
+            label60.TabIndex = 36;
+            label60.Text = "Poison Attack";
             // 
             // label59
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(6, 510);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(47, 13);
-            this.label59.TabIndex = 35;
-            this.label59.Text = "Freezing";
+            label59.AutoSize = true;
+            label59.Location = new Point(7, 667);
+            label59.Margin = new Padding(4, 0, 4, 0);
+            label59.Name = "label59";
+            label59.Size = new Size(57, 17);
+            label59.TabIndex = 35;
+            label59.Text = "Freezing";
             // 
             // label58
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(6, 484);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(81, 13);
-            this.label58.TabIndex = 34;
-            this.label58.Text = "Critical Damage";
+            label58.AutoSize = true;
+            label58.Location = new Point(7, 633);
+            label58.Margin = new Padding(4, 0, 4, 0);
+            label58.Name = "label58";
+            label58.Size = new Size(100, 17);
+            label58.TabIndex = 34;
+            label58.Text = "Critical Damage";
             // 
             // label57
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(6, 458);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(61, 13);
-            this.label57.TabIndex = 33;
-            this.label57.Text = "CriticalRate";
+            label57.AutoSize = true;
+            label57.Location = new Point(7, 599);
+            label57.Margin = new Padding(4, 0, 4, 0);
+            label57.Name = "label57";
+            label57.Size = new Size(73, 17);
+            label57.TabIndex = 33;
+            label57.Text = "CriticalRate";
             // 
             // label56
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(6, 432);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(88, 13);
-            this.label56.TabIndex = 32;
-            this.label56.Text = "Poison Recovery";
+            label56.AutoSize = true;
+            label56.Location = new Point(7, 565);
+            label56.Margin = new Padding(4, 0, 4, 0);
+            label56.Name = "label56";
+            label56.Size = new Size(104, 17);
+            label56.TabIndex = 32;
+            label56.Text = "Poison Recovery";
             // 
             // label55
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(6, 406);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(83, 13);
-            this.label55.TabIndex = 31;
-            this.label55.Text = "Mana Recovery";
+            label55.AutoSize = true;
+            label55.Location = new Point(7, 531);
+            label55.Margin = new Padding(4, 0, 4, 0);
+            label55.Name = "label55";
+            label55.Size = new Size(98, 17);
+            label55.TabIndex = 31;
+            label55.Text = "Mana Recovery";
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(6, 380);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(87, 13);
-            this.label54.TabIndex = 30;
-            this.label54.Text = "Health Recovery";
+            label54.AutoSize = true;
+            label54.Location = new Point(7, 497);
+            label54.Margin = new Padding(4, 0, 4, 0);
+            label54.Name = "label54";
+            label54.Size = new Size(102, 17);
+            label54.TabIndex = 30;
+            label54.Text = "Health Recovery";
             // 
             // label53
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(6, 354);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(71, 13);
-            this.label53.TabIndex = 29;
-            this.label53.Text = "Poison Resist";
+            label53.AutoSize = true;
+            label53.Location = new Point(7, 463);
+            label53.Margin = new Padding(4, 0, 4, 0);
+            label53.Name = "label53";
+            label53.Size = new Size(85, 17);
+            label53.TabIndex = 29;
+            label53.Text = "Poison Resist";
             // 
             // label52
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(6, 328);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(68, 13);
-            this.label52.TabIndex = 28;
-            this.label52.Text = "Magic Resist";
+            label52.AutoSize = true;
+            label52.Location = new Point(7, 429);
+            label52.Margin = new Padding(4, 0, 4, 0);
+            label52.Name = "label52";
+            label52.Size = new Size(82, 17);
+            label52.TabIndex = 28;
+            label52.Text = "Magic Resist";
             // 
             // label51
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(6, 302);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(38, 13);
-            this.label51.TabIndex = 27;
-            this.label51.Text = "Strong";
+            label51.AutoSize = true;
+            label51.Location = new Point(7, 395);
+            label51.Margin = new Padding(4, 0, 4, 0);
+            label51.Name = "label51";
+            label51.Size = new Size(47, 17);
+            label51.TabIndex = 27;
+            label51.Text = "Strong";
             // 
             // label50
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(6, 276);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(45, 13);
-            this.label50.TabIndex = 26;
-            this.label50.Text = "Max Mp";
+            label50.AutoSize = true;
+            label50.Location = new Point(7, 361);
+            label50.Margin = new Padding(4, 0, 4, 0);
+            label50.Name = "label50";
+            label50.Size = new Size(57, 17);
+            label50.TabIndex = 26;
+            label50.Text = "Max Mp";
             // 
             // label49
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(6, 250);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(44, 13);
-            this.label49.TabIndex = 25;
-            this.label49.Text = "Max Hp";
+            label49.AutoSize = true;
+            label49.Location = new Point(7, 327);
+            label49.Margin = new Padding(4, 0, 4, 0);
+            label49.Name = "label49";
+            label49.Size = new Size(54, 17);
+            label49.TabIndex = 25;
+            label49.Text = "Max Hp";
             // 
             // label48
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(6, 224);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(57, 13);
-            this.label48.TabIndex = 24;
-            this.label48.Text = "Max Agility";
+            label48.AutoSize = true;
+            label48.Location = new Point(7, 293);
+            label48.Margin = new Padding(4, 0, 4, 0);
+            label48.Name = "label48";
+            label48.Size = new Size(72, 17);
+            label48.TabIndex = 24;
+            label48.Text = "Max Agility";
             // 
             // label47
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(6, 198);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(75, 13);
-            this.label47.TabIndex = 23;
-            this.label47.Text = "Max Accuracy";
+            label47.AutoSize = true;
+            label47.Location = new Point(7, 259);
+            label47.Margin = new Padding(4, 0, 4, 0);
+            label47.Name = "label47";
+            label47.Size = new Size(88, 17);
+            label47.TabIndex = 23;
+            label47.Text = "Max Accuracy";
             // 
             // label46
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(6, 172);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(43, 13);
-            this.label46.TabIndex = 22;
-            this.label46.Text = "Max Sc";
+            label46.AutoSize = true;
+            label46.Location = new Point(7, 225);
+            label46.Margin = new Padding(4, 0, 4, 0);
+            label46.Name = "label46";
+            label46.Size = new Size(50, 17);
+            label46.TabIndex = 22;
+            label46.Text = "Max Sc";
             // 
             // label45
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 146);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(45, 13);
-            this.label45.TabIndex = 21;
-            this.label45.Text = "Max Mc";
+            label45.AutoSize = true;
+            label45.Location = new Point(7, 191);
+            label45.Margin = new Padding(4, 0, 4, 0);
+            label45.Name = "label45";
+            label45.Size = new Size(55, 17);
+            label45.TabIndex = 21;
+            label45.Text = "Max Mc";
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(6, 120);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(44, 13);
-            this.label44.TabIndex = 20;
-            this.label44.Text = "Max Dc";
+            label44.AutoSize = true;
+            label44.Location = new Point(7, 157);
+            label44.Margin = new Padding(4, 0, 4, 0);
+            label44.Name = "label44";
+            label44.Size = new Size(52, 17);
+            label44.TabIndex = 20;
+            label44.Text = "Max Dc";
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(6, 98);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(51, 13);
-            this.label43.TabIndex = 19;
-            this.label43.Text = "Max Mac";
+            label43.AutoSize = true;
+            label43.Location = new Point(7, 128);
+            label43.Margin = new Padding(4, 0, 4, 0);
+            label43.Name = "label43";
+            label43.Size = new Size(62, 17);
+            label43.TabIndex = 19;
+            label43.Text = "Max Mac";
             // 
             // label42
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 68);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(43, 13);
-            this.label42.TabIndex = 18;
-            this.label42.Text = "Max Ac";
+            label42.AutoSize = true;
+            label42.Location = new Point(7, 89);
+            label42.Margin = new Padding(4, 0, 4, 0);
+            label42.Name = "label42";
+            label42.Size = new Size(51, 17);
+            label42.TabIndex = 18;
+            label42.Text = "Max Ac";
             // 
             // label41
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 42);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(73, 13);
-            this.label41.TabIndex = 17;
-            this.label41.Text = "Max Durability";
+            label41.AutoSize = true;
+            label41.Location = new Point(7, 55);
+            label41.Margin = new Padding(4, 0, 4, 0);
+            label41.Name = "label41";
+            label41.Size = new Size(92, 17);
+            label41.TabIndex = 17;
+            label41.Text = "Max Durability";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.RISSlotMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISLuckMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISAttackSpeedMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISPoisonAttackMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISFreezingMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISCriticalDamageMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISCriticalRateMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISPoisonRecovMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMpRecovMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISHpRecovMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISPoisonResistMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMagicResistMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISStrongMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxMpMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxHpMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxAgilMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxAccMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxScMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxMcMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxDcMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxMacMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxAcMaxStattextBox);
-            this.groupBox6.Controls.Add(this.RISMaxDuraMaxStattextBox);
-            this.groupBox6.Location = new System.Drawing.Point(347, 19);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(95, 648);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Maximum Stats";
+            groupBox6.Controls.Add(RISSlotMaxStattextBox);
+            groupBox6.Controls.Add(RISLuckMaxStattextBox);
+            groupBox6.Controls.Add(RISAttackSpeedMaxStattextBox);
+            groupBox6.Controls.Add(RISPoisonAttackMaxStattextBox);
+            groupBox6.Controls.Add(RISFreezingMaxStattextBox);
+            groupBox6.Controls.Add(RISCriticalDamageMaxStattextBox);
+            groupBox6.Controls.Add(RISCriticalRateMaxStattextBox);
+            groupBox6.Controls.Add(RISPoisonRecovMaxStattextBox);
+            groupBox6.Controls.Add(RISMpRecovMaxStattextBox);
+            groupBox6.Controls.Add(RISHpRecovMaxStattextBox);
+            groupBox6.Controls.Add(RISPoisonResistMaxStattextBox);
+            groupBox6.Controls.Add(RISMagicResistMaxStattextBox);
+            groupBox6.Controls.Add(RISStrongMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxMpMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxHpMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxAgilMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxAccMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxScMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxMcMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxDcMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxMacMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxAcMaxStattextBox);
+            groupBox6.Controls.Add(RISMaxDuraMaxStattextBox);
+            groupBox6.Location = new Point(405, 25);
+            groupBox6.Margin = new Padding(4, 4, 4, 4);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Padding = new Padding(4, 4, 4, 4);
+            groupBox6.Size = new Size(111, 847);
+            groupBox6.TabIndex = 3;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "最大属性";
             // 
             // RISSlotMaxStattextBox
             // 
-            this.RISSlotMaxStattextBox.Location = new System.Drawing.Point(21, 618);
-            this.RISSlotMaxStattextBox.Name = "RISSlotMaxStattextBox";
-            this.RISSlotMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISSlotMaxStattextBox.TabIndex = 53;
-            this.RISSlotMaxStattextBox.TextChanged += new System.EventHandler(this.RISSlotMaxStattextBox_TextChanged);
+            RISSlotMaxStattextBox.Location = new Point(24, 808);
+            RISSlotMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISSlotMaxStattextBox.Name = "RISSlotMaxStattextBox";
+            RISSlotMaxStattextBox.Size = new Size(44, 23);
+            RISSlotMaxStattextBox.TabIndex = 53;
+            RISSlotMaxStattextBox.TextChanged += RISSlotMaxStattextBox_TextChanged;
             // 
             // RISLuckMaxStattextBox
             // 
-            this.RISLuckMaxStattextBox.Location = new System.Drawing.Point(21, 566);
-            this.RISLuckMaxStattextBox.MaxLength = 3;
-            this.RISLuckMaxStattextBox.Name = "RISLuckMaxStattextBox";
-            this.RISLuckMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISLuckMaxStattextBox.TabIndex = 52;
-            this.RISLuckMaxStattextBox.TextChanged += new System.EventHandler(this.RISLuckMaxStattextBox_TextChanged);
+            RISLuckMaxStattextBox.Location = new Point(24, 740);
+            RISLuckMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISLuckMaxStattextBox.MaxLength = 3;
+            RISLuckMaxStattextBox.Name = "RISLuckMaxStattextBox";
+            RISLuckMaxStattextBox.Size = new Size(44, 23);
+            RISLuckMaxStattextBox.TabIndex = 52;
+            RISLuckMaxStattextBox.TextChanged += RISLuckMaxStattextBox_TextChanged;
             // 
             // RISAttackSpeedMaxStattextBox
             // 
-            this.RISAttackSpeedMaxStattextBox.Location = new System.Drawing.Point(21, 540);
-            this.RISAttackSpeedMaxStattextBox.MaxLength = 3;
-            this.RISAttackSpeedMaxStattextBox.Name = "RISAttackSpeedMaxStattextBox";
-            this.RISAttackSpeedMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISAttackSpeedMaxStattextBox.TabIndex = 51;
-            this.RISAttackSpeedMaxStattextBox.TextChanged += new System.EventHandler(this.RISAttackSpeedMaxStattextBox_TextChanged);
+            RISAttackSpeedMaxStattextBox.Location = new Point(24, 706);
+            RISAttackSpeedMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISAttackSpeedMaxStattextBox.MaxLength = 3;
+            RISAttackSpeedMaxStattextBox.Name = "RISAttackSpeedMaxStattextBox";
+            RISAttackSpeedMaxStattextBox.Size = new Size(44, 23);
+            RISAttackSpeedMaxStattextBox.TabIndex = 51;
+            RISAttackSpeedMaxStattextBox.TextChanged += RISAttackSpeedMaxStattextBox_TextChanged;
             // 
             // RISPoisonAttackMaxStattextBox
             // 
-            this.RISPoisonAttackMaxStattextBox.Location = new System.Drawing.Point(21, 514);
-            this.RISPoisonAttackMaxStattextBox.MaxLength = 3;
-            this.RISPoisonAttackMaxStattextBox.Name = "RISPoisonAttackMaxStattextBox";
-            this.RISPoisonAttackMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonAttackMaxStattextBox.TabIndex = 50;
-            this.RISPoisonAttackMaxStattextBox.TextChanged += new System.EventHandler(this.RISPoisonAttackMaxStattextBox_TextChanged);
+            RISPoisonAttackMaxStattextBox.Location = new Point(24, 672);
+            RISPoisonAttackMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonAttackMaxStattextBox.MaxLength = 3;
+            RISPoisonAttackMaxStattextBox.Name = "RISPoisonAttackMaxStattextBox";
+            RISPoisonAttackMaxStattextBox.Size = new Size(44, 23);
+            RISPoisonAttackMaxStattextBox.TabIndex = 50;
+            RISPoisonAttackMaxStattextBox.TextChanged += RISPoisonAttackMaxStattextBox_TextChanged;
             // 
             // RISFreezingMaxStattextBox
             // 
-            this.RISFreezingMaxStattextBox.Location = new System.Drawing.Point(21, 488);
-            this.RISFreezingMaxStattextBox.MaxLength = 3;
-            this.RISFreezingMaxStattextBox.Name = "RISFreezingMaxStattextBox";
-            this.RISFreezingMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISFreezingMaxStattextBox.TabIndex = 49;
-            this.RISFreezingMaxStattextBox.TextChanged += new System.EventHandler(this.RISFreezingMaxStattextBox_TextChanged);
+            RISFreezingMaxStattextBox.Location = new Point(24, 638);
+            RISFreezingMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISFreezingMaxStattextBox.MaxLength = 3;
+            RISFreezingMaxStattextBox.Name = "RISFreezingMaxStattextBox";
+            RISFreezingMaxStattextBox.Size = new Size(44, 23);
+            RISFreezingMaxStattextBox.TabIndex = 49;
+            RISFreezingMaxStattextBox.TextChanged += RISFreezingMaxStattextBox_TextChanged;
             // 
             // RISCriticalDamageMaxStattextBox
             // 
-            this.RISCriticalDamageMaxStattextBox.Location = new System.Drawing.Point(21, 462);
-            this.RISCriticalDamageMaxStattextBox.MaxLength = 3;
-            this.RISCriticalDamageMaxStattextBox.Name = "RISCriticalDamageMaxStattextBox";
-            this.RISCriticalDamageMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalDamageMaxStattextBox.TabIndex = 48;
-            this.RISCriticalDamageMaxStattextBox.TextChanged += new System.EventHandler(this.RISCriticalDamageMaxStattextBox_TextChanged);
+            RISCriticalDamageMaxStattextBox.Location = new Point(24, 604);
+            RISCriticalDamageMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalDamageMaxStattextBox.MaxLength = 3;
+            RISCriticalDamageMaxStattextBox.Name = "RISCriticalDamageMaxStattextBox";
+            RISCriticalDamageMaxStattextBox.Size = new Size(44, 23);
+            RISCriticalDamageMaxStattextBox.TabIndex = 48;
+            RISCriticalDamageMaxStattextBox.TextChanged += RISCriticalDamageMaxStattextBox_TextChanged;
             // 
             // RISCriticalRateMaxStattextBox
             // 
-            this.RISCriticalRateMaxStattextBox.Location = new System.Drawing.Point(21, 436);
-            this.RISCriticalRateMaxStattextBox.MaxLength = 3;
-            this.RISCriticalRateMaxStattextBox.Name = "RISCriticalRateMaxStattextBox";
-            this.RISCriticalRateMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalRateMaxStattextBox.TabIndex = 47;
-            this.RISCriticalRateMaxStattextBox.TextChanged += new System.EventHandler(this.RISCriticalRateMaxStattextBox_TextChanged);
+            RISCriticalRateMaxStattextBox.Location = new Point(24, 570);
+            RISCriticalRateMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalRateMaxStattextBox.MaxLength = 3;
+            RISCriticalRateMaxStattextBox.Name = "RISCriticalRateMaxStattextBox";
+            RISCriticalRateMaxStattextBox.Size = new Size(44, 23);
+            RISCriticalRateMaxStattextBox.TabIndex = 47;
+            RISCriticalRateMaxStattextBox.TextChanged += RISCriticalRateMaxStattextBox_TextChanged;
             // 
             // RISPoisonRecovMaxStattextBox
             // 
-            this.RISPoisonRecovMaxStattextBox.Location = new System.Drawing.Point(21, 410);
-            this.RISPoisonRecovMaxStattextBox.MaxLength = 3;
-            this.RISPoisonRecovMaxStattextBox.Name = "RISPoisonRecovMaxStattextBox";
-            this.RISPoisonRecovMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonRecovMaxStattextBox.TabIndex = 46;
-            this.RISPoisonRecovMaxStattextBox.TextChanged += new System.EventHandler(this.RISPoisonRecovMaxStattextBox_TextChanged);
+            RISPoisonRecovMaxStattextBox.Location = new Point(24, 536);
+            RISPoisonRecovMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonRecovMaxStattextBox.MaxLength = 3;
+            RISPoisonRecovMaxStattextBox.Name = "RISPoisonRecovMaxStattextBox";
+            RISPoisonRecovMaxStattextBox.Size = new Size(44, 23);
+            RISPoisonRecovMaxStattextBox.TabIndex = 46;
+            RISPoisonRecovMaxStattextBox.TextChanged += RISPoisonRecovMaxStattextBox_TextChanged;
             // 
             // RISMpRecovMaxStattextBox
             // 
-            this.RISMpRecovMaxStattextBox.Location = new System.Drawing.Point(21, 384);
-            this.RISMpRecovMaxStattextBox.MaxLength = 3;
-            this.RISMpRecovMaxStattextBox.Name = "RISMpRecovMaxStattextBox";
-            this.RISMpRecovMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMpRecovMaxStattextBox.TabIndex = 45;
-            this.RISMpRecovMaxStattextBox.TextChanged += new System.EventHandler(this.RISMpRecovMaxStattextBox_TextChanged);
+            RISMpRecovMaxStattextBox.Location = new Point(24, 502);
+            RISMpRecovMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMpRecovMaxStattextBox.MaxLength = 3;
+            RISMpRecovMaxStattextBox.Name = "RISMpRecovMaxStattextBox";
+            RISMpRecovMaxStattextBox.Size = new Size(44, 23);
+            RISMpRecovMaxStattextBox.TabIndex = 45;
+            RISMpRecovMaxStattextBox.TextChanged += RISMpRecovMaxStattextBox_TextChanged;
             // 
             // RISHpRecovMaxStattextBox
             // 
-            this.RISHpRecovMaxStattextBox.Location = new System.Drawing.Point(21, 358);
-            this.RISHpRecovMaxStattextBox.MaxLength = 3;
-            this.RISHpRecovMaxStattextBox.Name = "RISHpRecovMaxStattextBox";
-            this.RISHpRecovMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISHpRecovMaxStattextBox.TabIndex = 44;
-            this.RISHpRecovMaxStattextBox.TextChanged += new System.EventHandler(this.RISHpRecovMaxStattextBox_TextChanged);
+            RISHpRecovMaxStattextBox.Location = new Point(24, 468);
+            RISHpRecovMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISHpRecovMaxStattextBox.MaxLength = 3;
+            RISHpRecovMaxStattextBox.Name = "RISHpRecovMaxStattextBox";
+            RISHpRecovMaxStattextBox.Size = new Size(44, 23);
+            RISHpRecovMaxStattextBox.TabIndex = 44;
+            RISHpRecovMaxStattextBox.TextChanged += RISHpRecovMaxStattextBox_TextChanged;
             // 
             // RISPoisonResistMaxStattextBox
             // 
-            this.RISPoisonResistMaxStattextBox.Location = new System.Drawing.Point(21, 332);
-            this.RISPoisonResistMaxStattextBox.MaxLength = 3;
-            this.RISPoisonResistMaxStattextBox.Name = "RISPoisonResistMaxStattextBox";
-            this.RISPoisonResistMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonResistMaxStattextBox.TabIndex = 43;
-            this.RISPoisonResistMaxStattextBox.TextChanged += new System.EventHandler(this.RISPoisonResistMaxStattextBox_TextChanged);
+            RISPoisonResistMaxStattextBox.Location = new Point(24, 434);
+            RISPoisonResistMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonResistMaxStattextBox.MaxLength = 3;
+            RISPoisonResistMaxStattextBox.Name = "RISPoisonResistMaxStattextBox";
+            RISPoisonResistMaxStattextBox.Size = new Size(44, 23);
+            RISPoisonResistMaxStattextBox.TabIndex = 43;
+            RISPoisonResistMaxStattextBox.TextChanged += RISPoisonResistMaxStattextBox_TextChanged;
             // 
             // RISMagicResistMaxStattextBox
             // 
-            this.RISMagicResistMaxStattextBox.Location = new System.Drawing.Point(21, 306);
-            this.RISMagicResistMaxStattextBox.MaxLength = 3;
-            this.RISMagicResistMaxStattextBox.Name = "RISMagicResistMaxStattextBox";
-            this.RISMagicResistMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMagicResistMaxStattextBox.TabIndex = 42;
-            this.RISMagicResistMaxStattextBox.TextChanged += new System.EventHandler(this.RISMagicResistMaxStattextBox_TextChanged);
+            RISMagicResistMaxStattextBox.Location = new Point(24, 400);
+            RISMagicResistMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMagicResistMaxStattextBox.MaxLength = 3;
+            RISMagicResistMaxStattextBox.Name = "RISMagicResistMaxStattextBox";
+            RISMagicResistMaxStattextBox.Size = new Size(44, 23);
+            RISMagicResistMaxStattextBox.TabIndex = 42;
+            RISMagicResistMaxStattextBox.TextChanged += RISMagicResistMaxStattextBox_TextChanged;
             // 
             // RISStrongMaxStattextBox
             // 
-            this.RISStrongMaxStattextBox.Location = new System.Drawing.Point(21, 280);
-            this.RISStrongMaxStattextBox.MaxLength = 3;
-            this.RISStrongMaxStattextBox.Name = "RISStrongMaxStattextBox";
-            this.RISStrongMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISStrongMaxStattextBox.TabIndex = 41;
-            this.RISStrongMaxStattextBox.TextChanged += new System.EventHandler(this.RISStrongMaxStattextBox_TextChanged);
+            RISStrongMaxStattextBox.Location = new Point(24, 366);
+            RISStrongMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISStrongMaxStattextBox.MaxLength = 3;
+            RISStrongMaxStattextBox.Name = "RISStrongMaxStattextBox";
+            RISStrongMaxStattextBox.Size = new Size(44, 23);
+            RISStrongMaxStattextBox.TabIndex = 41;
+            RISStrongMaxStattextBox.TextChanged += RISStrongMaxStattextBox_TextChanged;
             // 
             // RISMaxMpMaxStattextBox
             // 
-            this.RISMaxMpMaxStattextBox.Location = new System.Drawing.Point(21, 254);
-            this.RISMaxMpMaxStattextBox.MaxLength = 3;
-            this.RISMaxMpMaxStattextBox.Name = "RISMaxMpMaxStattextBox";
-            this.RISMaxMpMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMpMaxStattextBox.TabIndex = 40;
-            this.RISMaxMpMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxMpMaxStattextBox_TextChanged);
+            RISMaxMpMaxStattextBox.Location = new Point(24, 332);
+            RISMaxMpMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMpMaxStattextBox.MaxLength = 3;
+            RISMaxMpMaxStattextBox.Name = "RISMaxMpMaxStattextBox";
+            RISMaxMpMaxStattextBox.Size = new Size(44, 23);
+            RISMaxMpMaxStattextBox.TabIndex = 40;
+            RISMaxMpMaxStattextBox.TextChanged += RISMaxMpMaxStattextBox_TextChanged;
             // 
             // RISMaxHpMaxStattextBox
             // 
-            this.RISMaxHpMaxStattextBox.Location = new System.Drawing.Point(21, 228);
-            this.RISMaxHpMaxStattextBox.MaxLength = 3;
-            this.RISMaxHpMaxStattextBox.Name = "RISMaxHpMaxStattextBox";
-            this.RISMaxHpMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxHpMaxStattextBox.TabIndex = 39;
-            this.RISMaxHpMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxHpMaxStattextBox_TextChanged);
+            RISMaxHpMaxStattextBox.Location = new Point(24, 298);
+            RISMaxHpMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxHpMaxStattextBox.MaxLength = 3;
+            RISMaxHpMaxStattextBox.Name = "RISMaxHpMaxStattextBox";
+            RISMaxHpMaxStattextBox.Size = new Size(44, 23);
+            RISMaxHpMaxStattextBox.TabIndex = 39;
+            RISMaxHpMaxStattextBox.TextChanged += RISMaxHpMaxStattextBox_TextChanged;
             // 
             // RISMaxAgilMaxStattextBox
             // 
-            this.RISMaxAgilMaxStattextBox.Location = new System.Drawing.Point(21, 202);
-            this.RISMaxAgilMaxStattextBox.MaxLength = 3;
-            this.RISMaxAgilMaxStattextBox.Name = "RISMaxAgilMaxStattextBox";
-            this.RISMaxAgilMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAgilMaxStattextBox.TabIndex = 38;
-            this.RISMaxAgilMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxAgilMaxStattextBox_TextChanged);
+            RISMaxAgilMaxStattextBox.Location = new Point(24, 264);
+            RISMaxAgilMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAgilMaxStattextBox.MaxLength = 3;
+            RISMaxAgilMaxStattextBox.Name = "RISMaxAgilMaxStattextBox";
+            RISMaxAgilMaxStattextBox.Size = new Size(44, 23);
+            RISMaxAgilMaxStattextBox.TabIndex = 38;
+            RISMaxAgilMaxStattextBox.TextChanged += RISMaxAgilMaxStattextBox_TextChanged;
             // 
             // RISMaxAccMaxStattextBox
             // 
-            this.RISMaxAccMaxStattextBox.Location = new System.Drawing.Point(21, 176);
-            this.RISMaxAccMaxStattextBox.MaxLength = 3;
-            this.RISMaxAccMaxStattextBox.Name = "RISMaxAccMaxStattextBox";
-            this.RISMaxAccMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAccMaxStattextBox.TabIndex = 37;
-            this.RISMaxAccMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxAccMaxStattextBox_TextChanged);
+            RISMaxAccMaxStattextBox.Location = new Point(24, 230);
+            RISMaxAccMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAccMaxStattextBox.MaxLength = 3;
+            RISMaxAccMaxStattextBox.Name = "RISMaxAccMaxStattextBox";
+            RISMaxAccMaxStattextBox.Size = new Size(44, 23);
+            RISMaxAccMaxStattextBox.TabIndex = 37;
+            RISMaxAccMaxStattextBox.TextChanged += RISMaxAccMaxStattextBox_TextChanged;
             // 
             // RISMaxScMaxStattextBox
             // 
-            this.RISMaxScMaxStattextBox.Location = new System.Drawing.Point(21, 150);
-            this.RISMaxScMaxStattextBox.MaxLength = 3;
-            this.RISMaxScMaxStattextBox.Name = "RISMaxScMaxStattextBox";
-            this.RISMaxScMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxScMaxStattextBox.TabIndex = 36;
-            this.RISMaxScMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxScMaxStattextBox_TextChanged);
+            RISMaxScMaxStattextBox.Location = new Point(24, 196);
+            RISMaxScMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxScMaxStattextBox.MaxLength = 3;
+            RISMaxScMaxStattextBox.Name = "RISMaxScMaxStattextBox";
+            RISMaxScMaxStattextBox.Size = new Size(44, 23);
+            RISMaxScMaxStattextBox.TabIndex = 36;
+            RISMaxScMaxStattextBox.TextChanged += RISMaxScMaxStattextBox_TextChanged;
             // 
             // RISMaxMcMaxStattextBox
             // 
-            this.RISMaxMcMaxStattextBox.Location = new System.Drawing.Point(21, 124);
-            this.RISMaxMcMaxStattextBox.MaxLength = 3;
-            this.RISMaxMcMaxStattextBox.Name = "RISMaxMcMaxStattextBox";
-            this.RISMaxMcMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMcMaxStattextBox.TabIndex = 35;
-            this.RISMaxMcMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxMcMaxStattextBox_TextChanged);
+            RISMaxMcMaxStattextBox.Location = new Point(24, 162);
+            RISMaxMcMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMcMaxStattextBox.MaxLength = 3;
+            RISMaxMcMaxStattextBox.Name = "RISMaxMcMaxStattextBox";
+            RISMaxMcMaxStattextBox.Size = new Size(44, 23);
+            RISMaxMcMaxStattextBox.TabIndex = 35;
+            RISMaxMcMaxStattextBox.TextChanged += RISMaxMcMaxStattextBox_TextChanged;
             // 
             // RISMaxDcMaxStattextBox
             // 
-            this.RISMaxDcMaxStattextBox.Location = new System.Drawing.Point(21, 98);
-            this.RISMaxDcMaxStattextBox.MaxLength = 3;
-            this.RISMaxDcMaxStattextBox.Name = "RISMaxDcMaxStattextBox";
-            this.RISMaxDcMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDcMaxStattextBox.TabIndex = 34;
-            this.RISMaxDcMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxDcMaxStattextBox_TextChanged);
+            RISMaxDcMaxStattextBox.Location = new Point(24, 128);
+            RISMaxDcMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDcMaxStattextBox.MaxLength = 3;
+            RISMaxDcMaxStattextBox.Name = "RISMaxDcMaxStattextBox";
+            RISMaxDcMaxStattextBox.Size = new Size(44, 23);
+            RISMaxDcMaxStattextBox.TabIndex = 34;
+            RISMaxDcMaxStattextBox.TextChanged += RISMaxDcMaxStattextBox_TextChanged;
             // 
             // RISMaxMacMaxStattextBox
             // 
-            this.RISMaxMacMaxStattextBox.Location = new System.Drawing.Point(21, 72);
-            this.RISMaxMacMaxStattextBox.MaxLength = 3;
-            this.RISMaxMacMaxStattextBox.Name = "RISMaxMacMaxStattextBox";
-            this.RISMaxMacMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMacMaxStattextBox.TabIndex = 33;
-            this.RISMaxMacMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxMacMaxStattextBox_TextChanged);
+            RISMaxMacMaxStattextBox.Location = new Point(24, 94);
+            RISMaxMacMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMacMaxStattextBox.MaxLength = 3;
+            RISMaxMacMaxStattextBox.Name = "RISMaxMacMaxStattextBox";
+            RISMaxMacMaxStattextBox.Size = new Size(44, 23);
+            RISMaxMacMaxStattextBox.TabIndex = 33;
+            RISMaxMacMaxStattextBox.TextChanged += RISMaxMacMaxStattextBox_TextChanged;
             // 
             // RISMaxAcMaxStattextBox
             // 
-            this.RISMaxAcMaxStattextBox.Location = new System.Drawing.Point(21, 46);
-            this.RISMaxAcMaxStattextBox.MaxLength = 3;
-            this.RISMaxAcMaxStattextBox.Name = "RISMaxAcMaxStattextBox";
-            this.RISMaxAcMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAcMaxStattextBox.TabIndex = 32;
-            this.RISMaxAcMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxAcMaxStattextBox_TextChanged);
+            RISMaxAcMaxStattextBox.Location = new Point(24, 60);
+            RISMaxAcMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAcMaxStattextBox.MaxLength = 3;
+            RISMaxAcMaxStattextBox.Name = "RISMaxAcMaxStattextBox";
+            RISMaxAcMaxStattextBox.Size = new Size(44, 23);
+            RISMaxAcMaxStattextBox.TabIndex = 32;
+            RISMaxAcMaxStattextBox.TextChanged += RISMaxAcMaxStattextBox_TextChanged;
             // 
             // RISMaxDuraMaxStattextBox
             // 
-            this.RISMaxDuraMaxStattextBox.Location = new System.Drawing.Point(21, 20);
-            this.RISMaxDuraMaxStattextBox.MaxLength = 3;
-            this.RISMaxDuraMaxStattextBox.Name = "RISMaxDuraMaxStattextBox";
-            this.RISMaxDuraMaxStattextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDuraMaxStattextBox.TabIndex = 31;
-            this.RISMaxDuraMaxStattextBox.TextChanged += new System.EventHandler(this.RISMaxDuraMaxStattextBox_TextChanged);
+            RISMaxDuraMaxStattextBox.Location = new Point(24, 26);
+            RISMaxDuraMaxStattextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDuraMaxStattextBox.MaxLength = 3;
+            RISMaxDuraMaxStattextBox.Name = "RISMaxDuraMaxStattextBox";
+            RISMaxDuraMaxStattextBox.Size = new Size(44, 23);
+            RISMaxDuraMaxStattextBox.TabIndex = 31;
+            RISMaxDuraMaxStattextBox.TextChanged += RISMaxDuraMaxStattextBox_TextChanged;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.RISSlotStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISLuckStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxDuraStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISAttackSpeedStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxAcStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISPoisonAttackStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxMacStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISFreezingStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxDcStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISCriticalDamageStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxMcStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISCriticalRateStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxScStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISPoisonRecovStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxAccStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMpRecovStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxAgilStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISHpRecovStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxHpStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISPoisonResistStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMaxMpStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISMagicResistStatChancetextBox);
-            this.groupBox5.Controls.Add(this.RISStrongStatChancetextBox);
-            this.groupBox5.Location = new System.Drawing.Point(256, 19);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(85, 648);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Chance/Stat";
+            groupBox5.Controls.Add(RISSlotStatChancetextBox);
+            groupBox5.Controls.Add(RISLuckStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxDuraStatChancetextBox);
+            groupBox5.Controls.Add(RISAttackSpeedStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxAcStatChancetextBox);
+            groupBox5.Controls.Add(RISPoisonAttackStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxMacStatChancetextBox);
+            groupBox5.Controls.Add(RISFreezingStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxDcStatChancetextBox);
+            groupBox5.Controls.Add(RISCriticalDamageStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxMcStatChancetextBox);
+            groupBox5.Controls.Add(RISCriticalRateStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxScStatChancetextBox);
+            groupBox5.Controls.Add(RISPoisonRecovStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxAccStatChancetextBox);
+            groupBox5.Controls.Add(RISMpRecovStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxAgilStatChancetextBox);
+            groupBox5.Controls.Add(RISHpRecovStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxHpStatChancetextBox);
+            groupBox5.Controls.Add(RISPoisonResistStatChancetextBox);
+            groupBox5.Controls.Add(RISMaxMpStatChancetextBox);
+            groupBox5.Controls.Add(RISMagicResistStatChancetextBox);
+            groupBox5.Controls.Add(RISStrongStatChancetextBox);
+            groupBox5.Location = new Point(299, 25);
+            groupBox5.Margin = new Padding(4, 4, 4, 4);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Padding = new Padding(4, 4, 4, 4);
+            groupBox5.Size = new Size(99, 847);
+            groupBox5.TabIndex = 2;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "概率/属性";
             // 
             // RISSlotStatChancetextBox
             // 
-            this.RISSlotStatChancetextBox.Location = new System.Drawing.Point(24, 618);
-            this.RISSlotStatChancetextBox.Name = "RISSlotStatChancetextBox";
-            this.RISSlotStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISSlotStatChancetextBox.TabIndex = 53;
-            this.RISSlotStatChancetextBox.TextChanged += new System.EventHandler(this.RISSlotStatChancetextBox_TextChanged);
+            RISSlotStatChancetextBox.Location = new Point(28, 808);
+            RISSlotStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISSlotStatChancetextBox.Name = "RISSlotStatChancetextBox";
+            RISSlotStatChancetextBox.Size = new Size(44, 23);
+            RISSlotStatChancetextBox.TabIndex = 53;
+            RISSlotStatChancetextBox.TextChanged += RISSlotStatChancetextBox_TextChanged;
             // 
             // RISLuckStatChancetextBox
             // 
-            this.RISLuckStatChancetextBox.Location = new System.Drawing.Point(24, 566);
-            this.RISLuckStatChancetextBox.MaxLength = 3;
-            this.RISLuckStatChancetextBox.Name = "RISLuckStatChancetextBox";
-            this.RISLuckStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISLuckStatChancetextBox.TabIndex = 52;
-            this.RISLuckStatChancetextBox.TextChanged += new System.EventHandler(this.RISLuckStatChancetextBox_TextChanged);
+            RISLuckStatChancetextBox.Location = new Point(28, 740);
+            RISLuckStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISLuckStatChancetextBox.MaxLength = 3;
+            RISLuckStatChancetextBox.Name = "RISLuckStatChancetextBox";
+            RISLuckStatChancetextBox.Size = new Size(44, 23);
+            RISLuckStatChancetextBox.TabIndex = 52;
+            RISLuckStatChancetextBox.TextChanged += RISLuckStatChancetextBox_TextChanged;
             // 
             // RISMaxDuraStatChancetextBox
             // 
-            this.RISMaxDuraStatChancetextBox.Location = new System.Drawing.Point(24, 20);
-            this.RISMaxDuraStatChancetextBox.MaxLength = 3;
-            this.RISMaxDuraStatChancetextBox.Name = "RISMaxDuraStatChancetextBox";
-            this.RISMaxDuraStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDuraStatChancetextBox.TabIndex = 31;
-            this.RISMaxDuraStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxDuraStatChancetextBox_TextChanged);
+            RISMaxDuraStatChancetextBox.Location = new Point(28, 26);
+            RISMaxDuraStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDuraStatChancetextBox.MaxLength = 3;
+            RISMaxDuraStatChancetextBox.Name = "RISMaxDuraStatChancetextBox";
+            RISMaxDuraStatChancetextBox.Size = new Size(44, 23);
+            RISMaxDuraStatChancetextBox.TabIndex = 31;
+            RISMaxDuraStatChancetextBox.TextChanged += RISMaxDuraStatChancetextBox_TextChanged;
             // 
             // RISAttackSpeedStatChancetextBox
             // 
-            this.RISAttackSpeedStatChancetextBox.Location = new System.Drawing.Point(24, 540);
-            this.RISAttackSpeedStatChancetextBox.MaxLength = 3;
-            this.RISAttackSpeedStatChancetextBox.Name = "RISAttackSpeedStatChancetextBox";
-            this.RISAttackSpeedStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISAttackSpeedStatChancetextBox.TabIndex = 51;
-            this.RISAttackSpeedStatChancetextBox.TextChanged += new System.EventHandler(this.RISAttackSpeedStatChancetextBox_TextChanged);
+            RISAttackSpeedStatChancetextBox.Location = new Point(28, 706);
+            RISAttackSpeedStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISAttackSpeedStatChancetextBox.MaxLength = 3;
+            RISAttackSpeedStatChancetextBox.Name = "RISAttackSpeedStatChancetextBox";
+            RISAttackSpeedStatChancetextBox.Size = new Size(44, 23);
+            RISAttackSpeedStatChancetextBox.TabIndex = 51;
+            RISAttackSpeedStatChancetextBox.TextChanged += RISAttackSpeedStatChancetextBox_TextChanged;
             // 
             // RISMaxAcStatChancetextBox
             // 
-            this.RISMaxAcStatChancetextBox.Location = new System.Drawing.Point(24, 46);
-            this.RISMaxAcStatChancetextBox.MaxLength = 3;
-            this.RISMaxAcStatChancetextBox.Name = "RISMaxAcStatChancetextBox";
-            this.RISMaxAcStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAcStatChancetextBox.TabIndex = 32;
-            this.RISMaxAcStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAcStatChancetextBox_TextChanged);
+            RISMaxAcStatChancetextBox.Location = new Point(28, 60);
+            RISMaxAcStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAcStatChancetextBox.MaxLength = 3;
+            RISMaxAcStatChancetextBox.Name = "RISMaxAcStatChancetextBox";
+            RISMaxAcStatChancetextBox.Size = new Size(44, 23);
+            RISMaxAcStatChancetextBox.TabIndex = 32;
+            RISMaxAcStatChancetextBox.TextChanged += RISMaxAcStatChancetextBox_TextChanged;
             // 
             // RISPoisonAttackStatChancetextBox
             // 
-            this.RISPoisonAttackStatChancetextBox.Location = new System.Drawing.Point(24, 514);
-            this.RISPoisonAttackStatChancetextBox.MaxLength = 3;
-            this.RISPoisonAttackStatChancetextBox.Name = "RISPoisonAttackStatChancetextBox";
-            this.RISPoisonAttackStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonAttackStatChancetextBox.TabIndex = 50;
-            this.RISPoisonAttackStatChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonAttackStatChancetextBox_TextChanged);
+            RISPoisonAttackStatChancetextBox.Location = new Point(28, 672);
+            RISPoisonAttackStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonAttackStatChancetextBox.MaxLength = 3;
+            RISPoisonAttackStatChancetextBox.Name = "RISPoisonAttackStatChancetextBox";
+            RISPoisonAttackStatChancetextBox.Size = new Size(44, 23);
+            RISPoisonAttackStatChancetextBox.TabIndex = 50;
+            RISPoisonAttackStatChancetextBox.TextChanged += RISPoisonAttackStatChancetextBox_TextChanged;
             // 
             // RISMaxMacStatChancetextBox
             // 
-            this.RISMaxMacStatChancetextBox.Location = new System.Drawing.Point(24, 72);
-            this.RISMaxMacStatChancetextBox.MaxLength = 3;
-            this.RISMaxMacStatChancetextBox.Name = "RISMaxMacStatChancetextBox";
-            this.RISMaxMacStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMacStatChancetextBox.TabIndex = 33;
-            this.RISMaxMacStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMacStatChancetextBox_TextChanged);
+            RISMaxMacStatChancetextBox.Location = new Point(28, 94);
+            RISMaxMacStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMacStatChancetextBox.MaxLength = 3;
+            RISMaxMacStatChancetextBox.Name = "RISMaxMacStatChancetextBox";
+            RISMaxMacStatChancetextBox.Size = new Size(44, 23);
+            RISMaxMacStatChancetextBox.TabIndex = 33;
+            RISMaxMacStatChancetextBox.TextChanged += RISMaxMacStatChancetextBox_TextChanged;
             // 
             // RISFreezingStatChancetextBox
             // 
-            this.RISFreezingStatChancetextBox.Location = new System.Drawing.Point(24, 488);
-            this.RISFreezingStatChancetextBox.MaxLength = 3;
-            this.RISFreezingStatChancetextBox.Name = "RISFreezingStatChancetextBox";
-            this.RISFreezingStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISFreezingStatChancetextBox.TabIndex = 49;
-            this.RISFreezingStatChancetextBox.TextChanged += new System.EventHandler(this.RISFreezingStatChancetextBox_TextChanged);
+            RISFreezingStatChancetextBox.Location = new Point(28, 638);
+            RISFreezingStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISFreezingStatChancetextBox.MaxLength = 3;
+            RISFreezingStatChancetextBox.Name = "RISFreezingStatChancetextBox";
+            RISFreezingStatChancetextBox.Size = new Size(44, 23);
+            RISFreezingStatChancetextBox.TabIndex = 49;
+            RISFreezingStatChancetextBox.TextChanged += RISFreezingStatChancetextBox_TextChanged;
             // 
             // RISMaxDcStatChancetextBox
             // 
-            this.RISMaxDcStatChancetextBox.Location = new System.Drawing.Point(24, 98);
-            this.RISMaxDcStatChancetextBox.MaxLength = 3;
-            this.RISMaxDcStatChancetextBox.Name = "RISMaxDcStatChancetextBox";
-            this.RISMaxDcStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDcStatChancetextBox.TabIndex = 34;
-            this.RISMaxDcStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxDcStatChancetextBox_TextChanged);
+            RISMaxDcStatChancetextBox.Location = new Point(28, 128);
+            RISMaxDcStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDcStatChancetextBox.MaxLength = 3;
+            RISMaxDcStatChancetextBox.Name = "RISMaxDcStatChancetextBox";
+            RISMaxDcStatChancetextBox.Size = new Size(44, 23);
+            RISMaxDcStatChancetextBox.TabIndex = 34;
+            RISMaxDcStatChancetextBox.TextChanged += RISMaxDcStatChancetextBox_TextChanged;
             // 
             // RISCriticalDamageStatChancetextBox
             // 
-            this.RISCriticalDamageStatChancetextBox.Location = new System.Drawing.Point(24, 462);
-            this.RISCriticalDamageStatChancetextBox.MaxLength = 3;
-            this.RISCriticalDamageStatChancetextBox.Name = "RISCriticalDamageStatChancetextBox";
-            this.RISCriticalDamageStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalDamageStatChancetextBox.TabIndex = 48;
-            this.RISCriticalDamageStatChancetextBox.TextChanged += new System.EventHandler(this.RISCriticalDamageStatChancetextBox_TextChanged);
+            RISCriticalDamageStatChancetextBox.Location = new Point(28, 604);
+            RISCriticalDamageStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalDamageStatChancetextBox.MaxLength = 3;
+            RISCriticalDamageStatChancetextBox.Name = "RISCriticalDamageStatChancetextBox";
+            RISCriticalDamageStatChancetextBox.Size = new Size(44, 23);
+            RISCriticalDamageStatChancetextBox.TabIndex = 48;
+            RISCriticalDamageStatChancetextBox.TextChanged += RISCriticalDamageStatChancetextBox_TextChanged;
             // 
             // RISMaxMcStatChancetextBox
             // 
-            this.RISMaxMcStatChancetextBox.Location = new System.Drawing.Point(24, 124);
-            this.RISMaxMcStatChancetextBox.MaxLength = 3;
-            this.RISMaxMcStatChancetextBox.Name = "RISMaxMcStatChancetextBox";
-            this.RISMaxMcStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMcStatChancetextBox.TabIndex = 35;
-            this.RISMaxMcStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMcStatChancetextBox_TextChanged);
+            RISMaxMcStatChancetextBox.Location = new Point(28, 162);
+            RISMaxMcStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMcStatChancetextBox.MaxLength = 3;
+            RISMaxMcStatChancetextBox.Name = "RISMaxMcStatChancetextBox";
+            RISMaxMcStatChancetextBox.Size = new Size(44, 23);
+            RISMaxMcStatChancetextBox.TabIndex = 35;
+            RISMaxMcStatChancetextBox.TextChanged += RISMaxMcStatChancetextBox_TextChanged;
             // 
             // RISCriticalRateStatChancetextBox
             // 
-            this.RISCriticalRateStatChancetextBox.Location = new System.Drawing.Point(24, 436);
-            this.RISCriticalRateStatChancetextBox.MaxLength = 3;
-            this.RISCriticalRateStatChancetextBox.Name = "RISCriticalRateStatChancetextBox";
-            this.RISCriticalRateStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalRateStatChancetextBox.TabIndex = 47;
-            this.RISCriticalRateStatChancetextBox.TextChanged += new System.EventHandler(this.RISCriticalRateStatChancetextBox_TextChanged);
+            RISCriticalRateStatChancetextBox.Location = new Point(28, 570);
+            RISCriticalRateStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalRateStatChancetextBox.MaxLength = 3;
+            RISCriticalRateStatChancetextBox.Name = "RISCriticalRateStatChancetextBox";
+            RISCriticalRateStatChancetextBox.Size = new Size(44, 23);
+            RISCriticalRateStatChancetextBox.TabIndex = 47;
+            RISCriticalRateStatChancetextBox.TextChanged += RISCriticalRateStatChancetextBox_TextChanged;
             // 
             // RISMaxScStatChancetextBox
             // 
-            this.RISMaxScStatChancetextBox.Location = new System.Drawing.Point(24, 150);
-            this.RISMaxScStatChancetextBox.MaxLength = 3;
-            this.RISMaxScStatChancetextBox.Name = "RISMaxScStatChancetextBox";
-            this.RISMaxScStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxScStatChancetextBox.TabIndex = 36;
-            this.RISMaxScStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxScStatChancetextBox_TextChanged);
+            RISMaxScStatChancetextBox.Location = new Point(28, 196);
+            RISMaxScStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxScStatChancetextBox.MaxLength = 3;
+            RISMaxScStatChancetextBox.Name = "RISMaxScStatChancetextBox";
+            RISMaxScStatChancetextBox.Size = new Size(44, 23);
+            RISMaxScStatChancetextBox.TabIndex = 36;
+            RISMaxScStatChancetextBox.TextChanged += RISMaxScStatChancetextBox_TextChanged;
             // 
             // RISPoisonRecovStatChancetextBox
             // 
-            this.RISPoisonRecovStatChancetextBox.Location = new System.Drawing.Point(24, 410);
-            this.RISPoisonRecovStatChancetextBox.MaxLength = 3;
-            this.RISPoisonRecovStatChancetextBox.Name = "RISPoisonRecovStatChancetextBox";
-            this.RISPoisonRecovStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonRecovStatChancetextBox.TabIndex = 46;
-            this.RISPoisonRecovStatChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonRecovStatChancetextBox_TextChanged);
+            RISPoisonRecovStatChancetextBox.Location = new Point(28, 536);
+            RISPoisonRecovStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonRecovStatChancetextBox.MaxLength = 3;
+            RISPoisonRecovStatChancetextBox.Name = "RISPoisonRecovStatChancetextBox";
+            RISPoisonRecovStatChancetextBox.Size = new Size(44, 23);
+            RISPoisonRecovStatChancetextBox.TabIndex = 46;
+            RISPoisonRecovStatChancetextBox.TextChanged += RISPoisonRecovStatChancetextBox_TextChanged;
             // 
             // RISMaxAccStatChancetextBox
             // 
-            this.RISMaxAccStatChancetextBox.Location = new System.Drawing.Point(24, 176);
-            this.RISMaxAccStatChancetextBox.MaxLength = 3;
-            this.RISMaxAccStatChancetextBox.Name = "RISMaxAccStatChancetextBox";
-            this.RISMaxAccStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAccStatChancetextBox.TabIndex = 37;
-            this.RISMaxAccStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAccStatChancetextBox_TextChanged);
+            RISMaxAccStatChancetextBox.Location = new Point(28, 230);
+            RISMaxAccStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAccStatChancetextBox.MaxLength = 3;
+            RISMaxAccStatChancetextBox.Name = "RISMaxAccStatChancetextBox";
+            RISMaxAccStatChancetextBox.Size = new Size(44, 23);
+            RISMaxAccStatChancetextBox.TabIndex = 37;
+            RISMaxAccStatChancetextBox.TextChanged += RISMaxAccStatChancetextBox_TextChanged;
             // 
             // RISMpRecovStatChancetextBox
             // 
-            this.RISMpRecovStatChancetextBox.Location = new System.Drawing.Point(24, 384);
-            this.RISMpRecovStatChancetextBox.MaxLength = 3;
-            this.RISMpRecovStatChancetextBox.Name = "RISMpRecovStatChancetextBox";
-            this.RISMpRecovStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMpRecovStatChancetextBox.TabIndex = 45;
-            this.RISMpRecovStatChancetextBox.TextChanged += new System.EventHandler(this.RISMpRecovStatChancetextBox_TextChanged);
+            RISMpRecovStatChancetextBox.Location = new Point(28, 502);
+            RISMpRecovStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMpRecovStatChancetextBox.MaxLength = 3;
+            RISMpRecovStatChancetextBox.Name = "RISMpRecovStatChancetextBox";
+            RISMpRecovStatChancetextBox.Size = new Size(44, 23);
+            RISMpRecovStatChancetextBox.TabIndex = 45;
+            RISMpRecovStatChancetextBox.TextChanged += RISMpRecovStatChancetextBox_TextChanged;
             // 
             // RISMaxAgilStatChancetextBox
             // 
-            this.RISMaxAgilStatChancetextBox.Location = new System.Drawing.Point(24, 202);
-            this.RISMaxAgilStatChancetextBox.MaxLength = 3;
-            this.RISMaxAgilStatChancetextBox.Name = "RISMaxAgilStatChancetextBox";
-            this.RISMaxAgilStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAgilStatChancetextBox.TabIndex = 38;
-            this.RISMaxAgilStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAgilStatChancetextBox_TextChanged);
+            RISMaxAgilStatChancetextBox.Location = new Point(28, 264);
+            RISMaxAgilStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAgilStatChancetextBox.MaxLength = 3;
+            RISMaxAgilStatChancetextBox.Name = "RISMaxAgilStatChancetextBox";
+            RISMaxAgilStatChancetextBox.Size = new Size(44, 23);
+            RISMaxAgilStatChancetextBox.TabIndex = 38;
+            RISMaxAgilStatChancetextBox.TextChanged += RISMaxAgilStatChancetextBox_TextChanged;
             // 
             // RISHpRecovStatChancetextBox
             // 
-            this.RISHpRecovStatChancetextBox.Location = new System.Drawing.Point(24, 358);
-            this.RISHpRecovStatChancetextBox.MaxLength = 3;
-            this.RISHpRecovStatChancetextBox.Name = "RISHpRecovStatChancetextBox";
-            this.RISHpRecovStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISHpRecovStatChancetextBox.TabIndex = 44;
-            this.RISHpRecovStatChancetextBox.TextChanged += new System.EventHandler(this.RISHpRecovStatChancetextBox_TextChanged);
+            RISHpRecovStatChancetextBox.Location = new Point(28, 468);
+            RISHpRecovStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISHpRecovStatChancetextBox.MaxLength = 3;
+            RISHpRecovStatChancetextBox.Name = "RISHpRecovStatChancetextBox";
+            RISHpRecovStatChancetextBox.Size = new Size(44, 23);
+            RISHpRecovStatChancetextBox.TabIndex = 44;
+            RISHpRecovStatChancetextBox.TextChanged += RISHpRecovStatChancetextBox_TextChanged;
             // 
             // RISMaxHpStatChancetextBox
             // 
-            this.RISMaxHpStatChancetextBox.Location = new System.Drawing.Point(24, 228);
-            this.RISMaxHpStatChancetextBox.MaxLength = 3;
-            this.RISMaxHpStatChancetextBox.Name = "RISMaxHpStatChancetextBox";
-            this.RISMaxHpStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxHpStatChancetextBox.TabIndex = 39;
-            this.RISMaxHpStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxHpStatChancetextBox_TextChanged);
+            RISMaxHpStatChancetextBox.Location = new Point(28, 298);
+            RISMaxHpStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxHpStatChancetextBox.MaxLength = 3;
+            RISMaxHpStatChancetextBox.Name = "RISMaxHpStatChancetextBox";
+            RISMaxHpStatChancetextBox.Size = new Size(44, 23);
+            RISMaxHpStatChancetextBox.TabIndex = 39;
+            RISMaxHpStatChancetextBox.TextChanged += RISMaxHpStatChancetextBox_TextChanged;
             // 
             // RISPoisonResistStatChancetextBox
             // 
-            this.RISPoisonResistStatChancetextBox.Location = new System.Drawing.Point(24, 332);
-            this.RISPoisonResistStatChancetextBox.MaxLength = 3;
-            this.RISPoisonResistStatChancetextBox.Name = "RISPoisonResistStatChancetextBox";
-            this.RISPoisonResistStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonResistStatChancetextBox.TabIndex = 43;
-            this.RISPoisonResistStatChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonResistStatChancetextBox_TextChanged);
+            RISPoisonResistStatChancetextBox.Location = new Point(28, 434);
+            RISPoisonResistStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonResistStatChancetextBox.MaxLength = 3;
+            RISPoisonResistStatChancetextBox.Name = "RISPoisonResistStatChancetextBox";
+            RISPoisonResistStatChancetextBox.Size = new Size(44, 23);
+            RISPoisonResistStatChancetextBox.TabIndex = 43;
+            RISPoisonResistStatChancetextBox.TextChanged += RISPoisonResistStatChancetextBox_TextChanged;
             // 
             // RISMaxMpStatChancetextBox
             // 
-            this.RISMaxMpStatChancetextBox.Location = new System.Drawing.Point(24, 254);
-            this.RISMaxMpStatChancetextBox.MaxLength = 3;
-            this.RISMaxMpStatChancetextBox.Name = "RISMaxMpStatChancetextBox";
-            this.RISMaxMpStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMpStatChancetextBox.TabIndex = 40;
-            this.RISMaxMpStatChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMpStatChancetextBox_TextChanged);
+            RISMaxMpStatChancetextBox.Location = new Point(28, 332);
+            RISMaxMpStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMpStatChancetextBox.MaxLength = 3;
+            RISMaxMpStatChancetextBox.Name = "RISMaxMpStatChancetextBox";
+            RISMaxMpStatChancetextBox.Size = new Size(44, 23);
+            RISMaxMpStatChancetextBox.TabIndex = 40;
+            RISMaxMpStatChancetextBox.TextChanged += RISMaxMpStatChancetextBox_TextChanged;
             // 
             // RISMagicResistStatChancetextBox
             // 
-            this.RISMagicResistStatChancetextBox.Location = new System.Drawing.Point(24, 306);
-            this.RISMagicResistStatChancetextBox.MaxLength = 3;
-            this.RISMagicResistStatChancetextBox.Name = "RISMagicResistStatChancetextBox";
-            this.RISMagicResistStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMagicResistStatChancetextBox.TabIndex = 42;
-            this.RISMagicResistStatChancetextBox.TextChanged += new System.EventHandler(this.RISMagicResistStatChancetextBox_TextChanged);
+            RISMagicResistStatChancetextBox.Location = new Point(28, 400);
+            RISMagicResistStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMagicResistStatChancetextBox.MaxLength = 3;
+            RISMagicResistStatChancetextBox.Name = "RISMagicResistStatChancetextBox";
+            RISMagicResistStatChancetextBox.Size = new Size(44, 23);
+            RISMagicResistStatChancetextBox.TabIndex = 42;
+            RISMagicResistStatChancetextBox.TextChanged += RISMagicResistStatChancetextBox_TextChanged;
             // 
             // RISStrongStatChancetextBox
             // 
-            this.RISStrongStatChancetextBox.Location = new System.Drawing.Point(24, 280);
-            this.RISStrongStatChancetextBox.MaxLength = 3;
-            this.RISStrongStatChancetextBox.Name = "RISStrongStatChancetextBox";
-            this.RISStrongStatChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISStrongStatChancetextBox.TabIndex = 41;
-            this.RISStrongStatChancetextBox.TextChanged += new System.EventHandler(this.RISStrongStatChancetextBox_TextChanged);
+            RISStrongStatChancetextBox.Location = new Point(28, 366);
+            RISStrongStatChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISStrongStatChancetextBox.MaxLength = 3;
+            RISStrongStatChancetextBox.Name = "RISStrongStatChancetextBox";
+            RISStrongStatChancetextBox.Size = new Size(44, 23);
+            RISStrongStatChancetextBox.TabIndex = 41;
+            RISStrongStatChancetextBox.TextChanged += RISStrongStatChancetextBox_TextChanged;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.RISCurseChancetextBox);
-            this.groupBox4.Controls.Add(this.RISSlotChancetextBox);
-            this.groupBox4.Controls.Add(this.RISLuckChancetextBox);
-            this.groupBox4.Controls.Add(this.RISAttackSpeedChancetextBox);
-            this.groupBox4.Controls.Add(this.RISPoisonAttackChancetextBox);
-            this.groupBox4.Controls.Add(this.RISFreezingChancetextBox);
-            this.groupBox4.Controls.Add(this.RISCriticalDamageChancetextBox);
-            this.groupBox4.Controls.Add(this.RISCriticalRateChancetextBox);
-            this.groupBox4.Controls.Add(this.RISPoisonRecovChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMpRecovChancetextBox);
-            this.groupBox4.Controls.Add(this.RISHpRecovChancetextBox);
-            this.groupBox4.Controls.Add(this.RISPoisonResistChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMagicResistChancetextBox);
-            this.groupBox4.Controls.Add(this.RISStrongChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxMpChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxHpChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxAgilChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxAccChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxScChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxMcChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxDcChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxMacChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxAcChancetextBox);
-            this.groupBox4.Controls.Add(this.RISMaxDuraChancetextBox);
-            this.groupBox4.Location = new System.Drawing.Point(144, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(106, 648);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Random chance:";
+            groupBox4.Controls.Add(RISCurseChancetextBox);
+            groupBox4.Controls.Add(RISSlotChancetextBox);
+            groupBox4.Controls.Add(RISLuckChancetextBox);
+            groupBox4.Controls.Add(RISAttackSpeedChancetextBox);
+            groupBox4.Controls.Add(RISPoisonAttackChancetextBox);
+            groupBox4.Controls.Add(RISFreezingChancetextBox);
+            groupBox4.Controls.Add(RISCriticalDamageChancetextBox);
+            groupBox4.Controls.Add(RISCriticalRateChancetextBox);
+            groupBox4.Controls.Add(RISPoisonRecovChancetextBox);
+            groupBox4.Controls.Add(RISMpRecovChancetextBox);
+            groupBox4.Controls.Add(RISHpRecovChancetextBox);
+            groupBox4.Controls.Add(RISPoisonResistChancetextBox);
+            groupBox4.Controls.Add(RISMagicResistChancetextBox);
+            groupBox4.Controls.Add(RISStrongChancetextBox);
+            groupBox4.Controls.Add(RISMaxMpChancetextBox);
+            groupBox4.Controls.Add(RISMaxHpChancetextBox);
+            groupBox4.Controls.Add(RISMaxAgilChancetextBox);
+            groupBox4.Controls.Add(RISMaxAccChancetextBox);
+            groupBox4.Controls.Add(RISMaxScChancetextBox);
+            groupBox4.Controls.Add(RISMaxMcChancetextBox);
+            groupBox4.Controls.Add(RISMaxDcChancetextBox);
+            groupBox4.Controls.Add(RISMaxMacChancetextBox);
+            groupBox4.Controls.Add(RISMaxAcChancetextBox);
+            groupBox4.Controls.Add(RISMaxDuraChancetextBox);
+            groupBox4.Location = new Point(168, 25);
+            groupBox4.Margin = new Padding(4, 4, 4, 4);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new Padding(4, 4, 4, 4);
+            groupBox4.Size = new Size(124, 847);
+            groupBox4.TabIndex = 1;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "随机几率：";
             // 
             // RISCurseChancetextBox
             // 
-            this.RISCurseChancetextBox.Location = new System.Drawing.Point(32, 592);
-            this.RISCurseChancetextBox.MaxLength = 3;
-            this.RISCurseChancetextBox.Name = "RISCurseChancetextBox";
-            this.RISCurseChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCurseChancetextBox.TabIndex = 31;
-            this.RISCurseChancetextBox.TextChanged += new System.EventHandler(this.RISCurseChancetextBox_TextChanged);
+            RISCurseChancetextBox.Location = new Point(37, 774);
+            RISCurseChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCurseChancetextBox.MaxLength = 3;
+            RISCurseChancetextBox.Name = "RISCurseChancetextBox";
+            RISCurseChancetextBox.Size = new Size(44, 23);
+            RISCurseChancetextBox.TabIndex = 31;
+            RISCurseChancetextBox.TextChanged += RISCurseChancetextBox_TextChanged;
             // 
             // RISSlotChancetextBox
             // 
-            this.RISSlotChancetextBox.Location = new System.Drawing.Point(32, 618);
-            this.RISSlotChancetextBox.Name = "RISSlotChancetextBox";
-            this.RISSlotChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISSlotChancetextBox.TabIndex = 31;
-            this.RISSlotChancetextBox.TextChanged += new System.EventHandler(this.RISSlotChancetextBox_TextChanged);
+            RISSlotChancetextBox.Location = new Point(37, 808);
+            RISSlotChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISSlotChancetextBox.Name = "RISSlotChancetextBox";
+            RISSlotChancetextBox.Size = new Size(44, 23);
+            RISSlotChancetextBox.TabIndex = 31;
+            RISSlotChancetextBox.TextChanged += RISSlotChancetextBox_TextChanged;
             // 
             // RISLuckChancetextBox
             // 
-            this.RISLuckChancetextBox.Location = new System.Drawing.Point(32, 566);
-            this.RISLuckChancetextBox.MaxLength = 3;
-            this.RISLuckChancetextBox.Name = "RISLuckChancetextBox";
-            this.RISLuckChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISLuckChancetextBox.TabIndex = 30;
-            this.RISLuckChancetextBox.TextChanged += new System.EventHandler(this.RISLuckChancetextBox_TextChanged);
+            RISLuckChancetextBox.Location = new Point(37, 740);
+            RISLuckChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISLuckChancetextBox.MaxLength = 3;
+            RISLuckChancetextBox.Name = "RISLuckChancetextBox";
+            RISLuckChancetextBox.Size = new Size(44, 23);
+            RISLuckChancetextBox.TabIndex = 30;
+            RISLuckChancetextBox.TextChanged += RISLuckChancetextBox_TextChanged;
             // 
             // RISAttackSpeedChancetextBox
             // 
-            this.RISAttackSpeedChancetextBox.Location = new System.Drawing.Point(32, 540);
-            this.RISAttackSpeedChancetextBox.MaxLength = 3;
-            this.RISAttackSpeedChancetextBox.Name = "RISAttackSpeedChancetextBox";
-            this.RISAttackSpeedChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISAttackSpeedChancetextBox.TabIndex = 29;
-            this.RISAttackSpeedChancetextBox.TextChanged += new System.EventHandler(this.RISAttackSpeedChancetextBox_TextChanged);
+            RISAttackSpeedChancetextBox.Location = new Point(37, 706);
+            RISAttackSpeedChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISAttackSpeedChancetextBox.MaxLength = 3;
+            RISAttackSpeedChancetextBox.Name = "RISAttackSpeedChancetextBox";
+            RISAttackSpeedChancetextBox.Size = new Size(44, 23);
+            RISAttackSpeedChancetextBox.TabIndex = 29;
+            RISAttackSpeedChancetextBox.TextChanged += RISAttackSpeedChancetextBox_TextChanged;
             // 
             // RISPoisonAttackChancetextBox
             // 
-            this.RISPoisonAttackChancetextBox.Location = new System.Drawing.Point(32, 514);
-            this.RISPoisonAttackChancetextBox.MaxLength = 3;
-            this.RISPoisonAttackChancetextBox.Name = "RISPoisonAttackChancetextBox";
-            this.RISPoisonAttackChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonAttackChancetextBox.TabIndex = 28;
-            this.RISPoisonAttackChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonAttackChancetextBox_TextChanged);
+            RISPoisonAttackChancetextBox.Location = new Point(37, 672);
+            RISPoisonAttackChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonAttackChancetextBox.MaxLength = 3;
+            RISPoisonAttackChancetextBox.Name = "RISPoisonAttackChancetextBox";
+            RISPoisonAttackChancetextBox.Size = new Size(44, 23);
+            RISPoisonAttackChancetextBox.TabIndex = 28;
+            RISPoisonAttackChancetextBox.TextChanged += RISPoisonAttackChancetextBox_TextChanged;
             // 
             // RISFreezingChancetextBox
             // 
-            this.RISFreezingChancetextBox.Location = new System.Drawing.Point(32, 488);
-            this.RISFreezingChancetextBox.MaxLength = 3;
-            this.RISFreezingChancetextBox.Name = "RISFreezingChancetextBox";
-            this.RISFreezingChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISFreezingChancetextBox.TabIndex = 27;
-            this.RISFreezingChancetextBox.TextChanged += new System.EventHandler(this.RISFreezingChancetextBox_TextChanged);
+            RISFreezingChancetextBox.Location = new Point(37, 638);
+            RISFreezingChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISFreezingChancetextBox.MaxLength = 3;
+            RISFreezingChancetextBox.Name = "RISFreezingChancetextBox";
+            RISFreezingChancetextBox.Size = new Size(44, 23);
+            RISFreezingChancetextBox.TabIndex = 27;
+            RISFreezingChancetextBox.TextChanged += RISFreezingChancetextBox_TextChanged;
             // 
             // RISCriticalDamageChancetextBox
             // 
-            this.RISCriticalDamageChancetextBox.Location = new System.Drawing.Point(32, 462);
-            this.RISCriticalDamageChancetextBox.MaxLength = 3;
-            this.RISCriticalDamageChancetextBox.Name = "RISCriticalDamageChancetextBox";
-            this.RISCriticalDamageChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalDamageChancetextBox.TabIndex = 26;
-            this.RISCriticalDamageChancetextBox.TextChanged += new System.EventHandler(this.RISCriticalDamageChancetextBox_TextChanged);
+            RISCriticalDamageChancetextBox.Location = new Point(37, 604);
+            RISCriticalDamageChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalDamageChancetextBox.MaxLength = 3;
+            RISCriticalDamageChancetextBox.Name = "RISCriticalDamageChancetextBox";
+            RISCriticalDamageChancetextBox.Size = new Size(44, 23);
+            RISCriticalDamageChancetextBox.TabIndex = 26;
+            RISCriticalDamageChancetextBox.TextChanged += RISCriticalDamageChancetextBox_TextChanged;
             // 
             // RISCriticalRateChancetextBox
             // 
-            this.RISCriticalRateChancetextBox.Location = new System.Drawing.Point(32, 436);
-            this.RISCriticalRateChancetextBox.MaxLength = 3;
-            this.RISCriticalRateChancetextBox.Name = "RISCriticalRateChancetextBox";
-            this.RISCriticalRateChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISCriticalRateChancetextBox.TabIndex = 25;
-            this.RISCriticalRateChancetextBox.TextChanged += new System.EventHandler(this.RISCriticalRateChancetextBox_TextChanged);
+            RISCriticalRateChancetextBox.Location = new Point(37, 570);
+            RISCriticalRateChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISCriticalRateChancetextBox.MaxLength = 3;
+            RISCriticalRateChancetextBox.Name = "RISCriticalRateChancetextBox";
+            RISCriticalRateChancetextBox.Size = new Size(44, 23);
+            RISCriticalRateChancetextBox.TabIndex = 25;
+            RISCriticalRateChancetextBox.TextChanged += RISCriticalRateChancetextBox_TextChanged;
             // 
             // RISPoisonRecovChancetextBox
             // 
-            this.RISPoisonRecovChancetextBox.Location = new System.Drawing.Point(32, 410);
-            this.RISPoisonRecovChancetextBox.MaxLength = 3;
-            this.RISPoisonRecovChancetextBox.Name = "RISPoisonRecovChancetextBox";
-            this.RISPoisonRecovChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonRecovChancetextBox.TabIndex = 24;
-            this.RISPoisonRecovChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonRecovChancetextBox_TextChanged);
+            RISPoisonRecovChancetextBox.Location = new Point(37, 536);
+            RISPoisonRecovChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonRecovChancetextBox.MaxLength = 3;
+            RISPoisonRecovChancetextBox.Name = "RISPoisonRecovChancetextBox";
+            RISPoisonRecovChancetextBox.Size = new Size(44, 23);
+            RISPoisonRecovChancetextBox.TabIndex = 24;
+            RISPoisonRecovChancetextBox.TextChanged += RISPoisonRecovChancetextBox_TextChanged;
             // 
             // RISMpRecovChancetextBox
             // 
-            this.RISMpRecovChancetextBox.Location = new System.Drawing.Point(32, 384);
-            this.RISMpRecovChancetextBox.MaxLength = 3;
-            this.RISMpRecovChancetextBox.Name = "RISMpRecovChancetextBox";
-            this.RISMpRecovChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMpRecovChancetextBox.TabIndex = 23;
-            this.RISMpRecovChancetextBox.TextChanged += new System.EventHandler(this.RISMpRecovChancetextBox_TextChanged);
+            RISMpRecovChancetextBox.Location = new Point(37, 502);
+            RISMpRecovChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMpRecovChancetextBox.MaxLength = 3;
+            RISMpRecovChancetextBox.Name = "RISMpRecovChancetextBox";
+            RISMpRecovChancetextBox.Size = new Size(44, 23);
+            RISMpRecovChancetextBox.TabIndex = 23;
+            RISMpRecovChancetextBox.TextChanged += RISMpRecovChancetextBox_TextChanged;
             // 
             // RISHpRecovChancetextBox
             // 
-            this.RISHpRecovChancetextBox.Location = new System.Drawing.Point(32, 358);
-            this.RISHpRecovChancetextBox.MaxLength = 3;
-            this.RISHpRecovChancetextBox.Name = "RISHpRecovChancetextBox";
-            this.RISHpRecovChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISHpRecovChancetextBox.TabIndex = 22;
-            this.RISHpRecovChancetextBox.TextChanged += new System.EventHandler(this.RISHpRecovChancetextBox_TextChanged);
+            RISHpRecovChancetextBox.Location = new Point(37, 468);
+            RISHpRecovChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISHpRecovChancetextBox.MaxLength = 3;
+            RISHpRecovChancetextBox.Name = "RISHpRecovChancetextBox";
+            RISHpRecovChancetextBox.Size = new Size(44, 23);
+            RISHpRecovChancetextBox.TabIndex = 22;
+            RISHpRecovChancetextBox.TextChanged += RISHpRecovChancetextBox_TextChanged;
             // 
             // RISPoisonResistChancetextBox
             // 
-            this.RISPoisonResistChancetextBox.Location = new System.Drawing.Point(32, 332);
-            this.RISPoisonResistChancetextBox.MaxLength = 3;
-            this.RISPoisonResistChancetextBox.Name = "RISPoisonResistChancetextBox";
-            this.RISPoisonResistChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISPoisonResistChancetextBox.TabIndex = 21;
-            this.RISPoisonResistChancetextBox.TextChanged += new System.EventHandler(this.RISPoisonResistChancetextBox_TextChanged);
+            RISPoisonResistChancetextBox.Location = new Point(37, 434);
+            RISPoisonResistChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISPoisonResistChancetextBox.MaxLength = 3;
+            RISPoisonResistChancetextBox.Name = "RISPoisonResistChancetextBox";
+            RISPoisonResistChancetextBox.Size = new Size(44, 23);
+            RISPoisonResistChancetextBox.TabIndex = 21;
+            RISPoisonResistChancetextBox.TextChanged += RISPoisonResistChancetextBox_TextChanged;
             // 
             // RISMagicResistChancetextBox
             // 
-            this.RISMagicResistChancetextBox.Location = new System.Drawing.Point(32, 306);
-            this.RISMagicResistChancetextBox.MaxLength = 3;
-            this.RISMagicResistChancetextBox.Name = "RISMagicResistChancetextBox";
-            this.RISMagicResistChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMagicResistChancetextBox.TabIndex = 20;
-            this.RISMagicResistChancetextBox.TextChanged += new System.EventHandler(this.RISMagicResistChancetextBox_TextChanged);
+            RISMagicResistChancetextBox.Location = new Point(37, 400);
+            RISMagicResistChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMagicResistChancetextBox.MaxLength = 3;
+            RISMagicResistChancetextBox.Name = "RISMagicResistChancetextBox";
+            RISMagicResistChancetextBox.Size = new Size(44, 23);
+            RISMagicResistChancetextBox.TabIndex = 20;
+            RISMagicResistChancetextBox.TextChanged += RISMagicResistChancetextBox_TextChanged;
             // 
             // RISStrongChancetextBox
             // 
-            this.RISStrongChancetextBox.Location = new System.Drawing.Point(32, 280);
-            this.RISStrongChancetextBox.MaxLength = 3;
-            this.RISStrongChancetextBox.Name = "RISStrongChancetextBox";
-            this.RISStrongChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISStrongChancetextBox.TabIndex = 19;
-            this.RISStrongChancetextBox.TextChanged += new System.EventHandler(this.RISStrongChancetextBox_TextChanged);
+            RISStrongChancetextBox.Location = new Point(37, 366);
+            RISStrongChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISStrongChancetextBox.MaxLength = 3;
+            RISStrongChancetextBox.Name = "RISStrongChancetextBox";
+            RISStrongChancetextBox.Size = new Size(44, 23);
+            RISStrongChancetextBox.TabIndex = 19;
+            RISStrongChancetextBox.TextChanged += RISStrongChancetextBox_TextChanged;
             // 
             // RISMaxMpChancetextBox
             // 
-            this.RISMaxMpChancetextBox.Location = new System.Drawing.Point(32, 254);
-            this.RISMaxMpChancetextBox.MaxLength = 3;
-            this.RISMaxMpChancetextBox.Name = "RISMaxMpChancetextBox";
-            this.RISMaxMpChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMpChancetextBox.TabIndex = 18;
-            this.RISMaxMpChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMpChancetextBox_TextChanged);
+            RISMaxMpChancetextBox.Location = new Point(37, 332);
+            RISMaxMpChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMpChancetextBox.MaxLength = 3;
+            RISMaxMpChancetextBox.Name = "RISMaxMpChancetextBox";
+            RISMaxMpChancetextBox.Size = new Size(44, 23);
+            RISMaxMpChancetextBox.TabIndex = 18;
+            RISMaxMpChancetextBox.TextChanged += RISMaxMpChancetextBox_TextChanged;
             // 
             // RISMaxHpChancetextBox
             // 
-            this.RISMaxHpChancetextBox.Location = new System.Drawing.Point(32, 228);
-            this.RISMaxHpChancetextBox.MaxLength = 3;
-            this.RISMaxHpChancetextBox.Name = "RISMaxHpChancetextBox";
-            this.RISMaxHpChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxHpChancetextBox.TabIndex = 17;
-            this.RISMaxHpChancetextBox.TextChanged += new System.EventHandler(this.RISMaxHpChancetextBox_TextChanged);
+            RISMaxHpChancetextBox.Location = new Point(37, 298);
+            RISMaxHpChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxHpChancetextBox.MaxLength = 3;
+            RISMaxHpChancetextBox.Name = "RISMaxHpChancetextBox";
+            RISMaxHpChancetextBox.Size = new Size(44, 23);
+            RISMaxHpChancetextBox.TabIndex = 17;
+            RISMaxHpChancetextBox.TextChanged += RISMaxHpChancetextBox_TextChanged;
             // 
             // RISMaxAgilChancetextBox
             // 
-            this.RISMaxAgilChancetextBox.Location = new System.Drawing.Point(32, 202);
-            this.RISMaxAgilChancetextBox.MaxLength = 3;
-            this.RISMaxAgilChancetextBox.Name = "RISMaxAgilChancetextBox";
-            this.RISMaxAgilChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAgilChancetextBox.TabIndex = 16;
-            this.RISMaxAgilChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAgilChancetextBox_TextChanged);
+            RISMaxAgilChancetextBox.Location = new Point(37, 264);
+            RISMaxAgilChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAgilChancetextBox.MaxLength = 3;
+            RISMaxAgilChancetextBox.Name = "RISMaxAgilChancetextBox";
+            RISMaxAgilChancetextBox.Size = new Size(44, 23);
+            RISMaxAgilChancetextBox.TabIndex = 16;
+            RISMaxAgilChancetextBox.TextChanged += RISMaxAgilChancetextBox_TextChanged;
             // 
             // RISMaxAccChancetextBox
             // 
-            this.RISMaxAccChancetextBox.Location = new System.Drawing.Point(32, 176);
-            this.RISMaxAccChancetextBox.MaxLength = 3;
-            this.RISMaxAccChancetextBox.Name = "RISMaxAccChancetextBox";
-            this.RISMaxAccChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAccChancetextBox.TabIndex = 15;
-            this.RISMaxAccChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAccChancetextBox_TextChanged);
+            RISMaxAccChancetextBox.Location = new Point(37, 230);
+            RISMaxAccChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAccChancetextBox.MaxLength = 3;
+            RISMaxAccChancetextBox.Name = "RISMaxAccChancetextBox";
+            RISMaxAccChancetextBox.Size = new Size(44, 23);
+            RISMaxAccChancetextBox.TabIndex = 15;
+            RISMaxAccChancetextBox.TextChanged += RISMaxAccChancetextBox_TextChanged;
             // 
             // RISMaxScChancetextBox
             // 
-            this.RISMaxScChancetextBox.Location = new System.Drawing.Point(32, 150);
-            this.RISMaxScChancetextBox.MaxLength = 3;
-            this.RISMaxScChancetextBox.Name = "RISMaxScChancetextBox";
-            this.RISMaxScChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxScChancetextBox.TabIndex = 14;
-            this.RISMaxScChancetextBox.TextChanged += new System.EventHandler(this.RISMaxScChancetextBox_TextChanged);
+            RISMaxScChancetextBox.Location = new Point(37, 196);
+            RISMaxScChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxScChancetextBox.MaxLength = 3;
+            RISMaxScChancetextBox.Name = "RISMaxScChancetextBox";
+            RISMaxScChancetextBox.Size = new Size(44, 23);
+            RISMaxScChancetextBox.TabIndex = 14;
+            RISMaxScChancetextBox.TextChanged += RISMaxScChancetextBox_TextChanged;
             // 
             // RISMaxMcChancetextBox
             // 
-            this.RISMaxMcChancetextBox.Location = new System.Drawing.Point(32, 124);
-            this.RISMaxMcChancetextBox.MaxLength = 3;
-            this.RISMaxMcChancetextBox.Name = "RISMaxMcChancetextBox";
-            this.RISMaxMcChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMcChancetextBox.TabIndex = 13;
-            this.RISMaxMcChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMcChancetextBox_TextChanged);
+            RISMaxMcChancetextBox.Location = new Point(37, 162);
+            RISMaxMcChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMcChancetextBox.MaxLength = 3;
+            RISMaxMcChancetextBox.Name = "RISMaxMcChancetextBox";
+            RISMaxMcChancetextBox.Size = new Size(44, 23);
+            RISMaxMcChancetextBox.TabIndex = 13;
+            RISMaxMcChancetextBox.TextChanged += RISMaxMcChancetextBox_TextChanged;
             // 
             // RISMaxDcChancetextBox
             // 
-            this.RISMaxDcChancetextBox.Location = new System.Drawing.Point(32, 98);
-            this.RISMaxDcChancetextBox.MaxLength = 3;
-            this.RISMaxDcChancetextBox.Name = "RISMaxDcChancetextBox";
-            this.RISMaxDcChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDcChancetextBox.TabIndex = 12;
-            this.RISMaxDcChancetextBox.TextChanged += new System.EventHandler(this.RISMaxDcChancetextBox_TextChanged);
+            RISMaxDcChancetextBox.Location = new Point(37, 128);
+            RISMaxDcChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDcChancetextBox.MaxLength = 3;
+            RISMaxDcChancetextBox.Name = "RISMaxDcChancetextBox";
+            RISMaxDcChancetextBox.Size = new Size(44, 23);
+            RISMaxDcChancetextBox.TabIndex = 12;
+            RISMaxDcChancetextBox.TextChanged += RISMaxDcChancetextBox_TextChanged;
             // 
             // RISMaxMacChancetextBox
             // 
-            this.RISMaxMacChancetextBox.Location = new System.Drawing.Point(32, 72);
-            this.RISMaxMacChancetextBox.MaxLength = 3;
-            this.RISMaxMacChancetextBox.Name = "RISMaxMacChancetextBox";
-            this.RISMaxMacChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxMacChancetextBox.TabIndex = 11;
-            this.RISMaxMacChancetextBox.TextChanged += new System.EventHandler(this.RISMaxMacChancetextBox_TextChanged);
+            RISMaxMacChancetextBox.Location = new Point(37, 94);
+            RISMaxMacChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxMacChancetextBox.MaxLength = 3;
+            RISMaxMacChancetextBox.Name = "RISMaxMacChancetextBox";
+            RISMaxMacChancetextBox.Size = new Size(44, 23);
+            RISMaxMacChancetextBox.TabIndex = 11;
+            RISMaxMacChancetextBox.TextChanged += RISMaxMacChancetextBox_TextChanged;
             // 
             // RISMaxAcChancetextBox
             // 
-            this.RISMaxAcChancetextBox.Location = new System.Drawing.Point(32, 46);
-            this.RISMaxAcChancetextBox.MaxLength = 3;
-            this.RISMaxAcChancetextBox.Name = "RISMaxAcChancetextBox";
-            this.RISMaxAcChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxAcChancetextBox.TabIndex = 10;
-            this.RISMaxAcChancetextBox.TextChanged += new System.EventHandler(this.RISMaxAcChancetextBox_TextChanged);
+            RISMaxAcChancetextBox.Location = new Point(37, 60);
+            RISMaxAcChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxAcChancetextBox.MaxLength = 3;
+            RISMaxAcChancetextBox.Name = "RISMaxAcChancetextBox";
+            RISMaxAcChancetextBox.Size = new Size(44, 23);
+            RISMaxAcChancetextBox.TabIndex = 10;
+            RISMaxAcChancetextBox.TextChanged += RISMaxAcChancetextBox_TextChanged;
             // 
             // RISMaxDuraChancetextBox
             // 
-            this.RISMaxDuraChancetextBox.Location = new System.Drawing.Point(32, 20);
-            this.RISMaxDuraChancetextBox.MaxLength = 3;
-            this.RISMaxDuraChancetextBox.Name = "RISMaxDuraChancetextBox";
-            this.RISMaxDuraChancetextBox.Size = new System.Drawing.Size(38, 20);
-            this.RISMaxDuraChancetextBox.TabIndex = 9;
-            this.RISMaxDuraChancetextBox.TextChanged += new System.EventHandler(this.RISMaxDuraChancetextBox_TextChanged);
+            RISMaxDuraChancetextBox.Location = new Point(37, 26);
+            RISMaxDuraChancetextBox.Margin = new Padding(4, 4, 4, 4);
+            RISMaxDuraChancetextBox.MaxLength = 3;
+            RISMaxDuraChancetextBox.Name = "RISMaxDuraChancetextBox";
+            RISMaxDuraChancetextBox.Size = new Size(44, 23);
+            RISMaxDuraChancetextBox.TabIndex = 9;
+            RISMaxDuraChancetextBox.TextChanged += RISMaxDuraChancetextBox_TextChanged;
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(3, 6);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(79, 13);
-            this.label40.TabIndex = 8;
-            this.label40.Text = "Random Index:";
+            label40.AutoSize = true;
+            label40.Location = new Point(4, 8);
+            label40.Margin = new Padding(4, 0, 4, 0);
+            label40.Name = "label40";
+            label40.Size = new Size(68, 17);
+            label40.TabIndex = 8;
+            label40.Text = "随机索引：";
             // 
             // RISIndexcomboBox
             // 
-            this.RISIndexcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RISIndexcomboBox.FormattingEnabled = true;
-            this.RISIndexcomboBox.Location = new System.Drawing.Point(83, 3);
-            this.RISIndexcomboBox.Name = "RISIndexcomboBox";
-            this.RISIndexcomboBox.Size = new System.Drawing.Size(92, 21);
-            this.RISIndexcomboBox.TabIndex = 7;
-            this.RISIndexcomboBox.SelectedIndexChanged += new System.EventHandler(this.RISIndexcomboBox_SelectedIndexChanged);
+            RISIndexcomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            RISIndexcomboBox.FormattingEnabled = true;
+            RISIndexcomboBox.Location = new Point(97, 4);
+            RISIndexcomboBox.Margin = new Padding(4, 4, 4, 4);
+            RISIndexcomboBox.Name = "RISIndexcomboBox";
+            RISIndexcomboBox.Size = new Size(107, 25);
+            RISIndexcomboBox.TabIndex = 7;
+            RISIndexcomboBox.SelectedIndexChanged += RISIndexcomboBox_SelectedIndexChanged;
             // 
             // lblClassStatExample
             // 
-            this.lblClassStatExample.AutoSize = true;
-            this.lblClassStatExample.Location = new System.Drawing.Point(723, 34);
-            this.lblClassStatExample.Name = "lblClassStatExample";
-            this.lblClassStatExample.Size = new System.Drawing.Size(126, 13);
-            this.lblClassStatExample.TabIndex = 17;
-            this.lblClassStatExample.Text = "Level 1-50 Stat Preview..";
+            lblClassStatExample.AutoSize = true;
+            lblClassStatExample.Location = new Point(844, 44);
+            lblClassStatExample.Margin = new Padding(4, 0, 4, 0);
+            lblClassStatExample.Name = "lblClassStatExample";
+            lblClassStatExample.Size = new Size(124, 17);
+            lblClassStatExample.TabIndex = 17;
+            lblClassStatExample.Text = "1-50级职业属性预览..";
             // 
             // lblHeroStatExample
             // 
-            this.lblHeroStatExample.AutoSize = true;
-            this.lblHeroStatExample.Location = new System.Drawing.Point(723, 34);
-            this.lblHeroStatExample.Name = "lblHeroStatExample";
-            this.lblHeroStatExample.Size = new System.Drawing.Size(148, 13);
-            this.lblHeroStatExample.TabIndex = 18;
-            this.lblHeroStatExample.Text = "Level 1-50 Hero Stat Preview..";
-            this.lblHeroStatExample.Visible = false;
+            lblHeroStatExample.AutoSize = true;
+            lblHeroStatExample.Location = new Point(844, 44);
+            lblHeroStatExample.Margin = new Padding(4, 0, 4, 0);
+            lblHeroStatExample.Name = "lblHeroStatExample";
+            lblHeroStatExample.Size = new Size(124, 17);
+            lblHeroStatExample.TabIndex = 18;
+            lblHeroStatExample.Text = "1-50级英雄属性预览..";
+            lblHeroStatExample.Visible = false;
             // 
             // BalanceConfigForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 749);
-            this.Controls.Add(this.lblHeroStatExample);
-            this.Controls.Add(this.lblClassStatExample);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "BalanceConfigForm";
-            this.Text = "BalanceConfigForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BalanceConfigForm_FormClosed);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.classGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.classCapGridView)).EndInit();
-            this.tabHero.ResumeLayout(false);
-            this.panelHeroLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.heroGridView)).EndInit();
-            this.panelHeroRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.heroCapGridView)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1004, 979);
+            Controls.Add(lblHeroStatExample);
+            Controls.Add(lblClassStatExample);
+            Controls.Add(tabControl1);
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "BalanceConfigForm";
+            Text = "平衡性配置";
+            FormClosed += BalanceConfigForm_FormClosed;
+            tabControl1.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)classGridView).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)classCapGridView).EndInit();
+            tabHero.ResumeLayout(false);
+            panelHeroLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)heroGridView).EndInit();
+            panelHeroRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)heroCapGridView).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

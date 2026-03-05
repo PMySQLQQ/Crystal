@@ -1172,14 +1172,16 @@ namespace Server.MirObjects
                     switch (item.Info.Shape)
                     {
                         case 0:
-                            if (CurrentMap.Info.NoEscape)
+                            // 地牢卷：副本实例地图禁止使用
+                            if (CurrentMap.IsInstance || CurrentMap.Info.NoEscape)
                             {
                                 ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.CanNotDungeon), ChatType.System);
                                 return false;
                             }
                             break;
                         case 1:
-                            if (CurrentMap.Info.NoTownTeleport)
+                            // 回城卷：副本实例地图禁止使用
+                            if (CurrentMap.IsInstance || CurrentMap.Info.NoTownTeleport)
                             {
                                 ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.NoTownTeleport), ChatType.System);
                                 return false;

@@ -1,4 +1,4 @@
-﻿namespace Server.MirForms.VisualMapInfo
+namespace Server.MirForms.VisualMapInfo
 {
     partial class VForm
     {
@@ -538,7 +538,7 @@
             this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
             this.Name = "VForm";
-            this.Text = "Visualizer";
+            this.Text = "地图可视化";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VForm_FormClosing);
             this.Load += new System.EventHandler(this.VForm_Load);
             this.Tool.ResumeLayout(false);

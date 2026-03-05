@@ -19,6 +19,8 @@ namespace Server.MirEnvir
         }
 
         public MapInfo Info;
+        // 标记是否为“副本实例地图”，用于屏蔽原始刷怪/NPC
+        public bool IsInstance;
 
         public int Thread = 0;
 
@@ -470,29 +472,33 @@ namespace Server.MirEnvir
 
                     GetWalkableCells();
                     
-                    for (int i = 0; i < Info.Respawns.Count; i++)
+                    // 副本实例地图不加载原始刷怪与静态 NPC，只保留本系统动态刷新的怪物/NPC
+                    if (!IsInstance)
                     {
-                        MapRespawn info = new MapRespawn(Info.Respawns[i]);
-                        if (info.Monster == null) continue;
-                        info.Map = this;
-                        info.WalkableCells = WalkableCells.Where(x =>
-                        x.X <= info.Info.Location.X + info.Info.Spread &&
-                        x.X >= info.Info.Location.X - info.Info.Spread &&
-                        x.Y <= info.Info.Location.Y + info.Info.Spread &&
-                        x.Y >= info.Info.Location.Y - info.Info.Spread).ToList();
+                        for (int i = 0; i < Info.Respawns.Count; i++)
+                        {
+                            MapRespawn info = new MapRespawn(Info.Respawns[i]);
+                            if (info.Monster == null) continue;
+                            info.Map = this;
+                            info.WalkableCells = WalkableCells.Where(x =>
+                            x.X <= info.Info.Location.X + info.Info.Spread &&
+                            x.X >= info.Info.Location.X - info.Info.Spread &&
+                            x.Y <= info.Info.Location.Y + info.Info.Spread &&
+                            x.Y >= info.Info.Location.Y - info.Info.Spread).ToList();
 
-                        Respawns.Add(info);
+                            Respawns.Add(info);
 
-                        if ((info.Info.SaveRespawnTime) && (info.Info.RespawnTicks != 0))
-                            Envir.SavedSpawns.Add(info);
-                    }
+                            if ((info.Info.SaveRespawnTime) && (info.Info.RespawnTicks != 0))
+                                Envir.SavedSpawns.Add(info);
+                        }
 
-                    for (int i = 0; i < Info.NPCs.Count; i++)
-                    {
-                        NPCInfo info = Info.NPCs[i];
-                        if (!ValidPoint(info.Location)) continue;
+                        for (int i = 0; i < Info.NPCs.Count; i++)
+                        {
+                            NPCInfo info = Info.NPCs[i];
+                            if (!ValidPoint(info.Location)) continue;
 
-                        AddObject(new NPCObject(info) { CurrentMap = this });
+                            AddObject(new NPCObject(info) { CurrentMap = this });
+                        }
                     }
 
                     for (int i = 0; i < Info.SafeZones.Count; i++)

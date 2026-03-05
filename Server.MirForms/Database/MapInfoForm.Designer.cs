@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -201,11 +201,11 @@ namespace Server
             MapTabs.Controls.Add(tabPage2);
             MapTabs.Controls.Add(tabPage4);
             MapTabs.Controls.Add(tabPage7);
-            MapTabs.Location = new Point(241, 72);
+            MapTabs.Location = new Point(241, 82);
             MapTabs.Margin = new Padding(4, 3, 4, 3);
             MapTabs.Name = "MapTabs";
             MapTabs.SelectedIndex = 0;
-            MapTabs.Size = new Size(630, 552);
+            MapTabs.Size = new Size(630, 626);
             MapTabs.TabIndex = 8;
             // 
             // tabPage1
@@ -229,13 +229,13 @@ namespace Server
             tabPage1.Controls.Add(MapNameTextBox);
             tabPage1.Controls.Add(FileNameTextBox);
             tabPage1.Controls.Add(label3);
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 26);
             tabPage1.Margin = new Padding(4, 3, 4, 3);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(4, 3, 4, 3);
-            tabPage1.Size = new Size(622, 524);
+            tabPage1.Size = new Size(622, 596);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Info";
+            tabPage1.Text = "信息";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // label48
@@ -243,26 +243,26 @@ namespace Server
             label48.AutoSize = true;
             label48.Location = new Point(451, 3);
             label48.Name = "label48";
-            label48.Size = new Size(164, 15);
+            label48.Size = new Size(92, 17);
             label48.TabIndex = 20;
-            label48.Text = "Weather (Can Select Multiple)";
+            label48.Text = "天气（可多选）";
             // 
             // lstParticles
             // 
             lstParticles.FormattingEnabled = true;
-            lstParticles.ItemHeight = 15;
-            lstParticles.Location = new Point(454, 21);
+            lstParticles.ItemHeight = 17;
+            lstParticles.Location = new Point(454, 24);
             lstParticles.Name = "lstParticles";
             lstParticles.SelectionMode = SelectionMode.MultiSimple;
-            lstParticles.Size = new Size(165, 244);
+            lstParticles.Size = new Size(165, 276);
             lstParticles.TabIndex = 0;
             lstParticles.SelectedIndexChanged += lstParticles_SelectedIndexChanged;
             // 
             // MinimapPreview
             // 
-            MinimapPreview.Location = new Point(3, 234);
+            MinimapPreview.Location = new Point(3, 265);
             MinimapPreview.Name = "MinimapPreview";
-            MinimapPreview.Size = new Size(357, 287);
+            MinimapPreview.Size = new Size(357, 325);
             MinimapPreview.SizeMode = PictureBoxSizeMode.StretchImage;
             MinimapPreview.TabIndex = 19;
             MinimapPreview.TabStop = false;
@@ -270,16 +270,16 @@ namespace Server
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(44, 209);
+            label11.Location = new Point(22, 238);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(42, 15);
+            label11.Size = new Size(68, 17);
             label11.TabIndex = 18;
-            label11.Text = "Music:";
+            label11.Text = "背景音乐：";
             // 
             // MusicTextBox
             // 
-            MusicTextBox.Location = new Point(96, 205);
+            MusicTextBox.Location = new Point(96, 232);
             MusicTextBox.Margin = new Padding(4, 3, 4, 3);
             MusicTextBox.Name = "MusicTextBox";
             MusicTextBox.Size = new Size(107, 23);
@@ -289,37 +289,37 @@ namespace Server
             // label33
             // 
             label33.AutoSize = true;
-            label33.Location = new Point(19, 177);
+            label33.Location = new Point(19, 201);
             label33.Margin = new Padding(4, 0, 4, 0);
             label33.Name = "label33";
-            label33.Size = new Size(64, 15);
+            label33.Size = new Size(68, 17);
             label33.TabIndex = 16;
-            label33.Text = "Mine Type:";
+            label33.Text = "矿区类型：";
             // 
             // MineComboBox
             // 
             MineComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             MineComboBox.FormattingEnabled = true;
-            MineComboBox.Location = new Point(96, 173);
+            MineComboBox.Location = new Point(96, 196);
             MineComboBox.Margin = new Padding(4, 3, 4, 3);
             MineComboBox.Name = "MineComboBox";
-            MineComboBox.Size = new Size(107, 23);
+            MineComboBox.Size = new Size(107, 25);
             MineComboBox.TabIndex = 15;
             MineComboBox.SelectedIndexChanged += MineComboBox_SelectedIndexChanged;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(150, 114);
+            label15.Location = new Point(150, 129);
             label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(54, 15);
+            label15.Size = new Size(56, 17);
             label15.TabIndex = 14;
-            label15.Text = "Big Map:";
+            label15.Text = "大地图：";
             // 
             // BigMapTextBox
             // 
-            BigMapTextBox.Location = new Point(215, 111);
+            BigMapTextBox.Location = new Point(215, 126);
             BigMapTextBox.Margin = new Padding(4, 3, 4, 3);
             BigMapTextBox.MaxLength = 5;
             BigMapTextBox.Name = "BigMapTextBox";
@@ -331,46 +331,46 @@ namespace Server
             // 
             LightsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             LightsComboBox.FormattingEnabled = true;
-            LightsComboBox.Location = new Point(96, 141);
+            LightsComboBox.Location = new Point(96, 160);
             LightsComboBox.Margin = new Padding(4, 3, 4, 3);
             LightsComboBox.Name = "LightsComboBox";
-            LightsComboBox.Size = new Size(107, 23);
+            LightsComboBox.Size = new Size(107, 25);
             LightsComboBox.TabIndex = 11;
             LightsComboBox.SelectedIndexChanged += LightsComboBox_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(44, 144);
+            label5.Location = new Point(44, 163);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(42, 15);
+            label5.Size = new Size(44, 17);
             label5.TabIndex = 12;
-            label5.Text = "Lights:";
+            label5.Text = "光照：";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 21);
+            label1.Location = new Point(19, 24);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(68, 17);
             label1.TabIndex = 4;
-            label1.Text = "Map Index:";
+            label1.Text = "地图编号：";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(27, 114);
+            label4.Location = new Point(27, 129);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(61, 15);
+            label4.Size = new Size(56, 17);
             label4.TabIndex = 10;
-            label4.Text = "Mini Map:";
+            label4.Text = "小地图：";
             // 
             // MapIndexTextBox
             // 
-            MapIndexTextBox.Location = new Point(96, 17);
+            MapIndexTextBox.Location = new Point(96, 19);
             MapIndexTextBox.Margin = new Padding(4, 3, 4, 3);
             MapIndexTextBox.Name = "MapIndexTextBox";
             MapIndexTextBox.ReadOnly = true;
@@ -379,7 +379,7 @@ namespace Server
             // 
             // MiniMapTextBox
             // 
-            MiniMapTextBox.Location = new Point(96, 111);
+            MiniMapTextBox.Location = new Point(96, 126);
             MiniMapTextBox.Margin = new Padding(4, 3, 4, 3);
             MiniMapTextBox.MaxLength = 5;
             MiniMapTextBox.Name = "MiniMapTextBox";
@@ -390,16 +390,16 @@ namespace Server
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 54);
+            label2.Location = new Point(22, 61);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(56, 17);
             label2.TabIndex = 6;
-            label2.Text = "File Name:";
+            label2.Text = "文件名：";
             // 
             // MapNameTextBox
             // 
-            MapNameTextBox.Location = new Point(96, 81);
+            MapNameTextBox.Location = new Point(96, 92);
             MapNameTextBox.Margin = new Padding(4, 3, 4, 3);
             MapNameTextBox.Name = "MapNameTextBox";
             MapNameTextBox.Size = new Size(107, 23);
@@ -408,7 +408,7 @@ namespace Server
             // 
             // FileNameTextBox
             // 
-            FileNameTextBox.Location = new Point(96, 51);
+            FileNameTextBox.Location = new Point(96, 58);
             FileNameTextBox.Margin = new Padding(4, 3, 4, 3);
             FileNameTextBox.Name = "FileNameTextBox";
             FileNameTextBox.Size = new Size(54, 23);
@@ -418,12 +418,12 @@ namespace Server
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(16, 84);
+            label3.Location = new Point(16, 95);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(69, 15);
+            label3.Size = new Size(68, 17);
             label3.TabIndex = 8;
-            label3.Text = "Map Name:";
+            label3.Text = "地图名称：";
             // 
             // tabPage6
             // 
@@ -462,18 +462,18 @@ namespace Server
             tabPage6.Controls.Add(FightCheckbox);
             tabPage6.Controls.Add(NoReconnectCheckbox);
             tabPage6.Controls.Add(NoTeleportCheckbox);
-            tabPage6.Location = new Point(4, 24);
+            tabPage6.Location = new Point(4, 26);
             tabPage6.Margin = new Padding(4, 3, 4, 3);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(4, 3, 4, 3);
-            tabPage6.Size = new Size(622, 524);
+            tabPage6.Size = new Size(622, 596);
             tabPage6.TabIndex = 5;
-            tabPage6.Text = "Attributes";
+            tabPage6.Text = "属性";
             tabPage6.UseVisualStyleBackColor = true;
             // 
             // FireWallCount
             // 
-            FireWallCount.Location = new Point(517, 164);
+            FireWallCount.Location = new Point(517, 186);
             FireWallCount.Name = "FireWallCount";
             FireWallCount.Size = new Size(68, 23);
             FireWallCount.TabIndex = 57;
@@ -482,62 +482,62 @@ namespace Server
             // FireWallCheckBox
             // 
             FireWallCheckBox.AutoSize = true;
-            FireWallCheckBox.Location = new Point(398, 168);
+            FireWallCheckBox.Location = new Point(398, 190);
             FireWallCheckBox.Name = "FireWallCheckBox";
-            FireWallCheckBox.Size = new Size(98, 19);
+            FireWallCheckBox.Size = new Size(75, 21);
             FireWallCheckBox.TabIndex = 56;
-            FireWallCheckBox.Text = "FireWall Limit";
+            FireWallCheckBox.Text = "限制火墙";
             FireWallCheckBox.UseVisualStyleBackColor = true;
             FireWallCheckBox.CheckedChanged += FireWallCheckBox_CheckedChanged;
             // 
             // RequiredGroupCheckBox
             // 
             RequiredGroupCheckBox.AutoSize = true;
-            RequiredGroupCheckBox.Location = new Point(398, 143);
+            RequiredGroupCheckBox.Location = new Point(398, 162);
             RequiredGroupCheckBox.Margin = new Padding(4, 3, 4, 3);
             RequiredGroupCheckBox.Name = "RequiredGroupCheckBox";
-            RequiredGroupCheckBox.Size = new Size(109, 19);
+            RequiredGroupCheckBox.Size = new Size(75, 21);
             RequiredGroupCheckBox.TabIndex = 55;
-            RequiredGroupCheckBox.Text = "Group Required";
+            RequiredGroupCheckBox.Text = "必须组队";
             RequiredGroupCheckBox.UseVisualStyleBackColor = true;
             RequiredGroupCheckBox.CheckedChanged += RequiredGroupCheckBox_CheckedChanged;
             // 
             // NoHeroesCheckbox
             // 
             NoHeroesCheckbox.AutoSize = true;
-            NoHeroesCheckbox.Location = new Point(203, 218);
+            NoHeroesCheckbox.Location = new Point(203, 247);
             NoHeroesCheckbox.Name = "NoHeroesCheckbox";
-            NoHeroesCheckbox.Size = new Size(82, 19);
+            NoHeroesCheckbox.Size = new Size(75, 21);
             NoHeroesCheckbox.TabIndex = 54;
-            NoHeroesCheckbox.Text = "No Heroes";
+            NoHeroesCheckbox.Text = "禁止英雄";
             NoHeroesCheckbox.UseVisualStyleBackColor = true;
             NoHeroesCheckbox.CheckedChanged += NoHeroesCheckbox_CheckedChanged;
             // 
             // NoExperienceCheckbox
             // 
             NoExperienceCheckbox.AutoSize = true;
-            NoExperienceCheckbox.Location = new Point(19, 268);
+            NoExperienceCheckbox.Location = new Point(19, 304);
             NoExperienceCheckbox.Name = "NoExperienceCheckbox";
-            NoExperienceCheckbox.Size = new Size(142, 19);
+            NoExperienceCheckbox.Size = new Size(87, 21);
             NoExperienceCheckbox.TabIndex = 53;
-            NoExperienceCheckbox.Text = "No Gained Experiance";
+            NoExperienceCheckbox.Text = "无经验获得";
             NoExperienceCheckbox.UseVisualStyleBackColor = true;
             NoExperienceCheckbox.CheckedChanged += NoExperienceCheckbox_CheckedChanged;
             // 
             // NoIntelligentCreatureCheckbox
             // 
             NoIntelligentCreatureCheckbox.AutoSize = true;
-            NoIntelligentCreatureCheckbox.Location = new Point(203, 243);
+            NoIntelligentCreatureCheckbox.Location = new Point(203, 275);
             NoIntelligentCreatureCheckbox.Name = "NoIntelligentCreatureCheckbox";
-            NoIntelligentCreatureCheckbox.Size = new Size(151, 19);
+            NoIntelligentCreatureCheckbox.Size = new Size(75, 21);
             NoIntelligentCreatureCheckbox.TabIndex = 56;
-            NoIntelligentCreatureCheckbox.Text = "No Intelligent Creatures";
+            NoIntelligentCreatureCheckbox.Text = "禁止灵兽";
             NoIntelligentCreatureCheckbox.UseVisualStyleBackColor = true;
             NoIntelligentCreatureCheckbox.CheckedChanged += NoIntelligentCreatureCheckbox_CheckedChanged;
             // 
             // RequiredGroupTextBox
             // 
-            RequiredGroupTextBox.Location = new Point(517, 139);
+            RequiredGroupTextBox.Location = new Point(517, 158);
             RequiredGroupTextBox.Name = "RequiredGroupTextBox";
             RequiredGroupTextBox.Size = new Size(68, 23);
             RequiredGroupTextBox.TabIndex = 53;
@@ -546,28 +546,28 @@ namespace Server
             // noGroupCheckbox
             // 
             noGroupCheckbox.AutoSize = true;
-            noGroupCheckbox.Location = new Point(19, 243);
+            noGroupCheckbox.Location = new Point(19, 275);
             noGroupCheckbox.Name = "noGroupCheckbox";
-            noGroupCheckbox.Size = new Size(78, 19);
+            noGroupCheckbox.Size = new Size(75, 21);
             noGroupCheckbox.TabIndex = 51;
-            noGroupCheckbox.Text = "No Group";
+            noGroupCheckbox.Text = "禁止组队";
             noGroupCheckbox.UseVisualStyleBackColor = true;
             noGroupCheckbox.CheckedChanged += noGroupCheckbox_CheckedChanged;
             // 
             // NoPetsCheckbox
             // 
             NoPetsCheckbox.AutoSize = true;
-            NoPetsCheckbox.Location = new Point(203, 193);
+            NoPetsCheckbox.Location = new Point(203, 219);
             NoPetsCheckbox.Name = "NoPetsCheckbox";
-            NoPetsCheckbox.Size = new Size(67, 19);
+            NoPetsCheckbox.Size = new Size(75, 21);
             NoPetsCheckbox.TabIndex = 50;
-            NoPetsCheckbox.Text = "No Pets";
+            NoPetsCheckbox.Text = "禁止宠物";
             NoPetsCheckbox.UseVisualStyleBackColor = true;
             NoPetsCheckbox.CheckedChanged += NoPetsCheckbox_CheckedChanged;
             // 
             // GTIndexBox
             // 
-            GTIndexBox.Location = new Point(517, 114);
+            GTIndexBox.Location = new Point(517, 129);
             GTIndexBox.Name = "GTIndexBox";
             GTIndexBox.Size = new Size(68, 23);
             GTIndexBox.TabIndex = 49;
@@ -576,88 +576,88 @@ namespace Server
             // GTBox
             // 
             GTBox.AutoSize = true;
-            GTBox.Location = new Point(398, 118);
+            GTBox.Location = new Point(398, 134);
             GTBox.Margin = new Padding(4, 3, 4, 3);
             GTBox.Name = "GTBox";
-            GTBox.Size = new Size(100, 19);
+            GTBox.Size = new Size(75, 21);
             GTBox.TabIndex = 46;
-            GTBox.Text = "Guild Terrority";
+            GTBox.Text = "行会领地";
             GTBox.UseVisualStyleBackColor = true;
             GTBox.CheckedChanged += GTBox_CheckedChanged;
             // 
             // NoReincarnation
             // 
             NoReincarnation.AutoSize = true;
-            NoReincarnation.Location = new Point(19, 218);
+            NoReincarnation.Location = new Point(19, 247);
             NoReincarnation.Margin = new Padding(4, 3, 4, 3);
             NoReincarnation.Name = "NoReincarnation";
-            NoReincarnation.Size = new Size(118, 19);
+            NoReincarnation.Size = new Size(75, 21);
             NoReincarnation.TabIndex = 45;
-            NoReincarnation.Text = "No Reincarnation";
+            NoReincarnation.Text = "禁止复活";
             NoReincarnation.UseVisualStyleBackColor = true;
             NoReincarnation.CheckedChanged += NoReincarnation_CheckedChanged;
             // 
             // NoTownTeleportCheckbox
             // 
             NoTownTeleportCheckbox.AutoSize = true;
-            NoTownTeleportCheckbox.Location = new Point(19, 118);
+            NoTownTeleportCheckbox.Location = new Point(19, 134);
             NoTownTeleportCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoTownTeleportCheckbox.Name = "NoTownTeleportCheckbox";
-            NoTownTeleportCheckbox.Size = new Size(115, 19);
+            NoTownTeleportCheckbox.Size = new Size(75, 21);
             NoTownTeleportCheckbox.TabIndex = 44;
-            NoTownTeleportCheckbox.Text = "No TownTeleport";
+            NoTownTeleportCheckbox.Text = "禁止回城";
             NoTownTeleportCheckbox.UseVisualStyleBackColor = true;
             NoTownTeleportCheckbox.CheckedChanged += NoTownTeleportCheckbox_CheckedChanged;
             // 
             // NoFightCheckbox
             // 
             NoFightCheckbox.AutoSize = true;
-            NoFightCheckbox.Location = new Point(203, 118);
+            NoFightCheckbox.Location = new Point(203, 134);
             NoFightCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoFightCheckbox.Name = "NoFightCheckbox";
-            NoFightCheckbox.Size = new Size(72, 19);
+            NoFightCheckbox.Size = new Size(75, 21);
             NoFightCheckbox.TabIndex = 43;
-            NoFightCheckbox.Text = "No Fight";
+            NoFightCheckbox.Text = "禁止战斗";
             NoFightCheckbox.UseVisualStyleBackColor = true;
             NoFightCheckbox.CheckedChanged += NoFightCheckbox_CheckedChanged;
             // 
             // NeedBridleCheckbox
             // 
             NeedBridleCheckbox.AutoSize = true;
-            NeedBridleCheckbox.Location = new Point(203, 168);
+            NeedBridleCheckbox.Location = new Point(203, 190);
             NeedBridleCheckbox.Margin = new Padding(4, 3, 4, 3);
             NeedBridleCheckbox.Name = "NeedBridleCheckbox";
-            NeedBridleCheckbox.Size = new Size(87, 19);
+            NeedBridleCheckbox.Size = new Size(63, 21);
             NeedBridleCheckbox.TabIndex = 42;
-            NeedBridleCheckbox.Text = "Need Bridle";
+            NeedBridleCheckbox.Text = "需缰绳";
             NeedBridleCheckbox.UseVisualStyleBackColor = true;
             NeedBridleCheckbox.CheckedChanged += NeedBridleCheckbox_CheckedChanged;
             // 
             // NoMountCheckbox
             // 
             NoMountCheckbox.AutoSize = true;
-            NoMountCheckbox.Location = new Point(203, 143);
+            NoMountCheckbox.Location = new Point(203, 162);
             NoMountCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoMountCheckbox.Name = "NoMountCheckbox";
-            NoMountCheckbox.Size = new Size(81, 19);
+            NoMountCheckbox.Size = new Size(75, 21);
             NoMountCheckbox.TabIndex = 41;
-            NoMountCheckbox.Text = "No Mount";
+            NoMountCheckbox.Text = "禁止骑乘";
             NoMountCheckbox.UseVisualStyleBackColor = true;
             NoMountCheckbox.CheckedChanged += NoMountCheckbox_CheckedChanged;
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(398, 94);
+            label19.Location = new Point(398, 107);
             label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(88, 15);
+            label19.Size = new Size(68, 17);
             label19.TabIndex = 40;
-            label19.Text = "Map Dark Light";
+            label19.Text = "地图黑暗度";
             // 
             // MapDarkLighttextBox
             // 
-            MapDarkLighttextBox.Location = new Point(517, 89);
+            MapDarkLighttextBox.Location = new Point(517, 101);
             MapDarkLighttextBox.Margin = new Padding(4, 3, 4, 3);
             MapDarkLighttextBox.Name = "MapDarkLighttextBox";
             MapDarkLighttextBox.Size = new Size(68, 23);
@@ -667,114 +667,114 @@ namespace Server
             // NoNamesCheckbox
             // 
             NoNamesCheckbox.AutoSize = true;
-            NoNamesCheckbox.Location = new Point(203, 93);
+            NoNamesCheckbox.Location = new Point(203, 105);
             NoNamesCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoNamesCheckbox.Name = "NoNamesCheckbox";
-            NoNamesCheckbox.Size = new Size(82, 19);
+            NoNamesCheckbox.Size = new Size(75, 21);
             NoNamesCheckbox.TabIndex = 38;
-            NoNamesCheckbox.Text = "No Names";
+            NoNamesCheckbox.Text = "隐藏姓名";
             NoNamesCheckbox.UseVisualStyleBackColor = true;
             NoNamesCheckbox.CheckedChanged += NoNamesCheckbox_CheckedChanged;
             // 
             // NoDropMonsterCheckbox
             // 
             NoDropMonsterCheckbox.AutoSize = true;
-            NoDropMonsterCheckbox.Location = new Point(203, 68);
+            NoDropMonsterCheckbox.Location = new Point(203, 77);
             NoDropMonsterCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoDropMonsterCheckbox.Name = "NoDropMonsterCheckbox";
-            NoDropMonsterCheckbox.Size = new Size(126, 19);
+            NoDropMonsterCheckbox.Size = new Size(87, 21);
             NoDropMonsterCheckbox.TabIndex = 37;
-            NoDropMonsterCheckbox.Text = "No Drop (Monster)";
+            NoDropMonsterCheckbox.Text = "怪物不掉落";
             NoDropMonsterCheckbox.UseVisualStyleBackColor = true;
             NoDropMonsterCheckbox.CheckedChanged += NoDropMonsterCheckbox_CheckedChanged;
             // 
             // NoDropPlayerCheckbox
             // 
             NoDropPlayerCheckbox.AutoSize = true;
-            NoDropPlayerCheckbox.Location = new Point(203, 43);
+            NoDropPlayerCheckbox.Location = new Point(203, 49);
             NoDropPlayerCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoDropPlayerCheckbox.Name = "NoDropPlayerCheckbox";
-            NoDropPlayerCheckbox.Size = new Size(114, 19);
+            NoDropPlayerCheckbox.Size = new Size(87, 21);
             NoDropPlayerCheckbox.TabIndex = 36;
-            NoDropPlayerCheckbox.Text = "No Drop (Player)";
+            NoDropPlayerCheckbox.Text = "玩家不掉落";
             NoDropPlayerCheckbox.UseVisualStyleBackColor = true;
             NoDropPlayerCheckbox.CheckedChanged += NoDropPlayerCheckbox_CheckedChanged;
             // 
             // NoThrowItemCheckbox
             // 
             NoThrowItemCheckbox.AutoSize = true;
-            NoThrowItemCheckbox.Location = new Point(203, 20);
+            NoThrowItemCheckbox.Location = new Point(203, 23);
             NoThrowItemCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoThrowItemCheckbox.Name = "NoThrowItemCheckbox";
-            NoThrowItemCheckbox.Size = new Size(105, 19);
+            NoThrowItemCheckbox.Size = new Size(99, 21);
             NoThrowItemCheckbox.TabIndex = 35;
-            NoThrowItemCheckbox.Text = "No Throw Item";
+            NoThrowItemCheckbox.Text = "禁止丢弃物品";
             NoThrowItemCheckbox.UseVisualStyleBackColor = true;
             NoThrowItemCheckbox.CheckedChanged += NoThrowItemCheckbox_CheckedChanged;
             // 
             // NoPositionCheckbox
             // 
             NoPositionCheckbox.AutoSize = true;
-            NoPositionCheckbox.Location = new Point(19, 193);
+            NoPositionCheckbox.Location = new Point(19, 219);
             NoPositionCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoPositionCheckbox.Name = "NoPositionCheckbox";
-            NoPositionCheckbox.Size = new Size(88, 19);
+            NoPositionCheckbox.Size = new Size(75, 21);
             NoPositionCheckbox.TabIndex = 34;
-            NoPositionCheckbox.Text = "No Position";
+            NoPositionCheckbox.Text = "禁止定点";
             NoPositionCheckbox.UseVisualStyleBackColor = true;
             NoPositionCheckbox.CheckedChanged += NoPositionCheckbox_CheckedChanged;
             // 
             // NoDrugCheckbox
             // 
             NoDrugCheckbox.AutoSize = true;
-            NoDrugCheckbox.Location = new Point(19, 168);
+            NoDrugCheckbox.Location = new Point(19, 190);
             NoDrugCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoDrugCheckbox.Name = "NoDrugCheckbox";
-            NoDrugCheckbox.Size = new Size(71, 19);
+            NoDrugCheckbox.Size = new Size(75, 21);
             NoDrugCheckbox.TabIndex = 33;
-            NoDrugCheckbox.Text = "No Drug";
+            NoDrugCheckbox.Text = "禁止用药";
             NoDrugCheckbox.UseVisualStyleBackColor = true;
             NoDrugCheckbox.CheckedChanged += NoDrugCheckbox_CheckedChanged;
             // 
             // NoRecallCheckbox
             // 
             NoRecallCheckbox.AutoSize = true;
-            NoRecallCheckbox.Location = new Point(19, 143);
+            NoRecallCheckbox.Location = new Point(19, 162);
             NoRecallCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoRecallCheckbox.Name = "NoRecallCheckbox";
-            NoRecallCheckbox.Size = new Size(76, 19);
+            NoRecallCheckbox.Size = new Size(75, 21);
             NoRecallCheckbox.TabIndex = 32;
-            NoRecallCheckbox.Text = "No Recall";
+            NoRecallCheckbox.Text = "禁止召唤";
             NoRecallCheckbox.UseVisualStyleBackColor = true;
             NoRecallCheckbox.CheckedChanged += NoRecallCheckbox_CheckedChanged;
             // 
             // NoEscapeCheckbox
             // 
             NoEscapeCheckbox.AutoSize = true;
-            NoEscapeCheckbox.Location = new Point(19, 93);
+            NoEscapeCheckbox.Location = new Point(19, 105);
             NoEscapeCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoEscapeCheckbox.Name = "NoEscapeCheckbox";
-            NoEscapeCheckbox.Size = new Size(81, 19);
+            NoEscapeCheckbox.Size = new Size(75, 21);
             NoEscapeCheckbox.TabIndex = 31;
-            NoEscapeCheckbox.Text = "No Escape";
+            NoEscapeCheckbox.Text = "禁止随机";
             NoEscapeCheckbox.UseVisualStyleBackColor = true;
             NoEscapeCheckbox.CheckedChanged += NoEscapeCheckbox_CheckedChanged;
             // 
             // NoRandomCheckbox
             // 
             NoRandomCheckbox.AutoSize = true;
-            NoRandomCheckbox.Location = new Point(19, 68);
+            NoRandomCheckbox.Location = new Point(19, 77);
             NoRandomCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoRandomCheckbox.Name = "NoRandomCheckbox";
-            NoRandomCheckbox.Size = new Size(90, 19);
+            NoRandomCheckbox.Size = new Size(87, 21);
             NoRandomCheckbox.TabIndex = 30;
-            NoRandomCheckbox.Text = "No Random";
+            NoRandomCheckbox.Text = "禁止传送卷";
             NoRandomCheckbox.UseVisualStyleBackColor = true;
             NoRandomCheckbox.CheckedChanged += NoRandomCheckbox_CheckedChanged;
             // 
             // LightningTextbox
             // 
-            LightningTextbox.Location = new Point(517, 64);
+            LightningTextbox.Location = new Point(517, 73);
             LightningTextbox.Margin = new Padding(4, 3, 4, 3);
             LightningTextbox.Name = "LightningTextbox";
             LightningTextbox.Size = new Size(68, 23);
@@ -783,7 +783,7 @@ namespace Server
             // 
             // FireTextbox
             // 
-            FireTextbox.Location = new Point(517, 39);
+            FireTextbox.Location = new Point(517, 44);
             FireTextbox.Margin = new Padding(4, 3, 4, 3);
             FireTextbox.Name = "FireTextbox";
             FireTextbox.Size = new Size(68, 23);
@@ -792,7 +792,7 @@ namespace Server
             // 
             // NoReconnectTextbox
             // 
-            NoReconnectTextbox.Location = new Point(128, 41);
+            NoReconnectTextbox.Location = new Point(128, 46);
             NoReconnectTextbox.Margin = new Padding(4, 3, 4, 3);
             NoReconnectTextbox.Name = "NoReconnectTextbox";
             NoReconnectTextbox.Size = new Size(56, 23);
@@ -802,60 +802,60 @@ namespace Server
             // LightningCheckbox
             // 
             LightningCheckbox.AutoSize = true;
-            LightningCheckbox.Location = new Point(398, 66);
+            LightningCheckbox.Location = new Point(398, 75);
             LightningCheckbox.Margin = new Padding(4, 3, 4, 3);
             LightningCheckbox.Name = "LightningCheckbox";
-            LightningCheckbox.Size = new Size(77, 19);
+            LightningCheckbox.Size = new Size(51, 21);
             LightningCheckbox.TabIndex = 26;
-            LightningCheckbox.Text = "Lightning";
+            LightningCheckbox.Text = "雷电";
             LightningCheckbox.UseVisualStyleBackColor = true;
             LightningCheckbox.CheckedChanged += LightningCheckbox_CheckedChanged;
             // 
             // FireCheckbox
             // 
             FireCheckbox.AutoSize = true;
-            FireCheckbox.Location = new Point(398, 41);
+            FireCheckbox.Location = new Point(398, 46);
             FireCheckbox.Margin = new Padding(4, 3, 4, 3);
             FireCheckbox.Name = "FireCheckbox";
-            FireCheckbox.Size = new Size(45, 19);
+            FireCheckbox.Size = new Size(51, 21);
             FireCheckbox.TabIndex = 25;
-            FireCheckbox.Text = "Fire";
+            FireCheckbox.Text = "火焰";
             FireCheckbox.UseVisualStyleBackColor = true;
             FireCheckbox.CheckStateChanged += FireCheckbox_CheckStateChanged;
             // 
             // FightCheckbox
             // 
             FightCheckbox.AutoSize = true;
-            FightCheckbox.Location = new Point(398, 18);
+            FightCheckbox.Location = new Point(398, 20);
             FightCheckbox.Margin = new Padding(4, 3, 4, 3);
             FightCheckbox.Name = "FightCheckbox";
-            FightCheckbox.Size = new Size(53, 19);
+            FightCheckbox.Size = new Size(51, 21);
             FightCheckbox.TabIndex = 23;
-            FightCheckbox.Text = "Fight";
+            FightCheckbox.Text = "战斗";
             FightCheckbox.UseVisualStyleBackColor = true;
             FightCheckbox.CheckedChanged += FightCheckbox_CheckedChanged;
             // 
             // NoReconnectCheckbox
             // 
             NoReconnectCheckbox.AutoSize = true;
-            NoReconnectCheckbox.Location = new Point(19, 43);
+            NoReconnectCheckbox.Location = new Point(19, 49);
             NoReconnectCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoReconnectCheckbox.Name = "NoReconnectCheckbox";
-            NoReconnectCheckbox.Size = new Size(101, 19);
+            NoReconnectCheckbox.Size = new Size(75, 21);
             NoReconnectCheckbox.TabIndex = 22;
-            NoReconnectCheckbox.Text = "No Reconnect";
+            NoReconnectCheckbox.Text = "禁止重连";
             NoReconnectCheckbox.UseVisualStyleBackColor = true;
             NoReconnectCheckbox.CheckedChanged += NoReconnectCheckbox_CheckedChanged;
             // 
             // NoTeleportCheckbox
             // 
             NoTeleportCheckbox.AutoSize = true;
-            NoTeleportCheckbox.Location = new Point(19, 20);
+            NoTeleportCheckbox.Location = new Point(19, 23);
             NoTeleportCheckbox.Margin = new Padding(4, 3, 4, 3);
             NoTeleportCheckbox.Name = "NoTeleportCheckbox";
-            NoTeleportCheckbox.Size = new Size(87, 19);
+            NoTeleportCheckbox.Size = new Size(75, 21);
             NoTeleportCheckbox.TabIndex = 21;
-            NoTeleportCheckbox.Text = "No Teleport";
+            NoTeleportCheckbox.Text = "禁止传送";
             NoTeleportCheckbox.UseVisualStyleBackColor = true;
             NoTeleportCheckbox.CheckedChanged += NoTeleportCheckbox_CheckedChanged;
             // 
@@ -865,33 +865,33 @@ namespace Server
             tabPage3.Controls.Add(AddSZButton);
             tabPage3.Controls.Add(SafeZoneInfoPanel);
             tabPage3.Controls.Add(SafeZoneInfoListBox);
-            tabPage3.Location = new Point(4, 24);
+            tabPage3.Location = new Point(4, 26);
             tabPage3.Margin = new Padding(4, 3, 4, 3);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(622, 524);
+            tabPage3.Size = new Size(622, 596);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Safe Zones";
+            tabPage3.Text = "安全区";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // RemoveSZButton
             // 
-            RemoveSZButton.Location = new Point(126, 8);
+            RemoveSZButton.Location = new Point(126, 9);
             RemoveSZButton.Margin = new Padding(4, 3, 4, 3);
             RemoveSZButton.Name = "RemoveSZButton";
-            RemoveSZButton.Size = new Size(88, 27);
+            RemoveSZButton.Size = new Size(88, 31);
             RemoveSZButton.TabIndex = 8;
-            RemoveSZButton.Text = "Remove";
+            RemoveSZButton.Text = "删除";
             RemoveSZButton.UseVisualStyleBackColor = true;
             RemoveSZButton.Click += RemoveSZButton_Click;
             // 
             // AddSZButton
             // 
-            AddSZButton.Location = new Point(7, 8);
+            AddSZButton.Location = new Point(7, 9);
             AddSZButton.Margin = new Padding(4, 3, 4, 3);
             AddSZButton.Name = "AddSZButton";
-            AddSZButton.Size = new Size(88, 27);
+            AddSZButton.Size = new Size(88, 31);
             AddSZButton.TabIndex = 7;
-            AddSZButton.Text = "Add";
+            AddSZButton.Text = "添加";
             AddSZButton.UseVisualStyleBackColor = true;
             AddSZButton.Click += AddSZButton_Click;
             // 
@@ -906,25 +906,25 @@ namespace Server
             SafeZoneInfoPanel.Controls.Add(SZXTextBox);
             SafeZoneInfoPanel.Controls.Add(StartPointCheckBox);
             SafeZoneInfoPanel.Enabled = false;
-            SafeZoneInfoPanel.Location = new Point(220, 40);
+            SafeZoneInfoPanel.Location = new Point(220, 45);
             SafeZoneInfoPanel.Margin = new Padding(4, 3, 4, 3);
             SafeZoneInfoPanel.Name = "SafeZoneInfoPanel";
-            SafeZoneInfoPanel.Size = new Size(230, 160);
+            SafeZoneInfoPanel.Size = new Size(230, 181);
             SafeZoneInfoPanel.TabIndex = 10;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(145, 29);
+            label12.Location = new Point(137, 33);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(17, 15);
+            label12.Size = new Size(27, 17);
             label12.TabIndex = 10;
-            label12.Text = "Y:";
+            label12.Text = "Y：";
             // 
             // SZYTextBox
             // 
-            SZYTextBox.Location = new Point(172, 25);
+            SZYTextBox.Location = new Point(172, 28);
             SZYTextBox.Margin = new Padding(4, 3, 4, 3);
             SZYTextBox.MaxLength = 5;
             SZYTextBox.Name = "SZYTextBox";
@@ -935,16 +935,16 @@ namespace Server
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(29, 59);
+            label14.Location = new Point(19, 68);
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(30, 15);
+            label14.Size = new Size(44, 17);
             label14.TabIndex = 8;
-            label14.Text = "Size:";
+            label14.Text = "大小：";
             // 
             // SizeTextBox
             // 
-            SizeTextBox.Location = new Point(71, 55);
+            SizeTextBox.Location = new Point(71, 62);
             SizeTextBox.Margin = new Padding(4, 3, 4, 3);
             SizeTextBox.MaxLength = 5;
             SizeTextBox.Name = "SizeTextBox";
@@ -955,16 +955,16 @@ namespace Server
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(44, 29);
+            label17.Location = new Point(35, 33);
             label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new Size(17, 15);
+            label17.Size = new Size(28, 17);
             label17.TabIndex = 3;
-            label17.Text = "X:";
+            label17.Text = "X：";
             // 
             // SZXTextBox
             // 
-            SZXTextBox.Location = new Point(71, 25);
+            SZXTextBox.Location = new Point(71, 28);
             SZXTextBox.Margin = new Padding(4, 3, 4, 3);
             SZXTextBox.MaxLength = 5;
             SZXTextBox.Name = "SZXTextBox";
@@ -975,12 +975,12 @@ namespace Server
             // StartPointCheckBox
             // 
             StartPointCheckBox.AutoSize = true;
-            StartPointCheckBox.Location = new Point(71, 103);
+            StartPointCheckBox.Location = new Point(71, 117);
             StartPointCheckBox.Margin = new Padding(4, 3, 4, 3);
             StartPointCheckBox.Name = "StartPointCheckBox";
-            StartPointCheckBox.Size = new Size(81, 19);
+            StartPointCheckBox.Size = new Size(63, 21);
             StartPointCheckBox.TabIndex = 5;
-            StartPointCheckBox.Text = "Start Point";
+            StartPointCheckBox.Text = "出生点";
             StartPointCheckBox.UseVisualStyleBackColor = true;
             StartPointCheckBox.CheckedChanged += StartPointCheckBox_CheckedChanged;
             // 
@@ -988,12 +988,12 @@ namespace Server
             // 
             SafeZoneInfoListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             SafeZoneInfoListBox.FormattingEnabled = true;
-            SafeZoneInfoListBox.ItemHeight = 15;
-            SafeZoneInfoListBox.Location = new Point(7, 40);
+            SafeZoneInfoListBox.ItemHeight = 17;
+            SafeZoneInfoListBox.Location = new Point(7, 45);
             SafeZoneInfoListBox.Margin = new Padding(4, 3, 4, 3);
             SafeZoneInfoListBox.Name = "SafeZoneInfoListBox";
             SafeZoneInfoListBox.SelectionMode = SelectionMode.MultiExtended;
-            SafeZoneInfoListBox.Size = new Size(206, 469);
+            SafeZoneInfoListBox.Size = new Size(206, 531);
             SafeZoneInfoListBox.TabIndex = 9;
             SafeZoneInfoListBox.SelectedIndexChanged += SafeZoneInfoListBox_SelectedIndexChanged;
             // 
@@ -1005,55 +1005,55 @@ namespace Server
             tabPage2.Controls.Add(AddRButton);
             tabPage2.Controls.Add(RespawnInfoListBox);
             tabPage2.Controls.Add(RespawnInfoPanel);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Location = new Point(4, 26);
             tabPage2.Margin = new Padding(4, 3, 4, 3);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 3, 4, 3);
-            tabPage2.Size = new Size(622, 524);
+            tabPage2.Size = new Size(622, 596);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Respawns";
+            tabPage2.Text = "刷新点";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // RPasteButton
             // 
-            RPasteButton.Location = new Point(315, 8);
+            RPasteButton.Location = new Point(315, 9);
             RPasteButton.Margin = new Padding(4, 3, 4, 3);
             RPasteButton.Name = "RPasteButton";
-            RPasteButton.Size = new Size(88, 27);
+            RPasteButton.Size = new Size(88, 31);
             RPasteButton.TabIndex = 22;
-            RPasteButton.Text = "Paste";
+            RPasteButton.Text = "粘贴";
             RPasteButton.UseVisualStyleBackColor = true;
             RPasteButton.Click += RPasteButton_Click;
             // 
             // RCopyButton
             // 
-            RCopyButton.Location = new Point(220, 8);
+            RCopyButton.Location = new Point(220, 9);
             RCopyButton.Margin = new Padding(4, 3, 4, 3);
             RCopyButton.Name = "RCopyButton";
-            RCopyButton.Size = new Size(88, 27);
+            RCopyButton.Size = new Size(88, 31);
             RCopyButton.TabIndex = 21;
-            RCopyButton.Text = "Copy";
+            RCopyButton.Text = "复制";
             RCopyButton.UseVisualStyleBackColor = true;
             // 
             // RemoveRButton
             // 
-            RemoveRButton.Location = new Point(126, 8);
+            RemoveRButton.Location = new Point(126, 9);
             RemoveRButton.Margin = new Padding(4, 3, 4, 3);
             RemoveRButton.Name = "RemoveRButton";
-            RemoveRButton.Size = new Size(88, 27);
+            RemoveRButton.Size = new Size(88, 31);
             RemoveRButton.TabIndex = 16;
-            RemoveRButton.Text = "Remove";
+            RemoveRButton.Text = "删除";
             RemoveRButton.UseVisualStyleBackColor = true;
             RemoveRButton.Click += RemoveRButton_Click;
             // 
             // AddRButton
             // 
-            AddRButton.Location = new Point(7, 8);
+            AddRButton.Location = new Point(7, 9);
             AddRButton.Margin = new Padding(4, 3, 4, 3);
             AddRButton.Name = "AddRButton";
-            AddRButton.Size = new Size(88, 27);
+            AddRButton.Size = new Size(88, 31);
             AddRButton.TabIndex = 15;
-            AddRButton.Text = "Add";
+            AddRButton.Text = "添加";
             AddRButton.UseVisualStyleBackColor = true;
             AddRButton.Click += AddRButton_Click;
             // 
@@ -1061,12 +1061,12 @@ namespace Server
             // 
             RespawnInfoListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             RespawnInfoListBox.FormattingEnabled = true;
-            RespawnInfoListBox.ItemHeight = 15;
-            RespawnInfoListBox.Location = new Point(7, 40);
+            RespawnInfoListBox.ItemHeight = 17;
+            RespawnInfoListBox.Location = new Point(7, 45);
             RespawnInfoListBox.Margin = new Padding(4, 3, 4, 3);
             RespawnInfoListBox.Name = "RespawnInfoListBox";
             RespawnInfoListBox.SelectionMode = SelectionMode.MultiExtended;
-            RespawnInfoListBox.Size = new Size(303, 469);
+            RespawnInfoListBox.Size = new Size(303, 531);
             RespawnInfoListBox.TabIndex = 14;
             RespawnInfoListBox.SelectedIndexChanged += RespawnInfoListBox_SelectedIndexChanged;
             // 
@@ -1094,44 +1094,44 @@ namespace Server
             RespawnInfoPanel.Controls.Add(label13);
             RespawnInfoPanel.Controls.Add(RXTextBox);
             RespawnInfoPanel.Enabled = false;
-            RespawnInfoPanel.Location = new Point(317, 40);
+            RespawnInfoPanel.Location = new Point(317, 45);
             RespawnInfoPanel.Margin = new Padding(4, 3, 4, 3);
             RespawnInfoPanel.Name = "RespawnInfoPanel";
-            RespawnInfoPanel.Size = new Size(296, 237);
+            RespawnInfoPanel.Size = new Size(296, 269);
             RespawnInfoPanel.TabIndex = 11;
             // 
             // chkrespawnsave
             // 
             chkrespawnsave.AutoSize = true;
-            chkrespawnsave.Location = new Point(29, 126);
+            chkrespawnsave.Location = new Point(29, 143);
             chkrespawnsave.Margin = new Padding(4, 3, 4, 3);
             chkrespawnsave.Name = "chkrespawnsave";
-            chkrespawnsave.Size = new Size(176, 19);
+            chkrespawnsave.Size = new Size(123, 21);
             chkrespawnsave.TabIndex = 25;
-            chkrespawnsave.Text = "Save respawnticks on reboot";
+            chkrespawnsave.Text = "重启保存刷新计时";
             chkrespawnsave.UseVisualStyleBackColor = true;
             chkrespawnsave.CheckedChanged += chkrespawnsave_CheckedChanged;
             // 
             // chkRespawnEnableTick
             // 
             chkRespawnEnableTick.AutoSize = true;
-            chkRespawnEnableTick.Location = new Point(29, 106);
+            chkRespawnEnableTick.Location = new Point(29, 120);
             chkRespawnEnableTick.Margin = new Padding(4, 3, 4, 3);
             chkRespawnEnableTick.Name = "chkRespawnEnableTick";
-            chkRespawnEnableTick.Size = new Size(145, 19);
+            chkRespawnEnableTick.Size = new Size(99, 21);
             chkRespawnEnableTick.TabIndex = 24;
-            chkRespawnEnableTick.Text = "Use tickbased respawn";
+            chkRespawnEnableTick.Text = "使用计时刷新";
             chkRespawnEnableTick.UseVisualStyleBackColor = true;
             chkRespawnEnableTick.CheckedChanged += chkRespawnEnableTick_CheckedChanged;
             // 
             // Randomtextbox
             // 
-            Randomtextbox.Location = new Point(184, 150);
+            Randomtextbox.Location = new Point(184, 170);
             Randomtextbox.Margin = new Padding(4, 3, 4, 3);
             Randomtextbox.MaxLength = 10;
             Randomtextbox.Multiline = true;
             Randomtextbox.Name = "Randomtextbox";
-            Randomtextbox.Size = new Size(42, 22);
+            Randomtextbox.Size = new Size(42, 24);
             Randomtextbox.TabIndex = 23;
             toolTip1.SetToolTip(Randomtextbox, "Allows random + or - added to each spawn time");
             Randomtextbox.TextChanged += RandomTextBox_TextChanged;
@@ -1139,26 +1139,26 @@ namespace Server
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(158, 153);
+            label23.Location = new Point(158, 173);
             label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
-            label23.Size = new Size(17, 15);
+            label23.Size = new Size(44, 17);
             label23.TabIndex = 22;
-            label23.Text = "R:";
+            label23.Text = "半径：";
             // 
             // label34
             // 
             label34.AutoSize = true;
-            label34.Location = new Point(26, 183);
+            label34.Location = new Point(26, 207);
             label34.Margin = new Padding(4, 0, 4, 0);
             label34.Name = "label34";
-            label34.Size = new Size(41, 15);
+            label34.Size = new Size(44, 17);
             label34.TabIndex = 21;
-            label34.Text = "Route:";
+            label34.Text = "路线：";
             // 
             // RoutePathTextBox
             // 
-            RoutePathTextBox.Location = new Point(76, 180);
+            RoutePathTextBox.Location = new Point(76, 204);
             RoutePathTextBox.Margin = new Padding(4, 3, 4, 3);
             RoutePathTextBox.Name = "RoutePathTextBox";
             RoutePathTextBox.Size = new Size(151, 23);
@@ -1168,16 +1168,16 @@ namespace Server
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(26, 213);
+            label24.Location = new Point(26, 241);
             label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new Size(25, 15);
+            label24.Size = new Size(44, 17);
             label24.TabIndex = 18;
-            label24.Text = "Dir:";
+            label24.Text = "方向：";
             // 
             // DirectionTextBox
             // 
-            DirectionTextBox.Location = new Point(76, 210);
+            DirectionTextBox.Location = new Point(76, 238);
             DirectionTextBox.Margin = new Padding(4, 3, 4, 3);
             DirectionTextBox.MaxLength = 5;
             DirectionTextBox.Name = "DirectionTextBox";
@@ -1188,21 +1188,21 @@ namespace Server
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(26, 153);
+            label8.Location = new Point(26, 173);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(39, 15);
+            label8.Size = new Size(44, 17);
             label8.TabIndex = 16;
-            label8.Text = "Delay:";
+            label8.Text = "延迟：";
             // 
             // DelayTextBox
             // 
-            DelayTextBox.Location = new Point(76, 150);
+            DelayTextBox.Location = new Point(76, 170);
             DelayTextBox.Margin = new Padding(4, 3, 4, 3);
             DelayTextBox.MaxLength = 10;
             DelayTextBox.Multiline = true;
             DelayTextBox.Name = "DelayTextBox";
-            DelayTextBox.Size = new Size(72, 22);
+            DelayTextBox.Size = new Size(72, 24);
             DelayTextBox.TabIndex = 15;
             toolTip1.SetToolTip(DelayTextBox, "if you use tick based spawn: this is ignored!");
             DelayTextBox.TextChanged += DelayTextBox_TextChanged;
@@ -1210,37 +1210,37 @@ namespace Server
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(13, 18);
+            label7.Location = new Point(13, 20);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(54, 15);
+            label7.Size = new Size(44, 17);
             label7.TabIndex = 14;
-            label7.Text = "Monster:";
+            label7.Text = "怪物：";
             // 
             // MonsterInfoComboBox
             // 
             MonsterInfoComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             MonsterInfoComboBox.FormattingEnabled = true;
-            MonsterInfoComboBox.Location = new Point(76, 15);
+            MonsterInfoComboBox.Location = new Point(76, 17);
             MonsterInfoComboBox.Margin = new Padding(4, 3, 4, 3);
             MonsterInfoComboBox.Name = "MonsterInfoComboBox";
-            MonsterInfoComboBox.Size = new Size(151, 23);
+            MonsterInfoComboBox.Size = new Size(151, 25);
             MonsterInfoComboBox.TabIndex = 13;
             MonsterInfoComboBox.SelectedIndexChanged += MonsterInfoComboBox_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(126, 80);
+            label6.Location = new Point(126, 91);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(46, 15);
+            label6.Size = new Size(44, 17);
             label6.TabIndex = 12;
-            label6.Text = "Spread:";
+            label6.Text = "分布：";
             // 
             // SpreadTextBox
             // 
-            SpreadTextBox.Location = new Point(184, 76);
+            SpreadTextBox.Location = new Point(184, 86);
             SpreadTextBox.Margin = new Padding(4, 3, 4, 3);
             SpreadTextBox.MaxLength = 5;
             SpreadTextBox.Name = "SpreadTextBox";
@@ -1251,16 +1251,16 @@ namespace Server
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(158, 50);
+            label9.Location = new Point(158, 57);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(17, 15);
+            label9.Size = new Size(27, 17);
             label9.TabIndex = 10;
-            label9.Text = "Y:";
+            label9.Text = "Y：";
             // 
             // RYTextBox
             // 
-            RYTextBox.Location = new Point(184, 46);
+            RYTextBox.Location = new Point(184, 52);
             RYTextBox.Margin = new Padding(4, 3, 4, 3);
             RYTextBox.MaxLength = 5;
             RYTextBox.Name = "RYTextBox";
@@ -1271,16 +1271,16 @@ namespace Server
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(24, 80);
+            label10.Location = new Point(24, 91);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(43, 15);
+            label10.Size = new Size(44, 17);
             label10.TabIndex = 8;
-            label10.Text = "Count:";
+            label10.Text = "数量：";
             // 
             // CountTextBox
             // 
-            CountTextBox.Location = new Point(76, 76);
+            CountTextBox.Location = new Point(76, 86);
             CountTextBox.Margin = new Padding(4, 3, 4, 3);
             CountTextBox.MaxLength = 5;
             CountTextBox.Name = "CountTextBox";
@@ -1291,16 +1291,16 @@ namespace Server
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(49, 50);
+            label13.Location = new Point(49, 57);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(17, 15);
+            label13.Size = new Size(28, 17);
             label13.TabIndex = 3;
-            label13.Text = "X:";
+            label13.Text = "X：";
             // 
             // RXTextBox
             // 
-            RXTextBox.Location = new Point(76, 46);
+            RXTextBox.Location = new Point(76, 52);
             RXTextBox.Margin = new Padding(4, 3, 4, 3);
             RXTextBox.MaxLength = 5;
             RXTextBox.Name = "RXTextBox";
@@ -1314,34 +1314,34 @@ namespace Server
             tabPage4.Controls.Add(AddMButton);
             tabPage4.Controls.Add(MovementInfoPanel);
             tabPage4.Controls.Add(MovementInfoListBox);
-            tabPage4.Location = new Point(4, 24);
+            tabPage4.Location = new Point(4, 26);
             tabPage4.Margin = new Padding(4, 3, 4, 3);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(4, 3, 4, 3);
-            tabPage4.Size = new Size(622, 524);
+            tabPage4.Size = new Size(622, 596);
             tabPage4.TabIndex = 3;
-            tabPage4.Text = "Movements";
+            tabPage4.Text = "传送点";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // RemoveMButton
             // 
-            RemoveMButton.Location = new Point(126, 8);
+            RemoveMButton.Location = new Point(126, 9);
             RemoveMButton.Margin = new Padding(4, 3, 4, 3);
             RemoveMButton.Name = "RemoveMButton";
-            RemoveMButton.Size = new Size(88, 27);
+            RemoveMButton.Size = new Size(88, 31);
             RemoveMButton.TabIndex = 12;
-            RemoveMButton.Text = "Remove";
+            RemoveMButton.Text = "删除";
             RemoveMButton.UseVisualStyleBackColor = true;
             RemoveMButton.Click += RemoveMButton_Click;
             // 
             // AddMButton
             // 
-            AddMButton.Location = new Point(7, 8);
+            AddMButton.Location = new Point(7, 9);
             AddMButton.Margin = new Padding(4, 3, 4, 3);
             AddMButton.Name = "AddMButton";
-            AddMButton.Size = new Size(88, 27);
+            AddMButton.Size = new Size(88, 31);
             AddMButton.TabIndex = 11;
-            AddMButton.Text = "Add";
+            AddMButton.Text = "添加";
             AddMButton.UseVisualStyleBackColor = true;
             AddMButton.Click += AddMButton_Click;
             // 
@@ -1366,25 +1366,25 @@ namespace Server
             MovementInfoPanel.Controls.Add(label20);
             MovementInfoPanel.Controls.Add(SourceXTextBox);
             MovementInfoPanel.Enabled = false;
-            MovementInfoPanel.Location = new Point(279, 40);
+            MovementInfoPanel.Location = new Point(279, 45);
             MovementInfoPanel.Margin = new Padding(4, 3, 4, 3);
             MovementInfoPanel.Name = "MovementInfoPanel";
-            MovementInfoPanel.Size = new Size(299, 237);
+            MovementInfoPanel.Size = new Size(299, 269);
             MovementInfoPanel.TabIndex = 14;
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(180, 210);
+            label26.Location = new Point(173, 238);
             label26.Margin = new Padding(4, 0, 4, 0);
             label26.Name = "label26";
-            label26.Size = new Size(33, 15);
+            label26.Size = new Size(44, 17);
             label26.TabIndex = 23;
-            label26.Text = "Icon:";
+            label26.Text = "图标：";
             // 
             // BigMapIconTextBox
             // 
-            BigMapIconTextBox.Location = new Point(225, 207);
+            BigMapIconTextBox.Location = new Point(225, 235);
             BigMapIconTextBox.Margin = new Padding(4, 3, 4, 3);
             BigMapIconTextBox.MaxLength = 5;
             BigMapIconTextBox.Name = "BigMapIconTextBox";
@@ -1395,94 +1395,94 @@ namespace Server
             // ShowBigMapCheckBox
             // 
             ShowBigMapCheckBox.AutoSize = true;
-            ShowBigMapCheckBox.Location = new Point(16, 210);
+            ShowBigMapCheckBox.Location = new Point(16, 238);
             ShowBigMapCheckBox.Margin = new Padding(4, 3, 4, 3);
             ShowBigMapCheckBox.Name = "ShowBigMapCheckBox";
-            ShowBigMapCheckBox.Size = new Size(116, 19);
+            ShowBigMapCheckBox.Size = new Size(87, 21);
             ShowBigMapCheckBox.TabIndex = 21;
-            ShowBigMapCheckBox.Text = "Show on BigMap";
+            ShowBigMapCheckBox.Text = "大地图显示";
             ShowBigMapCheckBox.UseVisualStyleBackColor = true;
             ShowBigMapCheckBox.CheckedChanged += ShowBigMapCheckBox_CheckedChanged;
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(4, 172);
+            label25.Location = new Point(11, 198);
             label25.Margin = new Padding(4, 0, 4, 0);
             label25.Name = "label25";
-            label25.Size = new Size(61, 15);
+            label25.Size = new Size(56, 17);
             label25.TabIndex = 20;
-            label25.Text = "Conquest:";
+            label25.Text = "攻城战：";
             // 
             // ConquestComboBox
             // 
             ConquestComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ConquestComboBox.FormattingEnabled = true;
-            ConquestComboBox.Location = new Point(75, 168);
+            ConquestComboBox.Location = new Point(75, 190);
             ConquestComboBox.Margin = new Padding(4, 3, 4, 3);
             ConquestComboBox.Name = "ConquestComboBox";
-            ConquestComboBox.Size = new Size(212, 23);
+            ConquestComboBox.Size = new Size(212, 25);
             ConquestComboBox.TabIndex = 19;
             ConquestComboBox.SelectedIndexChanged += ConquestComboBox_SelectedIndexChanged;
             // 
             // NeedMoveMCheckBox
             // 
             NeedMoveMCheckBox.AutoSize = true;
-            NeedMoveMCheckBox.Location = new Point(16, 142);
+            NeedMoveMCheckBox.Location = new Point(16, 161);
             NeedMoveMCheckBox.Margin = new Padding(4, 3, 4, 3);
             NeedMoveMCheckBox.Name = "NeedMoveMCheckBox";
-            NeedMoveMCheckBox.Size = new Size(87, 19);
+            NeedMoveMCheckBox.Size = new Size(63, 21);
             NeedMoveMCheckBox.TabIndex = 18;
-            NeedMoveMCheckBox.Text = "Need Move";
+            NeedMoveMCheckBox.Text = "需移动";
             NeedMoveMCheckBox.UseVisualStyleBackColor = true;
             NeedMoveMCheckBox.CheckedChanged += NeedScriptMCheckBox_CheckedChanged;
             // 
             // NeedHoleMCheckBox
             // 
             NeedHoleMCheckBox.AutoSize = true;
-            NeedHoleMCheckBox.Location = new Point(16, 115);
+            NeedHoleMCheckBox.Location = new Point(16, 130);
             NeedHoleMCheckBox.Margin = new Padding(4, 3, 4, 3);
             NeedHoleMCheckBox.Name = "NeedHoleMCheckBox";
-            NeedHoleMCheckBox.Size = new Size(82, 19);
+            NeedHoleMCheckBox.Size = new Size(63, 21);
             NeedHoleMCheckBox.TabIndex = 17;
-            NeedHoleMCheckBox.Text = "Need Hole";
+            NeedHoleMCheckBox.Text = "需洞口";
             NeedHoleMCheckBox.UseVisualStyleBackColor = true;
             NeedHoleMCheckBox.CheckedChanged += NeedHoleMCheckBox_CheckedChanged;
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(13, 43);
+            label22.Location = new Point(13, 49);
             label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
-            label22.Size = new Size(49, 15);
+            label22.Size = new Size(68, 17);
             label22.TabIndex = 16;
-            label22.Text = "To Map:";
+            label22.Text = "目标地图：";
             // 
             // DestMapComboBox
             // 
             DestMapComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             DestMapComboBox.FormattingEnabled = true;
-            DestMapComboBox.Location = new Point(75, 38);
+            DestMapComboBox.Location = new Point(89, 43);
             DestMapComboBox.Margin = new Padding(4, 3, 4, 3);
             DestMapComboBox.Name = "DestMapComboBox";
-            DestMapComboBox.Size = new Size(212, 23);
+            DestMapComboBox.Size = new Size(198, 25);
             DestMapComboBox.TabIndex = 15;
             DestMapComboBox.SelectedIndexChanged += DestMapComboBox_SelectedIndexChanged;
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(138, 73);
+            label18.Location = new Point(139, 83);
             label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(32, 15);
+            label18.Size = new Size(51, 17);
             label18.TabIndex = 14;
-            label18.Text = "To Y:";
+            label18.Text = "目标Y：";
             // 
             // DestYTextBox
             // 
-            DestYTextBox.Location = new Point(183, 69);
+            DestYTextBox.Location = new Point(197, 77);
             DestYTextBox.Margin = new Padding(4, 3, 4, 3);
             DestYTextBox.MaxLength = 5;
             DestYTextBox.Name = "DestYTextBox";
@@ -1493,16 +1493,16 @@ namespace Server
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(27, 73);
+            label21.Location = new Point(27, 83);
             label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
-            label21.Size = new Size(32, 15);
+            label21.Size = new Size(52, 17);
             label21.TabIndex = 13;
-            label21.Text = "To X:";
+            label21.Text = "目标X：";
             // 
             // DestXTextBox
             // 
-            DestXTextBox.Location = new Point(72, 69);
+            DestXTextBox.Location = new Point(89, 77);
             DestXTextBox.Margin = new Padding(4, 3, 4, 3);
             DestXTextBox.MaxLength = 5;
             DestXTextBox.Name = "DestXTextBox";
@@ -1513,16 +1513,16 @@ namespace Server
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(126, 13);
+            label16.Location = new Point(138, 12);
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(48, 15);
+            label16.Size = new Size(51, 17);
             label16.TabIndex = 10;
-            label16.Text = "From Y:";
+            label16.Text = "起始Y：";
             // 
             // SourceYTextBox
             // 
-            SourceYTextBox.Location = new Point(183, 8);
+            SourceYTextBox.Location = new Point(197, 9);
             SourceYTextBox.Margin = new Padding(4, 3, 4, 3);
             SourceYTextBox.MaxLength = 5;
             SourceYTextBox.Name = "SourceYTextBox";
@@ -1533,16 +1533,16 @@ namespace Server
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(15, 13);
+            label20.Location = new Point(27, 15);
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new Size(48, 15);
+            label20.Size = new Size(52, 17);
             label20.TabIndex = 3;
-            label20.Text = "From X:";
+            label20.Text = "起始X：";
             // 
             // SourceXTextBox
             // 
-            SourceXTextBox.Location = new Point(72, 8);
+            SourceXTextBox.Location = new Point(88, 9);
             SourceXTextBox.Margin = new Padding(4, 3, 4, 3);
             SourceXTextBox.MaxLength = 5;
             SourceXTextBox.Name = "SourceXTextBox";
@@ -1554,12 +1554,12 @@ namespace Server
             // 
             MovementInfoListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             MovementInfoListBox.FormattingEnabled = true;
-            MovementInfoListBox.ItemHeight = 15;
-            MovementInfoListBox.Location = new Point(7, 40);
+            MovementInfoListBox.ItemHeight = 17;
+            MovementInfoListBox.Location = new Point(7, 45);
             MovementInfoListBox.Margin = new Padding(4, 3, 4, 3);
             MovementInfoListBox.Name = "MovementInfoListBox";
             MovementInfoListBox.SelectionMode = SelectionMode.MultiExtended;
-            MovementInfoListBox.Size = new Size(264, 469);
+            MovementInfoListBox.Size = new Size(264, 531);
             MovementInfoListBox.TabIndex = 13;
             MovementInfoListBox.SelectedIndexChanged += MovementInfoListBox_SelectedIndexChanged;
             // 
@@ -1569,34 +1569,34 @@ namespace Server
             tabPage7.Controls.Add(MZAddbutton);
             tabPage7.Controls.Add(MineZonepanel);
             tabPage7.Controls.Add(MZListlistBox);
-            tabPage7.Location = new Point(4, 24);
+            tabPage7.Location = new Point(4, 26);
             tabPage7.Margin = new Padding(4, 3, 4, 3);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(4, 3, 4, 3);
-            tabPage7.Size = new Size(622, 524);
+            tabPage7.Size = new Size(622, 596);
             tabPage7.TabIndex = 6;
-            tabPage7.Text = "MineZones";
+            tabPage7.Text = "矿区";
             tabPage7.UseVisualStyleBackColor = true;
             // 
             // MZDeletebutton
             // 
-            MZDeletebutton.Location = new Point(126, 8);
+            MZDeletebutton.Location = new Point(126, 9);
             MZDeletebutton.Margin = new Padding(4, 3, 4, 3);
             MZDeletebutton.Name = "MZDeletebutton";
-            MZDeletebutton.Size = new Size(88, 27);
+            MZDeletebutton.Size = new Size(88, 31);
             MZDeletebutton.TabIndex = 12;
-            MZDeletebutton.Text = "Remove";
+            MZDeletebutton.Text = "删除";
             MZDeletebutton.UseVisualStyleBackColor = true;
             MZDeletebutton.Click += MZDeletebutton_Click;
             // 
             // MZAddbutton
             // 
-            MZAddbutton.Location = new Point(7, 8);
+            MZAddbutton.Location = new Point(7, 9);
             MZAddbutton.Margin = new Padding(4, 3, 4, 3);
             MZAddbutton.Name = "MZAddbutton";
-            MZAddbutton.Size = new Size(88, 27);
+            MZAddbutton.Size = new Size(88, 31);
             MZAddbutton.TabIndex = 11;
-            MZAddbutton.Text = "Add";
+            MZAddbutton.Text = "添加";
             MZAddbutton.UseVisualStyleBackColor = true;
             MZAddbutton.Click += MZAddbutton_Click;
             // 
@@ -1612,46 +1612,46 @@ namespace Server
             MineZonepanel.Controls.Add(label32);
             MineZonepanel.Controls.Add(MZXtextBox);
             MineZonepanel.Enabled = false;
-            MineZonepanel.Location = new Point(220, 40);
+            MineZonepanel.Location = new Point(220, 45);
             MineZonepanel.Margin = new Padding(4, 3, 4, 3);
             MineZonepanel.Name = "MineZonepanel";
-            MineZonepanel.Size = new Size(281, 160);
+            MineZonepanel.Size = new Size(281, 181);
             MineZonepanel.TabIndex = 14;
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(14, 20);
+            label27.Location = new Point(14, 23);
             label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new Size(64, 15);
+            label27.Size = new Size(68, 17);
             label27.TabIndex = 14;
-            label27.Text = "Mine Type:";
+            label27.Text = "矿区类型：";
             // 
             // MineZoneComboBox
             // 
             MineZoneComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             MineZoneComboBox.FormattingEnabled = true;
-            MineZoneComboBox.Location = new Point(91, 16);
+            MineZoneComboBox.Location = new Point(91, 18);
             MineZoneComboBox.Margin = new Padding(4, 3, 4, 3);
             MineZoneComboBox.Name = "MineZoneComboBox";
-            MineZoneComboBox.Size = new Size(144, 23);
+            MineZoneComboBox.Size = new Size(144, 25);
             MineZoneComboBox.TabIndex = 13;
             MineZoneComboBox.SelectedIndexChanged += MineZoneComboBox_SelectedIndexChanged;
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Location = new Point(166, 61);
+            label30.Location = new Point(160, 72);
             label30.Margin = new Padding(4, 0, 4, 0);
             label30.Name = "label30";
-            label30.Size = new Size(17, 15);
+            label30.Size = new Size(27, 17);
             label30.TabIndex = 10;
-            label30.Text = "Y:";
+            label30.Text = "Y：";
             // 
             // MZYtextBox
             // 
-            MZYtextBox.Location = new Point(192, 58);
+            MZYtextBox.Location = new Point(192, 66);
             MZYtextBox.Margin = new Padding(4, 3, 4, 3);
             MZYtextBox.MaxLength = 5;
             MZYtextBox.Name = "MZYtextBox";
@@ -1662,16 +1662,16 @@ namespace Server
             // label31
             // 
             label31.AutoSize = true;
-            label31.Location = new Point(49, 114);
+            label31.Location = new Point(39, 126);
             label31.Margin = new Padding(4, 0, 4, 0);
             label31.Name = "label31";
-            label31.Size = new Size(30, 15);
+            label31.Size = new Size(44, 17);
             label31.TabIndex = 8;
-            label31.Text = "Size:";
+            label31.Text = "大小：";
             // 
             // MZSizetextBox
             // 
-            MZSizetextBox.Location = new Point(91, 111);
+            MZSizetextBox.Location = new Point(91, 123);
             MZSizetextBox.Margin = new Padding(4, 3, 4, 3);
             MZSizetextBox.MaxLength = 5;
             MZSizetextBox.Name = "MZSizetextBox";
@@ -1682,16 +1682,16 @@ namespace Server
             // label32
             // 
             label32.AutoSize = true;
-            label32.Location = new Point(64, 66);
+            label32.Location = new Point(55, 72);
             label32.Margin = new Padding(4, 0, 4, 0);
             label32.Name = "label32";
-            label32.Size = new Size(17, 15);
+            label32.Size = new Size(28, 17);
             label32.TabIndex = 3;
-            label32.Text = "X:";
+            label32.Text = "X：";
             // 
             // MZXtextBox
             // 
-            MZXtextBox.Location = new Point(91, 62);
+            MZXtextBox.Location = new Point(91, 70);
             MZXtextBox.Margin = new Padding(4, 3, 4, 3);
             MZXtextBox.MaxLength = 5;
             MZXtextBox.Name = "MZXtextBox";
@@ -1703,34 +1703,34 @@ namespace Server
             // 
             MZListlistBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             MZListlistBox.FormattingEnabled = true;
-            MZListlistBox.ItemHeight = 15;
-            MZListlistBox.Location = new Point(7, 40);
+            MZListlistBox.ItemHeight = 17;
+            MZListlistBox.Location = new Point(7, 45);
             MZListlistBox.Margin = new Padding(4, 3, 4, 3);
             MZListlistBox.Name = "MZListlistBox";
             MZListlistBox.SelectionMode = SelectionMode.MultiExtended;
-            MZListlistBox.Size = new Size(206, 229);
+            MZListlistBox.Size = new Size(206, 259);
             MZListlistBox.TabIndex = 13;
             MZListlistBox.SelectedIndexChanged += MZListlistBox_SelectedIndexChanged;
             // 
             // RemoveButton
             // 
-            RemoveButton.Location = new Point(109, 5);
+            RemoveButton.Location = new Point(109, 6);
             RemoveButton.Margin = new Padding(4, 3, 4, 3);
             RemoveButton.Name = "RemoveButton";
-            RemoveButton.Size = new Size(88, 27);
+            RemoveButton.Size = new Size(88, 31);
             RemoveButton.TabIndex = 6;
-            RemoveButton.Text = "Remove";
+            RemoveButton.Text = "删除";
             RemoveButton.UseVisualStyleBackColor = true;
             RemoveButton.Click += RemoveButton_Click;
             // 
             // AddButton
             // 
-            AddButton.Location = new Point(13, 5);
+            AddButton.Location = new Point(13, 6);
             AddButton.Margin = new Padding(4, 3, 4, 3);
             AddButton.Name = "AddButton";
-            AddButton.Size = new Size(88, 27);
+            AddButton.Size = new Size(88, 31);
             AddButton.TabIndex = 5;
-            AddButton.Text = "Add";
+            AddButton.Text = "添加";
             AddButton.UseVisualStyleBackColor = true;
             AddButton.Click += AddButton_Click;
             // 
@@ -1738,55 +1738,55 @@ namespace Server
             // 
             MapInfoListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             MapInfoListBox.FormattingEnabled = true;
-            MapInfoListBox.ItemHeight = 15;
-            MapInfoListBox.Location = new Point(14, 72);
+            MapInfoListBox.ItemHeight = 17;
+            MapInfoListBox.Location = new Point(14, 82);
             MapInfoListBox.Margin = new Padding(4, 3, 4, 3);
             MapInfoListBox.Name = "MapInfoListBox";
             MapInfoListBox.SelectionMode = SelectionMode.MultiExtended;
-            MapInfoListBox.Size = new Size(220, 529);
+            MapInfoListBox.Size = new Size(220, 599);
             MapInfoListBox.TabIndex = 7;
             MapInfoListBox.SelectedIndexChanged += MapInfoListBox_SelectedIndexChanged;
             // 
             // PasteMapButton
             // 
-            PasteMapButton.Location = new Point(301, 5);
+            PasteMapButton.Location = new Point(301, 6);
             PasteMapButton.Margin = new Padding(4, 3, 4, 3);
             PasteMapButton.Name = "PasteMapButton";
-            PasteMapButton.Size = new Size(88, 27);
+            PasteMapButton.Size = new Size(88, 31);
             PasteMapButton.TabIndex = 24;
-            PasteMapButton.Text = "Paste";
+            PasteMapButton.Text = "粘贴";
             PasteMapButton.UseVisualStyleBackColor = true;
             PasteMapButton.Click += PasteMapButton_Click;
             // 
             // CopyMapButton
             // 
-            CopyMapButton.Location = new Point(205, 5);
+            CopyMapButton.Location = new Point(205, 6);
             CopyMapButton.Margin = new Padding(4, 3, 4, 3);
             CopyMapButton.Name = "CopyMapButton";
-            CopyMapButton.Size = new Size(88, 27);
+            CopyMapButton.Size = new Size(88, 31);
             CopyMapButton.TabIndex = 23;
-            CopyMapButton.Text = "Copy";
+            CopyMapButton.Text = "复制";
             CopyMapButton.UseVisualStyleBackColor = true;
             // 
             // ImportMapInfoButton
             // 
-            ImportMapInfoButton.Location = new Point(658, 5);
+            ImportMapInfoButton.Location = new Point(658, 6);
             ImportMapInfoButton.Margin = new Padding(4, 3, 4, 3);
             ImportMapInfoButton.Name = "ImportMapInfoButton";
-            ImportMapInfoButton.Size = new Size(102, 27);
+            ImportMapInfoButton.Size = new Size(102, 31);
             ImportMapInfoButton.TabIndex = 25;
-            ImportMapInfoButton.Text = "Import MapInfo";
+            ImportMapInfoButton.Text = "导入地图信息";
             ImportMapInfoButton.UseVisualStyleBackColor = true;
             ImportMapInfoButton.Click += ImportMapInfoButton_Click;
             // 
             // ExportMapInfoButton
             // 
-            ExportMapInfoButton.Location = new Point(658, 38);
+            ExportMapInfoButton.Location = new Point(658, 43);
             ExportMapInfoButton.Margin = new Padding(4, 3, 4, 3);
             ExportMapInfoButton.Name = "ExportMapInfoButton";
-            ExportMapInfoButton.Size = new Size(102, 27);
+            ExportMapInfoButton.Size = new Size(102, 31);
             ExportMapInfoButton.TabIndex = 26;
-            ExportMapInfoButton.Text = "Export MapInfo";
+            ExportMapInfoButton.Text = "导出地图信息";
             ExportMapInfoButton.UseVisualStyleBackColor = true;
             ExportMapInfoButton.Click += ExportMapInfoButton_Click;
             // 
@@ -1795,57 +1795,57 @@ namespace Server
             ImportMongenButton.Location = new Point(766, 3);
             ImportMongenButton.Margin = new Padding(4, 3, 4, 3);
             ImportMongenButton.Name = "ImportMongenButton";
-            ImportMongenButton.Size = new Size(100, 27);
+            ImportMongenButton.Size = new Size(100, 31);
             ImportMongenButton.TabIndex = 27;
-            ImportMongenButton.Text = "Import Spawns";
+            ImportMongenButton.Text = "导入刷新";
             ImportMongenButton.UseVisualStyleBackColor = true;
             ImportMongenButton.Click += ImportMonGenButton_Click;
             // 
             // ExportMongenButton
             // 
-            ExportMongenButton.Location = new Point(766, 38);
+            ExportMongenButton.Location = new Point(766, 43);
             ExportMongenButton.Margin = new Padding(4, 3, 4, 3);
             ExportMongenButton.Name = "ExportMongenButton";
-            ExportMongenButton.Size = new Size(100, 27);
+            ExportMongenButton.Size = new Size(100, 31);
             ExportMongenButton.TabIndex = 28;
-            ExportMongenButton.Text = "Export Spawns";
+            ExportMongenButton.Text = "导出刷新";
             ExportMongenButton.UseVisualStyleBackColor = true;
             ExportMongenButton.Click += ExportMonGenButton_Click;
             // 
             // VisualizerButton
             // 
-            VisualizerButton.Location = new Point(564, 5);
+            VisualizerButton.Location = new Point(564, 6);
             VisualizerButton.Margin = new Padding(4, 3, 4, 3);
             VisualizerButton.Name = "VisualizerButton";
-            VisualizerButton.Size = new Size(88, 27);
+            VisualizerButton.Size = new Size(88, 31);
             VisualizerButton.TabIndex = 31;
-            VisualizerButton.Text = "Visualizer";
+            VisualizerButton.Text = "可视化";
             VisualizerButton.UseVisualStyleBackColor = true;
             VisualizerButton.Click += VisualizerButton_Click;
             // 
             // MapSearchButton
             // 
-            MapSearchButton.Location = new Point(240, 42);
+            MapSearchButton.Location = new Point(240, 48);
             MapSearchButton.Name = "MapSearchButton";
-            MapSearchButton.Size = new Size(75, 23);
+            MapSearchButton.Size = new Size(75, 26);
             MapSearchButton.TabIndex = 33;
-            MapSearchButton.Text = "Search";
+            MapSearchButton.Text = "搜索";
             MapSearchButton.UseVisualStyleBackColor = true;
             MapSearchButton.Click += MapSearchButton_Click;
             // 
             // MapSearchTextBox
             // 
-            MapSearchTextBox.Location = new Point(14, 41);
+            MapSearchTextBox.Location = new Point(14, 46);
             MapSearchTextBox.Name = "MapSearchTextBox";
-            MapSearchTextBox.PlaceholderText = "Search...";
+            MapSearchTextBox.PlaceholderText = "搜索…";
             MapSearchTextBox.Size = new Size(220, 23);
             MapSearchTextBox.TabIndex = 35;
             // 
             // MapInfoForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(886, 625);
+            ClientSize = new Size(886, 708);
             Controls.Add(MapSearchTextBox);
             Controls.Add(MapSearchButton);
             Controls.Add(VisualizerButton);
@@ -1861,7 +1861,7 @@ namespace Server
             Controls.Add(MapInfoListBox);
             Margin = new Padding(4, 3, 4, 3);
             Name = "MapInfoForm";
-            Text = "Map Info";
+            Text = "地图信息";
             FormClosed += MapInfoForm_FormClosed;
             MapTabs.ResumeLayout(false);
             tabPage1.ResumeLayout(false);

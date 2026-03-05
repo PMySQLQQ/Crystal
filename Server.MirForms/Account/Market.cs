@@ -1,4 +1,4 @@
-﻿using Server.MirDatabase;
+using Server.MirDatabase;
 using Server.MirEnvir;
 using System.Data;
 
@@ -53,11 +53,11 @@ namespace Server.Database
             // Update TotalItemsOwnedLabel based on the player filter results
             if (filterByPlayer && !string.IsNullOrEmpty(filteredPlayerName))
             {
-                TotalItemsOwnedLabel.Text = $"Total Items owned by: {filteredPlayerName} ({filteredPlayerItemCount})";
+                TotalItemsOwnedLabel.Text = $"该玩家总物品数：{filteredPlayerName}（{filteredPlayerItemCount}）";
             }
             else
             {
-                TotalItemsOwnedLabel.Text = "Total Items owned by: ";
+                TotalItemsOwnedLabel.Text = "该玩家总物品数：";
             }
 
             // Iterate over each filtered auction listing and add it to the MarketListing

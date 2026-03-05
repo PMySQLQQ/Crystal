@@ -1,4 +1,4 @@
-﻿namespace LibraryViewer
+namespace LibraryViewer
 {
     partial class LoadSettings
     {
@@ -99,7 +99,7 @@
             this.Controls.Add(this.cbPrefix);
             this.Controls.Add(this.button1);
             this.Name = "LoadSettings";
-            this.Text = "LoadSettings";
+            this.Text = "加载设置";
             this.ResumeLayout(false);
             this.PerformLayout();
 

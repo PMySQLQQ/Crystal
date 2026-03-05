@@ -1,4 +1,4 @@
-﻿using Client.MirSounds.Libraries;
+using Client.MirSounds.Libraries;
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
@@ -6,6 +6,9 @@ namespace Client.MirSounds
 {
     public static class SoundManager
     {
+        public const int SampleRate = 44100;
+        public const int ChannelCount = 2;
+
         private static Dictionary<int, string> _indexList => SoundList.Indexes;
         private static List<KeyValuePair<long, int>> _delayList = new List<KeyValuePair<long, int>>();
         private static Dictionary<int, CachedSound> _cachedOneShots = new Dictionary<int, CachedSound>();
@@ -61,11 +64,8 @@ namespace Client.MirSounds
 
         public static void Create()
         {
-            int sampleRate = 44100;
-            int channelCount = 2;
-
             _OneShots = new WaveOutEvent();
-            mixer = new MixingSampleProvider(WaveFormat.CreateIeeeFloatWaveFormat(sampleRate, channelCount));
+            mixer = new MixingSampleProvider(WaveFormat.CreateIeeeFloatWaveFormat(SampleRate, ChannelCount));
             mixer.ReadFully = true;
             _OneShots.Init(mixer);
             _OneShots.Volume = ScaleVolume(_vol);

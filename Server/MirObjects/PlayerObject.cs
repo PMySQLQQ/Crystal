@@ -269,12 +269,22 @@ namespace Server.MirObjects
 
             if (CurrentMap != null && CurrentMap.ValidPoint(CurrentLocation))
             {
-                CurrentMapIndex = CurrentMap.Info.Index;
-
-                if (!CurrentMap.Info.RequiredGroup)
+                // 如果当前在副本实例地图，登出/重启时强制保存为绑定地图的安全区
+                if (CurrentMap.IsInstance)
                 {
-                    LastValidMap = CurrentMap;
-                    LastValidLocation = CurrentLocation;
+                    CurrentMapIndex = BindMapIndex;
+                    LastValidMap = Envir.GetMap(BindMapIndex);
+                    LastValidLocation = BindLocation;
+                }
+                else
+                {
+                    CurrentMapIndex = CurrentMap.Info.Index;
+
+                    if (!CurrentMap.Info.RequiredGroup)
+                    {
+                        LastValidMap = CurrentMap;
+                        LastValidLocation = CurrentLocation;
+                    }
                 }
             }
 
@@ -2500,7 +2510,8 @@ namespace Server.MirObjects
                         if (GroupMembers == null || GroupMembers[0] != this || Dead)
                             return;
 
-                        if (CurrentMap.Info.NoRecall)
+                        // 副本实例地图禁止组队召回
+                        if (CurrentMap.IsInstance || CurrentMap.Info.NoRecall)
                         {
                             ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.CannotRecallOnMap), ChatType.System);
                             return;
@@ -2538,7 +2549,8 @@ namespace Server.MirObjects
                             return;
                         }
 
-                        if (CurrentMap.Info.NoRecall)
+                        // 副本实例地图禁止召回队员
+                        if (CurrentMap.IsInstance || CurrentMap.Info.NoRecall)
                         {
                             ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.CannotRecallOnMap), ChatType.System);
                             return;
@@ -2590,7 +2602,8 @@ namespace Server.MirObjects
                             return;
                         }
 
-                        if (CurrentMap.Info.NoRecall)
+                        // 副本实例地图禁止召回配偶
+                        if (CurrentMap.IsInstance || CurrentMap.Info.NoRecall)
                         {
                             ReceiveChat(GameLanguage.ServerTextMap.GetLocalization(ServerTextKeys.CannotRecallOnMap), ChatType.System);
                             return;
@@ -4502,6 +4515,10 @@ namespace Server.MirObjects
 
                 CallDefaultNPC(DefaultNPCType.MapCoord, CurrentMap.Info.FileName, activeCoord.X, activeCoord.Y);
             }
+
+            // 副本实例地图不走原始地图的 Movement 连接坐标，避免直接传出副本
+            if (CurrentMap.IsInstance)
+                return false;
 
             //Map movements
             for (int i = 0; i < CurrentMap.Info.Movements.Count; i++)
@@ -7963,6 +7980,10 @@ namespace Server.MirObjects
                 NPCObject ob = CurrentMap.NPCs[i];
                 if (ob.ObjectID != objectID) continue;
                 if (!Functions.InRange(ob.CurrentLocation, CurrentLocation, Globals.DataRange)) return;
+
+                // 副本活动入口 NPC，直接尝试进入活动
+                if (Envir.ActivityManager != null && Envir.ActivityManager.TryEnterActivity(this, ob))
+                    return;
 
                 ob.CheckVisible(this);
 

@@ -1,4 +1,5 @@
-﻿using NAudio.Wave;
+using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 using System;
 
 namespace Client.MirSounds.Libraries
@@ -9,6 +10,7 @@ namespace Client.MirSounds.Libraries
         public long ExpireTime { get; set; }
         public float[] AudioData { get; private set; }
         public WaveFormat WaveFormat { get; private set; }
+
         public CachedSound(int index, string fileName)
         {
             Index = index;
@@ -36,14 +38,23 @@ namespace Client.MirSounds.Libraries
             {
                 using (var audioFileReader = new AudioFileReader(fileName))
                 {
-                    WaveFormat = audioFileReader.WaveFormat;
-                    var wholeFile = new List<float>((int)(audioFileReader.Length / 4));
-                    var readBuffer = new float[audioFileReader.WaveFormat.SampleRate * audioFileReader.WaveFormat.Channels];
+                    // 确保所有缓存的音效与全局混音器使用相同的采样率
+                    ISampleProvider source = audioFileReader;
+                    if (audioFileReader.WaveFormat.SampleRate != SoundManager.SampleRate)
+                    {
+                        source = new WdlResamplingSampleProvider(source, SoundManager.SampleRate);
+                    }
+
+                    WaveFormat = source.WaveFormat;
+
+                    var wholeFile = new List<float>();
+                    var readBuffer = new float[WaveFormat.SampleRate * WaveFormat.Channels];
                     int samplesRead;
-                    while ((samplesRead = audioFileReader.Read(readBuffer, 0, readBuffer.Length)) > 0)
+                    while ((samplesRead = source.Read(readBuffer, 0, readBuffer.Length)) > 0)
                     {
                         wholeFile.AddRange(readBuffer.Take(samplesRead));
                     }
+
                     AudioData = wholeFile.ToArray();
                 }
             }

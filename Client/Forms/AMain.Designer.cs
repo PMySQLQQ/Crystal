@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -99,7 +99,7 @@ namespace Launcher
             this.SpeedLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SpeedLabel.Size = new System.Drawing.Size(83, 18);
             this.SpeedLabel.TabIndex = 13;
-            this.SpeedLabel.Text = "Speed";
+            this.SpeedLabel.Text = "速度";
             this.SpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.SpeedLabel.Visible = false;
             // 
@@ -211,7 +211,7 @@ namespace Launcher
             this.CurrentFile_label.Name = "CurrentFile_label";
             this.CurrentFile_label.Size = new System.Drawing.Size(422, 20);
             this.CurrentFile_label.TabIndex = 27;
-            this.CurrentFile_label.Text = "Checking Files.";
+            this.CurrentFile_label.Text = "正在检查文件...";
             this.CurrentFile_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CurrentFile_label.Visible = false;
             // 
@@ -257,7 +257,7 @@ namespace Launcher
             this.Credit_label.Name = "Credit_label";
             this.Credit_label.Size = new System.Drawing.Size(114, 13);
             this.Credit_label.TabIndex = 30;
-            this.Credit_label.Text = "Powered by Crystal M2";
+            this.Credit_label.Text = "由 Crystal M2 提供支持";
             this.Credit_label.Click += new System.EventHandler(this.Credit_label_Click);
             // 
             // ProgTotalEnd_pb
@@ -379,7 +379,7 @@ namespace Launcher
             this.MinimizeBox = false;
             this.Name = "AMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Launcher";
+            this.Text = "启动器";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AMain_FormClosed);
             this.Load += new System.EventHandler(this.AMain_Load);

@@ -1,4 +1,4 @@
-﻿namespace Server.MirForms.VisualMapInfo.Control.Forms
+namespace Server.MirForms.VisualMapInfo.Control.Forms
 {
     partial class MiningDetailForm
     {
@@ -114,7 +114,7 @@
             this.MaximizeBox = false;
             this.Name = "MiningDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Mining";
+            this.Text = "挖矿区域";
             this.ResumeLayout(false);
             this.PerformLayout();
 

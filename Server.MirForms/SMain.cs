@@ -1,4 +1,4 @@
-﻿using CustomFormControl;
+using CustomFormControl;
 using Server.Account;
 using Server.Database;
 using Server.MirDatabase;
@@ -465,6 +465,12 @@ namespace Server
         private void gameshopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GameShop form = new GameShop();
+            form.ShowDialog();
+        }
+
+        private void instanceActivityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InstanceActivityForm form = new InstanceActivityForm();
             form.ShowDialog();
         }
 

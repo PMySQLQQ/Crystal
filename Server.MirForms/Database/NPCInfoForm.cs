@@ -349,7 +349,7 @@ namespace Server
 
             if (ofd.FileName == string.Empty) return;
 
-            Path = ofd.FileName;            
+            Path = ofd.FileName;
 
             foreach (var m in File.ReadAllLines(Path).Skip(1))
             {
@@ -649,5 +649,10 @@ namespace Server
             }
         }
         #endregion
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

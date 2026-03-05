@@ -1002,7 +1002,10 @@ namespace Server.MirObjects
             PoisonList.Clear();
             Envir.MonsterCount--;
             if (CurrentMap != null)
-            CurrentMap.MonsterCount--;
+                CurrentMap.MonsterCount--;
+
+            var killer = GetAttacker(EXPOwner) as PlayerObject;
+            Envir.ActivityManager?.OnMonsterDied(this, killer);
         }
 
         public MapObject GetAttacker(MapObject attacker)

@@ -1,4 +1,4 @@
-﻿namespace Server
+namespace Server
 {
     partial class ConfigForm
     {
@@ -104,6 +104,8 @@
             expRateInput = new NumericUpDown();
             lblExpRate = new Label();
             tabPage5 = new TabPage();
+            label24 = new Label();
+            PositionMovesBox = new TextBox();
             groupBox2 = new GroupBox();
             ReaddArcDrops = new Button();
             ReaddSinDrops = new Button();
@@ -117,8 +119,6 @@
             gameMasterEffect_CheckBox = new CheckBox();
             label8 = new Label();
             VPathDialog = new OpenFileDialog();
-            label24 = new Label();
-            PositionMovesBox = new TextBox();
             configTabs.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -148,7 +148,7 @@
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(87, 29);
             SaveButton.TabIndex = 6;
-            SaveButton.Text = "Close";
+            SaveButton.Text = "关闭";
             SaveButton.UseVisualStyleBackColor = true;
             SaveButton.Click += SaveButton_Click;
             // 
@@ -179,7 +179,7 @@
             tabPage1.Padding = new Padding(3, 5, 3, 5);
             tabPage1.Size = new Size(476, 396);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Version";
+            tabPage1.Text = "版本";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -195,43 +195,43 @@
             groupBox1.Size = new Size(460, 84);
             groupBox1.TabIndex = 25;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Version Info";
+            groupBox1.Text = "版本信息";
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Location = new Point(7, 56);
             label11.Name = "label11";
-            label11.Size = new Size(63, 17);
+            label11.Size = new Size(44, 17);
             label11.TabIndex = 23;
-            label11.Text = "Database";
+            label11.Text = "数据库";
             // 
             // DBVersionLabel
             // 
             DBVersionLabel.AutoSize = true;
             DBVersionLabel.Location = new Point(89, 56);
             DBVersionLabel.Name = "DBVersionLabel";
-            DBVersionLabel.Size = new Size(52, 17);
+            DBVersionLabel.Size = new Size(44, 17);
             DBVersionLabel.TabIndex = 24;
-            DBVersionLabel.Text = "Version";
+            DBVersionLabel.Text = "版本号";
             // 
             // ServerVersionLabel
             // 
             ServerVersionLabel.AutoSize = true;
             ServerVersionLabel.Location = new Point(89, 26);
             ServerVersionLabel.Name = "ServerVersionLabel";
-            ServerVersionLabel.Size = new Size(52, 17);
+            ServerVersionLabel.Size = new Size(44, 17);
             ServerVersionLabel.TabIndex = 7;
-            ServerVersionLabel.Text = "Version";
+            ServerVersionLabel.Text = "版本号";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Location = new Point(7, 26);
             label10.Name = "label10";
-            label10.Size = new Size(45, 17);
+            label10.Size = new Size(44, 17);
             label10.TabIndex = 22;
-            label10.Text = "Server";
+            label10.Text = "服务器";
             // 
             // VersionCheckBox
             // 
@@ -239,9 +239,9 @@
             VersionCheckBox.Location = new Point(104, 56);
             VersionCheckBox.Margin = new Padding(3, 5, 3, 5);
             VersionCheckBox.Name = "VersionCheckBox";
-            VersionCheckBox.Size = new Size(163, 21);
+            VersionCheckBox.Size = new Size(111, 21);
             VersionCheckBox.TabIndex = 3;
-            VersionCheckBox.Text = "Check for client version";
+            VersionCheckBox.Text = "检查客户端版本";
             VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // VPathBrowseButton
@@ -269,9 +269,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(16, 26);
             label1.Name = "label1";
-            label1.Size = new Size(84, 17);
+            label1.Size = new Size(68, 17);
             label1.TabIndex = 0;
-            label1.Text = "Version Path:";
+            label1.Text = "版本路径：";
             // 
             // tabPage2
             // 
@@ -285,7 +285,7 @@
             tabPage2.Padding = new Padding(3, 5, 3, 5);
             tabPage2.Size = new Size(476, 396);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Network";
+            tabPage2.Text = "网络";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // gbServerSettings
@@ -298,7 +298,7 @@
             gbServerSettings.Size = new Size(196, 68);
             gbServerSettings.TabIndex = 3;
             gbServerSettings.TabStop = false;
-            gbServerSettings.Text = "Database Settings";
+            gbServerSettings.Text = "数据库设置";
             // 
             // SaveDelayTextBox
             // 
@@ -315,18 +315,18 @@
             label6.AutoSize = true;
             label6.Location = new Point(6, 32);
             label6.Name = "label6";
-            label6.Size = new Size(74, 17);
+            label6.Size = new Size(68, 17);
             label6.TabIndex = 24;
-            label6.Text = "Save Delay:";
+            label6.Text = "保存间隔：";
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Location = new Point(145, 32);
             label12.Name = "label12";
-            label12.Size = new Size(53, 17);
+            label12.Size = new Size(32, 17);
             label12.TabIndex = 26;
-            label12.Text = "minutes";
+            label12.Text = "分钟";
             // 
             // gbHTTPService
             // 
@@ -341,16 +341,16 @@
             gbHTTPService.Size = new Size(440, 182);
             gbHTTPService.TabIndex = 2;
             gbHTTPService.TabStop = false;
-            gbHTTPService.Text = "HTTP Service";
+            gbHTTPService.Text = "HTTP 服务";
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Location = new Point(18, 111);
             label15.Name = "label15";
-            label15.Size = new Size(247, 17);
+            label15.Size = new Size(193, 17);
             label15.TabIndex = 22;
-            label15.Text = "(http service only allow trusted IP to visit)";
+            label15.Text = "（HTTP 服务仅允许信任 IP 访问）";
             // 
             // HTTPTrustedIPAddressTextBox
             // 
@@ -367,9 +367,9 @@
             label14.AutoSize = true;
             label14.Location = new Point(18, 86);
             label14.Name = "label14";
-            label14.Size = new Size(156, 17);
+            label14.Size = new Size(93, 17);
             label14.TabIndex = 20;
-            label14.Text = "HTTP Trusted IP Address:";
+            label14.Text = "HTTP 信任 IP：";
             // 
             // HTTPIPAddressTextBox
             // 
@@ -386,9 +386,9 @@
             label13.AutoSize = true;
             label13.Location = new Point(18, 58);
             label13.Name = "label13";
-            label13.Size = new Size(108, 17);
+            label13.Size = new Size(93, 17);
             label13.TabIndex = 18;
-            label13.Text = "HTTP IP Address:";
+            label13.Text = "HTTP 绑定 IP：";
             // 
             // StartHTTPCheckBox
             // 
@@ -396,9 +396,9 @@
             StartHTTPCheckBox.Location = new Point(18, 25);
             StartHTTPCheckBox.Margin = new Padding(3, 5, 3, 5);
             StartHTTPCheckBox.Name = "StartHTTPCheckBox";
-            StartHTTPCheckBox.Size = new Size(133, 21);
+            StartHTTPCheckBox.Size = new Size(113, 21);
             StartHTTPCheckBox.TabIndex = 23;
-            StartHTTPCheckBox.Text = "Start HTTP Service";
+            StartHTTPCheckBox.Text = "启动 HTTP 服务";
             StartHTTPCheckBox.UseVisualStyleBackColor = true;
             StartHTTPCheckBox.CheckedChanged += StartHTTPCheckBox_CheckedChanged;
             // 
@@ -417,7 +417,7 @@
             gbConnectionSettings.Size = new Size(225, 162);
             gbConnectionSettings.TabIndex = 1;
             gbConnectionSettings.TabStop = false;
-            gbConnectionSettings.Text = "Connection Settings";
+            gbConnectionSettings.Text = "连接设置";
             // 
             // RelogDelayTextBox
             // 
@@ -434,9 +434,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(6, 22);
             label7.Name = "label7";
-            label7.Size = new Size(81, 17);
+            label7.Size = new Size(68, 17);
             label7.TabIndex = 26;
-            label7.Text = "Relog Delay:";
+            label7.Text = "重登间隔：";
             // 
             // maxConnectionsPerIP
             // 
@@ -452,9 +452,9 @@
             lblMaxConnectionsPerIP.AutoSize = true;
             lblMaxConnectionsPerIP.Location = new Point(6, 112);
             lblMaxConnectionsPerIP.Name = "lblMaxConnectionsPerIP";
-            lblMaxConnectionsPerIP.Size = new Size(125, 17);
+            lblMaxConnectionsPerIP.Size = new Size(103, 17);
             lblMaxConnectionsPerIP.TabIndex = 24;
-            lblMaxConnectionsPerIP.Text = "Max connections/IP:";
+            lblMaxConnectionsPerIP.Text = "单IP最大连接数：";
             // 
             // MaxUserTextBox
             // 
@@ -471,9 +471,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(6, 82);
             label5.Name = "label5";
-            label5.Size = new Size(67, 17);
+            label5.Size = new Size(92, 17);
             label5.TabIndex = 16;
-            label5.Text = "Max User:";
+            label5.Text = "最大在线人数：";
             // 
             // TimeOutTextBox
             // 
@@ -490,9 +490,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(6, 51);
             label4.Name = "label4";
-            label4.Size = new Size(60, 17);
+            label4.Size = new Size(68, 17);
             label4.TabIndex = 14;
-            label4.Text = "TimeOut:";
+            label4.Text = "超时时间：";
             // 
             // gbServerConnection
             // 
@@ -505,7 +505,7 @@
             gbServerConnection.Size = new Size(196, 85);
             gbServerConnection.TabIndex = 0;
             gbServerConnection.TabStop = false;
-            gbServerConnection.Text = "Server Connection";
+            gbServerConnection.Text = "服务器连接";
             // 
             // IPAddressTextBox
             // 
@@ -522,9 +522,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 22);
             label2.Name = "label2";
-            label2.Size = new Size(74, 17);
+            label2.Size = new Size(59, 17);
             label2.TabIndex = 10;
-            label2.Text = "IP Address:";
+            label2.Text = "IP 地址：";
             // 
             // PortTextBox
             // 
@@ -539,11 +539,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(39, 51);
+            label3.Location = new Point(21, 51);
             label3.Name = "label3";
-            label3.Size = new Size(35, 17);
+            label3.Size = new Size(44, 17);
             label3.TabIndex = 12;
-            label3.Text = "Port:";
+            label3.Text = "端口：";
             // 
             // tabPage3
             // 
@@ -556,7 +556,7 @@
             tabPage3.Padding = new Padding(3, 5, 3, 5);
             tabPage3.Size = new Size(476, 396);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Permissions";
+            tabPage3.Text = "权限";
             tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
             // 
@@ -571,7 +571,7 @@
             gbGameWorld.Size = new Size(272, 335);
             gbGameWorld.TabIndex = 2;
             gbGameWorld.TabStop = false;
-            gbGameWorld.Text = "Game World";
+            gbGameWorld.Text = "游戏世界";
             // 
             // SafeZoneHealingCheckBox
             // 
@@ -579,9 +579,9 @@
             SafeZoneHealingCheckBox.Location = new Point(6, 57);
             SafeZoneHealingCheckBox.Margin = new Padding(3, 5, 3, 5);
             SafeZoneHealingCheckBox.Name = "SafeZoneHealingCheckBox";
-            SafeZoneHealingCheckBox.Size = new Size(161, 21);
+            SafeZoneHealingCheckBox.Size = new Size(111, 21);
             SafeZoneHealingCheckBox.TabIndex = 1;
-            SafeZoneHealingCheckBox.Text = "SafeZone Auto-Healing";
+            SafeZoneHealingCheckBox.Text = "安全区自动回血";
             SafeZoneHealingCheckBox.UseVisualStyleBackColor = true;
             SafeZoneHealingCheckBox.CheckedChanged += SafeZoneHealingCheckBox_CheckedChanged;
             // 
@@ -591,9 +591,9 @@
             SafeZoneBorderCheckBox.Location = new Point(6, 26);
             SafeZoneBorderCheckBox.Margin = new Padding(3, 5, 3, 5);
             SafeZoneBorderCheckBox.Name = "SafeZoneBorderCheckBox";
-            SafeZoneBorderCheckBox.Size = new Size(132, 21);
+            SafeZoneBorderCheckBox.Size = new Size(111, 21);
             SafeZoneBorderCheckBox.TabIndex = 0;
-            SafeZoneBorderCheckBox.Text = "SafeZone Borders";
+            SafeZoneBorderCheckBox.Text = "显示安全区边框";
             SafeZoneBorderCheckBox.UseVisualStyleBackColor = true;
             SafeZoneBorderCheckBox.CheckedChanged += SafeZoneBorderCheckBox_CheckedChanged;
             // 
@@ -603,9 +603,9 @@
             ObserveCheckBox.Location = new Point(6, 87);
             ObserveCheckBox.Margin = new Padding(3, 5, 3, 5);
             ObserveCheckBox.Name = "ObserveCheckBox";
-            ObserveCheckBox.Size = new Size(115, 21);
+            ObserveCheckBox.Size = new Size(75, 21);
             ObserveCheckBox.TabIndex = 30;
-            ObserveCheckBox.Text = "Observe Mode";
+            ObserveCheckBox.Text = "观察模式";
             ObserveCheckBox.UseVisualStyleBackColor = true;
             // 
             // WarehousePasswordCheckBox
@@ -614,9 +614,9 @@
             WarehousePasswordCheckBox.Location = new Point(6, 118);
             WarehousePasswordCheckBox.Margin = new Padding(3, 5, 3, 5);
             WarehousePasswordCheckBox.Name = "WarehousePasswordCheckBox";
-            WarehousePasswordCheckBox.Size = new Size(153, 21);
+            WarehousePasswordCheckBox.Size = new Size(99, 21);
             WarehousePasswordCheckBox.TabIndex = 31;
-            WarehousePasswordCheckBox.Text = "Warehouse Password";
+            WarehousePasswordCheckBox.Text = "启用仓库密码";
             WarehousePasswordCheckBox.UseVisualStyleBackColor = true;
             // 
             // gbCharacterScreen
@@ -631,7 +631,7 @@
             gbCharacterScreen.Size = new Size(157, 184);
             gbCharacterScreen.TabIndex = 1;
             gbCharacterScreen.TabStop = false;
-            gbCharacterScreen.Text = "Character Screen";
+            gbCharacterScreen.Text = "角色界面";
             // 
             // StartGameCheckBox
             // 
@@ -639,9 +639,9 @@
             StartGameCheckBox.Location = new Point(6, 148);
             StartGameCheckBox.Margin = new Padding(3, 5, 3, 5);
             StartGameCheckBox.Name = "StartGameCheckBox";
-            StartGameCheckBox.Size = new Size(106, 21);
+            StartGameCheckBox.Size = new Size(123, 21);
             StartGameCheckBox.TabIndex = 11;
-            StartGameCheckBox.Text = "World Access";
+            StartGameCheckBox.Text = "允许进入游戏世界";
             StartGameCheckBox.UseVisualStyleBackColor = true;
             // 
             // NCharacterCheckBox
@@ -650,9 +650,9 @@
             NCharacterCheckBox.Location = new Point(6, 26);
             NCharacterCheckBox.Margin = new Padding(3, 5, 3, 5);
             NCharacterCheckBox.Name = "NCharacterCheckBox";
-            NCharacterCheckBox.Size = new Size(136, 21);
+            NCharacterCheckBox.Size = new Size(99, 21);
             NCharacterCheckBox.TabIndex = 9;
-            NCharacterCheckBox.Text = "Character Creation";
+            NCharacterCheckBox.Text = "允许创建角色";
             NCharacterCheckBox.UseVisualStyleBackColor = true;
             // 
             // DCharacterCheckBox
@@ -661,9 +661,9 @@
             DCharacterCheckBox.Location = new Point(6, 57);
             DCharacterCheckBox.Margin = new Padding(3, 5, 3, 5);
             DCharacterCheckBox.Name = "DCharacterCheckBox";
-            DCharacterCheckBox.Size = new Size(135, 21);
+            DCharacterCheckBox.Size = new Size(99, 21);
             DCharacterCheckBox.TabIndex = 10;
-            DCharacterCheckBox.Text = "Character Deletion";
+            DCharacterCheckBox.Text = "允许删除角色";
             DCharacterCheckBox.UseVisualStyleBackColor = true;
             // 
             // AllowAssassinCheckBox
@@ -672,9 +672,9 @@
             AllowAssassinCheckBox.Location = new Point(6, 87);
             AllowAssassinCheckBox.Margin = new Padding(3, 5, 3, 5);
             AllowAssassinCheckBox.Name = "AllowAssassinCheckBox";
-            AllowAssassinCheckBox.Size = new Size(110, 21);
+            AllowAssassinCheckBox.Size = new Size(99, 21);
             AllowAssassinCheckBox.TabIndex = 12;
-            AllowAssassinCheckBox.Text = "Assassin Class";
+            AllowAssassinCheckBox.Text = "开启刺客职业";
             AllowAssassinCheckBox.UseVisualStyleBackColor = true;
             // 
             // AllowArcherCheckBox
@@ -685,7 +685,7 @@
             AllowArcherCheckBox.Name = "AllowArcherCheckBox";
             AllowArcherCheckBox.Size = new Size(99, 21);
             AllowArcherCheckBox.TabIndex = 13;
-            AllowArcherCheckBox.Text = "Archer Class";
+            AllowArcherCheckBox.Text = "开启弓手职业";
             AllowArcherCheckBox.UseVisualStyleBackColor = true;
             // 
             // gbLoginScreen
@@ -698,7 +698,7 @@
             gbLoginScreen.Size = new Size(157, 147);
             gbLoginScreen.TabIndex = 0;
             gbLoginScreen.TabStop = false;
-            gbLoginScreen.Text = "Login Screen";
+            gbLoginScreen.Text = "登录界面";
             // 
             // AccountCheckBox
             // 
@@ -706,9 +706,9 @@
             AccountCheckBox.Location = new Point(6, 26);
             AccountCheckBox.Margin = new Padding(3, 5, 3, 5);
             AccountCheckBox.Name = "AccountCheckBox";
-            AccountCheckBox.Size = new Size(147, 21);
+            AccountCheckBox.Size = new Size(99, 21);
             AccountCheckBox.TabIndex = 6;
-            AccountCheckBox.Text = "Account Registration";
+            AccountCheckBox.Text = "允许注册账号";
             AccountCheckBox.UseVisualStyleBackColor = true;
             // 
             // PasswordCheckBox
@@ -717,9 +717,9 @@
             PasswordCheckBox.Location = new Point(6, 57);
             PasswordCheckBox.Margin = new Padding(3, 5, 3, 5);
             PasswordCheckBox.Name = "PasswordCheckBox";
-            PasswordCheckBox.Size = new Size(137, 21);
+            PasswordCheckBox.Size = new Size(99, 21);
             PasswordCheckBox.TabIndex = 7;
-            PasswordCheckBox.Text = "Password Changes";
+            PasswordCheckBox.Text = "允许修改密码";
             PasswordCheckBox.UseVisualStyleBackColor = true;
             // 
             // LoginCheckBox
@@ -728,9 +728,9 @@
             LoginCheckBox.Location = new Point(6, 87);
             LoginCheckBox.Margin = new Padding(3, 5, 3, 5);
             LoginCheckBox.Name = "LoginCheckBox";
-            LoginCheckBox.Size = new Size(109, 21);
+            LoginCheckBox.Size = new Size(99, 21);
             LoginCheckBox.TabIndex = 8;
-            LoginCheckBox.Text = "Account Login";
+            LoginCheckBox.Text = "允许账号登录";
             LoginCheckBox.UseVisualStyleBackColor = true;
             // 
             // tabPage6
@@ -742,7 +742,7 @@
             tabPage6.Padding = new Padding(3);
             tabPage6.Size = new Size(476, 396);
             tabPage6.TabIndex = 5;
-            tabPage6.Text = "Rates";
+            tabPage6.Text = "倍率";
             tabPage6.UseVisualStyleBackColor = true;
             // 
             // gbRestedExpRates
@@ -764,7 +764,7 @@
             gbRestedExpRates.Size = new Size(228, 170);
             gbRestedExpRates.TabIndex = 8;
             gbRestedExpRates.TabStop = false;
-            gbRestedExpRates.Text = "Rested exp";
+            gbRestedExpRates.Text = "疲劳经验";
             // 
             // label22
             // 
@@ -839,36 +839,36 @@
             lblMaxRestedBonus.AutoSize = true;
             lblMaxRestedBonus.Location = new Point(13, 137);
             lblMaxRestedBonus.Name = "lblMaxRestedBonus";
-            lblMaxRestedBonus.Size = new Size(76, 17);
+            lblMaxRestedBonus.Size = new Size(68, 17);
             lblMaxRestedBonus.TabIndex = 0;
-            lblMaxRestedBonus.Text = "Max bonus:";
+            lblMaxRestedBonus.Text = "最大加成：";
             // 
             // lblRestedExpBonus
             // 
             lblRestedExpBonus.AutoSize = true;
             lblRestedExpBonus.Location = new Point(13, 100);
             lblRestedExpBonus.Name = "lblRestedExpBonus";
-            lblRestedExpBonus.Size = new Size(72, 17);
+            lblRestedExpBonus.Size = new Size(68, 17);
             lblRestedExpBonus.TabIndex = 0;
-            lblRestedExpBonus.Text = "Exp bonus:";
+            lblRestedExpBonus.Text = "经验加成：";
             // 
             // lblRestedBuffLength
             // 
             lblRestedBuffLength.AutoSize = true;
             lblRestedBuffLength.Location = new Point(13, 62);
             lblRestedBuffLength.Name = "lblRestedBuffLength";
-            lblRestedBuffLength.Size = new Size(74, 17);
+            lblRestedBuffLength.Size = new Size(71, 17);
             lblRestedBuffLength.TabIndex = 0;
-            lblRestedBuffLength.Text = "Buff length:";
+            lblRestedBuffLength.Text = "Buff 持续：";
             // 
             // lblPeriod
             // 
             lblPeriod.AutoSize = true;
             lblPeriod.Location = new Point(13, 27);
             lblPeriod.Name = "lblPeriod";
-            lblPeriod.Size = new Size(49, 17);
+            lblPeriod.Size = new Size(44, 17);
             lblPeriod.TabIndex = 0;
-            lblPeriod.Text = "Period:";
+            lblPeriod.Text = "周期：";
             // 
             // gbGlobals
             // 
@@ -883,7 +883,7 @@
             gbGlobals.Size = new Size(228, 113);
             gbGlobals.TabIndex = 7;
             gbGlobals.TabStop = false;
-            gbGlobals.Text = "Globals";
+            gbGlobals.Text = "全局设置";
             // 
             // label19
             // 
@@ -919,7 +919,7 @@
             lblDropRate.Name = "lblDropRate";
             lblDropRate.Size = new Size(68, 17);
             lblDropRate.TabIndex = 7;
-            lblDropRate.Text = "Drop rate:";
+            lblDropRate.Text = "掉率倍率：";
             // 
             // expRateInput
             // 
@@ -935,9 +935,9 @@
             lblExpRate.AutoSize = true;
             lblExpRate.Location = new Point(13, 27);
             lblExpRate.Name = "lblExpRate";
-            lblExpRate.Size = new Size(59, 17);
+            lblExpRate.Size = new Size(68, 17);
             lblExpRate.TabIndex = 8;
-            lblExpRate.Text = "Exp rate:";
+            lblExpRate.Text = "经验倍率：";
             // 
             // tabPage5
             // 
@@ -956,8 +956,29 @@
             tabPage5.Padding = new Padding(3, 5, 3, 5);
             tabPage5.Size = new Size(476, 396);
             tabPage5.TabIndex = 4;
-            tabPage5.Text = "Game Features";
+            tabPage5.Text = "游戏功能";
             tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(22, 151);
+            label24.Margin = new Padding(2, 0, 2, 0);
+            label24.Name = "label24";
+            label24.Size = new Size(92, 17);
+            label24.TabIndex = 44;
+            label24.Text = "移动坐标记录：";
+            // 
+            // PositionMovesBox
+            // 
+            PositionMovesBox.Location = new Point(126, 148);
+            PositionMovesBox.Margin = new Padding(2, 3, 2, 3);
+            PositionMovesBox.MaxLength = 10;
+            PositionMovesBox.Name = "PositionMovesBox";
+            PositionMovesBox.Size = new Size(56, 23);
+            PositionMovesBox.TabIndex = 43;
+            PositionMovesBox.Tag = "";
+            PositionMovesBox.Text = "3000";
             // 
             // groupBox2
             // 
@@ -970,7 +991,7 @@
             groupBox2.Size = new Size(160, 161);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Drops Management";
+            groupBox2.Text = "掉落管理";
             // 
             // ReaddArcDrops
             // 
@@ -978,7 +999,7 @@
             ReaddArcDrops.Name = "ReaddArcDrops";
             ReaddArcDrops.Size = new Size(144, 26);
             ReaddArcDrops.TabIndex = 3;
-            ReaddArcDrops.Text = "ReAdd Archer Drops";
+            ReaddArcDrops.Text = "重新加入弓手掉落";
             ReaddArcDrops.UseVisualStyleBackColor = true;
             ReaddArcDrops.Click += ReaddArcDrops_Click;
             // 
@@ -988,7 +1009,7 @@
             ReaddSinDrops.Name = "ReaddSinDrops";
             ReaddSinDrops.Size = new Size(144, 26);
             ReaddSinDrops.TabIndex = 2;
-            ReaddSinDrops.Text = "ReAdd Assassin Drops";
+            ReaddSinDrops.Text = "重新加入刺客掉落";
             ReaddSinDrops.UseVisualStyleBackColor = true;
             ReaddSinDrops.Click += ReaddSinDrops_Click;
             // 
@@ -998,7 +1019,7 @@
             RemoveArcDrops.Name = "RemoveArcDrops";
             RemoveArcDrops.Size = new Size(144, 26);
             RemoveArcDrops.TabIndex = 1;
-            RemoveArcDrops.Text = "Remove Archer Drops";
+            RemoveArcDrops.Text = "移除弓手掉落";
             RemoveArcDrops.UseVisualStyleBackColor = true;
             RemoveArcDrops.Click += RemoveArcDrops_Click;
             // 
@@ -1008,7 +1029,7 @@
             RemoveSinDrops.Name = "RemoveSinDrops";
             RemoveSinDrops.Size = new Size(144, 26);
             RemoveSinDrops.TabIndex = 0;
-            RemoveSinDrops.Text = "Remove Assassin Drops";
+            RemoveSinDrops.Text = "移除刺客掉落";
             RemoveSinDrops.UseVisualStyleBackColor = true;
             RemoveSinDrops.Click += RemoveSinDrops_Click;
             // 
@@ -1026,18 +1047,18 @@
             label9.AutoSize = true;
             label9.Location = new Point(22, 107);
             label9.Name = "label9";
-            label9.Size = new Size(148, 17);
+            label9.Size = new Size(104, 17);
             label9.TabIndex = 31;
-            label9.Text = "Max Resolution Allowed";
+            label9.Text = "允许的最大分辨率";
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Location = new Point(217, 70);
             label16.Name = "label16";
-            label16.Size = new Size(53, 17);
+            label16.Size = new Size(32, 17);
             label16.TabIndex = 29;
-            label16.Text = "minutes";
+            label16.Text = "分钟";
             // 
             // lineMessageTimeTextBox
             // 
@@ -1054,9 +1075,9 @@
             label17.AutoSize = true;
             label17.Location = new Point(22, 70);
             label17.Name = "label17";
-            label17.Size = new Size(158, 17);
+            label17.Size = new Size(80, 17);
             label17.TabIndex = 27;
-            label17.Text = "Line Message Frequency :";
+            label17.Text = "跑马灯频率：";
             // 
             // gameMasterEffect_CheckBox
             // 
@@ -1064,9 +1085,9 @@
             gameMasterEffect_CheckBox.Location = new Point(22, 28);
             gameMasterEffect_CheckBox.Margin = new Padding(3, 5, 3, 5);
             gameMasterEffect_CheckBox.Name = "gameMasterEffect_CheckBox";
-            gameMasterEffect_CheckBox.Size = new Size(142, 21);
+            gameMasterEffect_CheckBox.Size = new Size(76, 21);
             gameMasterEffect_CheckBox.TabIndex = 2;
-            gameMasterEffect_CheckBox.Text = "Game Master Effect";
+            gameMasterEffect_CheckBox.Text = "GM 特效";
             gameMasterEffect_CheckBox.UseVisualStyleBackColor = true;
             // 
             // label8
@@ -1082,27 +1103,6 @@
             VPathDialog.Filter = "Executable Files (*.exe)|*.exe";
             VPathDialog.Multiselect = true;
             // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new Point(22, 151);
-            label24.Margin = new Padding(2, 0, 2, 0);
-            label24.Name = "label24";
-            label24.Size = new Size(100, 17);
-            label24.TabIndex = 44;
-            label24.Text = "PositionMoves :";
-            // 
-            // PositionMovesBox
-            // 
-            PositionMovesBox.Location = new Point(126, 148);
-            PositionMovesBox.Margin = new Padding(2, 3, 2, 3);
-            PositionMovesBox.MaxLength = 10;
-            PositionMovesBox.Name = "PositionMovesBox";
-            PositionMovesBox.Size = new Size(56, 23);
-            PositionMovesBox.TabIndex = 43;
-            PositionMovesBox.Tag = "";
-            PositionMovesBox.Text = "3000";
-            // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -1112,7 +1112,7 @@
             Controls.Add(configTabs);
             Margin = new Padding(3, 5, 3, 5);
             Name = "ConfigForm";
-            Text = "Server Config Form";
+            Text = "服务器配置";
             FormClosed += ConfigForm_FormClosed;
             configTabs.ResumeLayout(false);
             tabPage1.ResumeLayout(false);

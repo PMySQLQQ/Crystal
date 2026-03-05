@@ -1,4 +1,4 @@
-﻿using Server.MirDatabase;
+using Server.MirDatabase;
 using Server.MirEnvir;
 using Server.MirObjects;
 using System.Diagnostics;
@@ -61,8 +61,8 @@ namespace Server
             }
             else
             {
-                CurrentMapLabel.Text = "OFFLINE";
-                CurrentXY.Text = "OFFLINE";
+                CurrentMapLabel.Text = "离线";
+                CurrentXY.Text = "离线";
             }
 
             CurrentIPLabel.Text = Character.AccountInfo.LastIP;
@@ -285,8 +285,22 @@ namespace Server
             info.Name = NameTextBox.Text;
             info.Level = Convert.ToByte(LevelTextBox.Text);
             info.PKPoints = Convert.ToInt32(PKPointsTextBox.Text);
-            info.AccountInfo.Gold = Convert.ToUInt32(tempGold);
-            info.AccountInfo.Credit = Convert.ToUInt32(tempCredit);
+
+            // 安全解析金币与元宝，避免 OverflowException
+            if (!uint.TryParse(tempGold, out var gold))
+            {
+                MessageBox.Show("Gold 必须是 0 ~ 4294967295 之间的数字。", "Invalid Gold", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!uint.TryParse(tempCredit, out var credit))
+            {
+                MessageBox.Show("GameGold 必须是 0 ~ 4294967295 之间的数字。", "Invalid GameGold", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            info.AccountInfo.Gold = gold;
+            info.AccountInfo.Credit = credit;
 
             UpdateTabs();
         }
@@ -505,7 +519,7 @@ namespace Server
                     {
                         Character.Flags[flagIndex] = true;
 
-                        selectedItem.SubItems[1].Text = "Active";
+                        selectedItem.SubItems[1].Text = "已启用";
                         selectedItem.SubItems[1].ForeColor = Color.Green;
                     }
                     else
@@ -534,7 +548,7 @@ namespace Server
                     {
                         Character.Flags[flagIndex] = false;
 
-                        selectedItem.SubItems[1].Text = "Inactive";
+                        selectedItem.SubItems[1].Text = "未启用";
                         selectedItem.SubItems[1].ForeColor = Color.Red;
                     }
                     else
@@ -625,8 +639,8 @@ namespace Server
             }
             else
             {
-                HeroCurrentMapLabel.Text = "OFFLINE";
-                HeroCurrentXY.Text = "OFFLINE";
+                HeroCurrentMapLabel.Text = "离线";
+                HeroCurrentXY.Text = "离线";
             }
         }
         private void UpdateHeroMagic()

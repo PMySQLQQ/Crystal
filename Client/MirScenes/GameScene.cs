@@ -1,4 +1,4 @@
-﻿﻿﻿﻿using Client.MirControls;
+using Client.MirControls;
 using Client.MirGraphics;
 using Client.MirNetwork;
 using Client.MirObjects;
@@ -142,6 +142,7 @@ namespace Client.MirScenes
         public NoticeDialog NoticeDialog;
 
         public TimerDialog TimerControl;
+        public InstanceActivityDialog InstanceActivityControl;
         public CompassDialog CompassControl;
         public RollDialog RollControl;
         public PositionMoveDialog PositionMoveDialog;//Point-to-point
@@ -393,6 +394,7 @@ namespace Client.MirScenes
             KeyboardLayoutDialog = new KeyboardLayoutDialog { Parent = this, Visible = false };
 
             TimerControl = new TimerDialog { Parent = this, Visible = false };
+            InstanceActivityControl = new InstanceActivityDialog { Parent = this, Visible = false };
             CompassControl = new CompassDialog { Parent = this, Visible = false };
             RollControl = new RollDialog { Parent = this, Visible = false };
 
@@ -1208,6 +1210,7 @@ namespace Client.MirScenes
             }
 
             TimerControl.Process();
+            InstanceActivityControl.Process();
             CompassControl.Process();
             RankingDialog.Process();
 
@@ -10263,12 +10266,18 @@ namespace Client.MirScenes
         }
         private void SetTimer(S.SetTimer p)
         {
-            GameScene.Scene.TimerControl.AddTimer(p);
+            if (p?.Key != null && p.Key.StartsWith("IA_", StringComparison.OrdinalIgnoreCase))
+                GameScene.Scene.InstanceActivityControl.AddTimer(p);
+            else
+                GameScene.Scene.TimerControl.AddTimer(p);
         }
 
         private void ExpireTimer(S.ExpireTimer p)
         {
-            GameScene.Scene.TimerControl.ExpireTimer(p.Key);
+            if (p?.Key != null && p.Key.StartsWith("IA_", StringComparison.OrdinalIgnoreCase))
+                GameScene.Scene.InstanceActivityControl.ExpireTimer(p.Key);
+            else
+                GameScene.Scene.TimerControl.ExpireTimer(p.Key);
         }
 
         private void SetCompass(S.SetCompass p)

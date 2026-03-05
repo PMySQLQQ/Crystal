@@ -1,4 +1,4 @@
-﻿using Client.MirSounds;
+using Client.MirSounds;
 
 namespace Client
 {

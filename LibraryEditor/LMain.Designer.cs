@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LibraryEditor
 {
@@ -960,7 +960,7 @@ namespace LibraryEditor
             MinimumSize = new Size(756, 513);
             Name = "LMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Legend of Mir Library Editor";
+            Text = "传奇资源库编辑器";
             Resize += LMain_Resize;
             MainMenu.ResumeLayout(false);
             MainMenu.PerformLayout();

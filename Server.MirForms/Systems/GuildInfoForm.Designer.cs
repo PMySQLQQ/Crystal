@@ -1,4 +1,4 @@
-﻿namespace Server
+namespace Server
 {
     partial class GuildInfoForm
     {
@@ -146,7 +146,7 @@
             // 
             // GuildExpratetextBox
             // 
-            GuildExpratetextBox.Location = new Point(371, 17);
+            GuildExpratetextBox.Location = new Point(371, 19);
             GuildExpratetextBox.Margin = new Padding(4, 3, 4, 3);
             GuildExpratetextBox.Name = "GuildExpratetextBox";
             GuildExpratetextBox.Size = new Size(39, 23);
@@ -156,16 +156,16 @@
             // label82
             // 
             label82.AutoSize = true;
-            label82.Location = new Point(306, 21);
+            label82.Location = new Point(306, 24);
             label82.Margin = new Padding(4, 0, 4, 0);
             label82.Name = "label82";
-            label82.Size = new Size(54, 15);
+            label82.Size = new Size(62, 17);
             label82.TabIndex = 45;
             label82.Text = "Exp Rate:";
             // 
             // GuildPPLtextBox
             // 
-            GuildPPLtextBox.Location = new Point(259, 17);
+            GuildPPLtextBox.Location = new Point(259, 19);
             GuildPPLtextBox.Margin = new Padding(4, 3, 4, 3);
             GuildPPLtextBox.Name = "GuildPPLtextBox";
             GuildPPLtextBox.Size = new Size(39, 23);
@@ -175,16 +175,16 @@
             // label81
             // 
             label81.AutoSize = true;
-            label81.Location = new Point(168, 21);
+            label81.Location = new Point(168, 24);
             label81.Margin = new Padding(4, 0, 4, 0);
             label81.Name = "label81";
-            label81.Size = new Size(78, 15);
+            label81.Size = new Size(85, 17);
             label81.TabIndex = 43;
             label81.Text = "Points / level:";
             // 
             // GuildMinOwnerLeveltextBox
             // 
-            GuildMinOwnerLeveltextBox.Location = new Point(121, 17);
+            GuildMinOwnerLeveltextBox.Location = new Point(121, 19);
             GuildMinOwnerLeveltextBox.Margin = new Padding(4, 3, 4, 3);
             GuildMinOwnerLeveltextBox.Name = "GuildMinOwnerLeveltextBox";
             GuildMinOwnerLeveltextBox.Size = new Size(39, 23);
@@ -194,10 +194,10 @@
             // label80
             // 
             label80.AutoSize = true;
-            label80.Location = new Point(9, 21);
+            label80.Location = new Point(9, 24);
             label80.Margin = new Padding(4, 0, 4, 0);
             label80.Name = "label80";
-            label80.Size = new Size(99, 15);
+            label80.Size = new Size(108, 17);
             label80.TabIndex = 41;
             label80.Text = "Min Owner Level:";
             // 
@@ -208,23 +208,23 @@
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Controls.Add(tabPage5);
-            tabControl1.Location = new Point(13, 47);
+            tabControl1.Location = new Point(13, 53);
             tabControl1.Margin = new Padding(4, 3, 4, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(856, 428);
+            tabControl1.Size = new Size(856, 485);
             tabControl1.TabIndex = 46;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(groupBox10);
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 26);
             tabPage1.Margin = new Padding(4, 3, 4, 3);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(4, 3, 4, 3);
-            tabPage1.Size = new Size(848, 400);
+            tabPage1.Size = new Size(848, 455);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Creation";
+            tabPage1.Text = "创建";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox10
@@ -238,39 +238,39 @@
             groupBox10.Controls.Add(GuildCreateListcomboBox);
             groupBox10.Controls.Add(GuildAddCreatItembutton);
             groupBox10.Controls.Add(label86);
-            groupBox10.Location = new Point(7, 8);
+            groupBox10.Location = new Point(7, 9);
             groupBox10.Margin = new Padding(4, 3, 4, 3);
             groupBox10.Name = "groupBox10";
             groupBox10.Padding = new Padding(4, 3, 4, 3);
-            groupBox10.Size = new Size(392, 171);
+            groupBox10.Size = new Size(392, 194);
             groupBox10.TabIndex = 50;
             groupBox10.TabStop = false;
-            groupBox10.Text = "Creation";
+            groupBox10.Text = "行会创建";
             // 
             // GuildItemNamecomboBox
             // 
             GuildItemNamecomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             GuildItemNamecomboBox.FormattingEnabled = true;
-            GuildItemNamecomboBox.Location = new Point(126, 60);
+            GuildItemNamecomboBox.Location = new Point(126, 68);
             GuildItemNamecomboBox.Margin = new Padding(4, 3, 4, 3);
             GuildItemNamecomboBox.Name = "GuildItemNamecomboBox";
-            GuildItemNamecomboBox.Size = new Size(166, 23);
+            GuildItemNamecomboBox.Size = new Size(166, 25);
             GuildItemNamecomboBox.TabIndex = 37;
             GuildItemNamecomboBox.SelectedIndexChanged += GuildItemNamecomboBox_SelectedIndexChanged;
             // 
             // label94
             // 
             label94.AutoSize = true;
-            label94.Location = new Point(298, 63);
+            label94.Location = new Point(298, 71);
             label94.Margin = new Padding(4, 0, 4, 0);
             label94.Name = "label94";
-            label94.Size = new Size(86, 15);
+            label94.Size = new Size(116, 17);
             label94.TabIndex = 36;
-            label94.Text = "(Gold = blank):";
+            label94.Text = "（为空则为金币）：";
             // 
             // GuildAmounttextBox
             // 
-            GuildAmounttextBox.Location = new Point(126, 87);
+            GuildAmounttextBox.Location = new Point(126, 99);
             GuildAmounttextBox.Margin = new Padding(4, 3, 4, 3);
             GuildAmounttextBox.Name = "GuildAmounttextBox";
             GuildAmounttextBox.Size = new Size(166, 23);
@@ -280,19 +280,19 @@
             // label93
             // 
             label93.AutoSize = true;
-            label93.Location = new Point(48, 90);
+            label93.Location = new Point(48, 102);
             label93.Margin = new Padding(4, 0, 4, 0);
             label93.Name = "label93";
-            label93.Size = new Size(54, 15);
+            label93.Size = new Size(44, 17);
             label93.TabIndex = 34;
-            label93.Text = "Amount:";
+            label93.Text = "数量：";
             // 
             // GuildDeleteCreateItembutton
             // 
-            GuildDeleteCreateItembutton.Location = new Point(335, 18);
+            GuildDeleteCreateItembutton.Location = new Point(335, 20);
             GuildDeleteCreateItembutton.Margin = new Padding(4, 3, 4, 3);
             GuildDeleteCreateItembutton.Name = "GuildDeleteCreateItembutton";
-            GuildDeleteCreateItembutton.Size = new Size(24, 24);
+            GuildDeleteCreateItembutton.Size = new Size(24, 27);
             GuildDeleteCreateItembutton.TabIndex = 29;
             GuildDeleteCreateItembutton.Text = "-";
             GuildDeleteCreateItembutton.UseVisualStyleBackColor = true;
@@ -301,30 +301,30 @@
             // label92
             // 
             label92.AutoSize = true;
-            label92.Location = new Point(48, 63);
+            label92.Location = new Point(48, 71);
             label92.Margin = new Padding(4, 0, 4, 0);
             label92.Name = "label92";
-            label92.Size = new Size(69, 15);
+            label92.Size = new Size(68, 17);
             label92.TabIndex = 32;
-            label92.Text = "Item Name:";
+            label92.Text = "物品名称：";
             // 
             // GuildCreateListcomboBox
             // 
             GuildCreateListcomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             GuildCreateListcomboBox.FormattingEnabled = true;
-            GuildCreateListcomboBox.Location = new Point(186, 18);
+            GuildCreateListcomboBox.Location = new Point(186, 20);
             GuildCreateListcomboBox.Margin = new Padding(4, 3, 4, 3);
             GuildCreateListcomboBox.Name = "GuildCreateListcomboBox";
-            GuildCreateListcomboBox.Size = new Size(107, 23);
+            GuildCreateListcomboBox.Size = new Size(107, 25);
             GuildCreateListcomboBox.TabIndex = 26;
             GuildCreateListcomboBox.SelectedIndexChanged += GuildCreateListcomboBox_SelectedIndexChanged;
             // 
             // GuildAddCreatItembutton
             // 
-            GuildAddCreatItembutton.Location = new Point(301, 18);
+            GuildAddCreatItembutton.Location = new Point(301, 20);
             GuildAddCreatItembutton.Margin = new Padding(4, 3, 4, 3);
             GuildAddCreatItembutton.Name = "GuildAddCreatItembutton";
-            GuildAddCreatItembutton.Size = new Size(24, 24);
+            GuildAddCreatItembutton.Size = new Size(24, 27);
             GuildAddCreatItembutton.TabIndex = 28;
             GuildAddCreatItembutton.Text = "+";
             GuildAddCreatItembutton.UseVisualStyleBackColor = true;
@@ -333,23 +333,23 @@
             // label86
             // 
             label86.AutoSize = true;
-            label86.Location = new Point(10, 23);
+            label86.Location = new Point(10, 26);
             label86.Margin = new Padding(4, 0, 4, 0);
             label86.Name = "label86";
-            label86.Size = new Size(162, 15);
+            label86.Size = new Size(92, 17);
             label86.TabIndex = 27;
-            label86.Text = "Guild Creation Requirements:";
+            label86.Text = "行会创建需求：";
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(groupBox9);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Location = new Point(4, 26);
             tabPage2.Margin = new Padding(4, 3, 4, 3);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 3, 4, 3);
-            tabPage2.Size = new Size(848, 400);
+            tabPage2.Size = new Size(848, 455);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Levels";
+            tabPage2.Text = "等级";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox9
@@ -362,41 +362,41 @@
             groupBox9.Controls.Add(GuildMemberCaptextBox);
             groupBox9.Controls.Add(label83);
             groupBox9.Controls.Add(GuildLevelListcomboBox);
-            groupBox9.Location = new Point(7, 8);
+            groupBox9.Location = new Point(7, 9);
             groupBox9.Margin = new Padding(4, 3, 4, 3);
             groupBox9.Name = "groupBox9";
             groupBox9.Padding = new Padding(4, 3, 4, 3);
-            groupBox9.Size = new Size(392, 171);
+            groupBox9.Size = new Size(392, 194);
             groupBox9.TabIndex = 49;
             groupBox9.TabStop = false;
-            groupBox9.Text = "Levelup";
+            groupBox9.Text = "升级";
             // 
             // label84
             // 
             label84.AutoSize = true;
-            label84.Location = new Point(51, 53);
+            label84.Location = new Point(51, 60);
             label84.Margin = new Padding(4, 0, 4, 0);
             label84.Name = "label84";
-            label84.Size = new Size(71, 15);
+            label84.Size = new Size(92, 17);
             label84.TabIndex = 18;
-            label84.Text = "Exp to lvlup:";
+            label84.Text = "升级所需经验：";
             // 
             // label85
             // 
             label85.AutoSize = true;
-            label85.Location = new Point(51, 83);
+            label85.Location = new Point(51, 94);
             label85.Margin = new Padding(4, 0, 4, 0);
             label85.Name = "label85";
-            label85.Size = new Size(74, 15);
+            label85.Size = new Size(68, 17);
             label85.TabIndex = 24;
-            label85.Text = "Membercap:";
+            label85.Text = "成员上限：";
             // 
             // GuildDeleteLevelbutton
             // 
-            GuildDeleteLevelbutton.Location = new Point(240, 17);
+            GuildDeleteLevelbutton.Location = new Point(240, 19);
             GuildDeleteLevelbutton.Margin = new Padding(4, 3, 4, 3);
             GuildDeleteLevelbutton.Name = "GuildDeleteLevelbutton";
-            GuildDeleteLevelbutton.Size = new Size(24, 24);
+            GuildDeleteLevelbutton.Size = new Size(24, 27);
             GuildDeleteLevelbutton.TabIndex = 16;
             GuildDeleteLevelbutton.Text = "-";
             GuildDeleteLevelbutton.UseVisualStyleBackColor = true;
@@ -404,7 +404,7 @@
             // 
             // GuildExpNeededtextBox
             // 
-            GuildExpNeededtextBox.Location = new Point(134, 50);
+            GuildExpNeededtextBox.Location = new Point(134, 57);
             GuildExpNeededtextBox.Margin = new Padding(4, 3, 4, 3);
             GuildExpNeededtextBox.Name = "GuildExpNeededtextBox";
             GuildExpNeededtextBox.Size = new Size(130, 23);
@@ -413,10 +413,10 @@
             // 
             // GuildAddLevelbutton
             // 
-            GuildAddLevelbutton.Location = new Point(206, 17);
+            GuildAddLevelbutton.Location = new Point(206, 19);
             GuildAddLevelbutton.Margin = new Padding(4, 3, 4, 3);
             GuildAddLevelbutton.Name = "GuildAddLevelbutton";
-            GuildAddLevelbutton.Size = new Size(24, 24);
+            GuildAddLevelbutton.Size = new Size(24, 27);
             GuildAddLevelbutton.TabIndex = 15;
             GuildAddLevelbutton.Text = "+";
             GuildAddLevelbutton.UseVisualStyleBackColor = true;
@@ -424,7 +424,7 @@
             // 
             // GuildMemberCaptextBox
             // 
-            GuildMemberCaptextBox.Location = new Point(134, 80);
+            GuildMemberCaptextBox.Location = new Point(134, 91);
             GuildMemberCaptextBox.Margin = new Padding(4, 3, 4, 3);
             GuildMemberCaptextBox.Name = "GuildMemberCaptextBox";
             GuildMemberCaptextBox.Size = new Size(39, 23);
@@ -434,21 +434,21 @@
             // label83
             // 
             label83.AutoSize = true;
-            label83.Location = new Point(51, 28);
+            label83.Location = new Point(51, 32);
             label83.Margin = new Padding(4, 0, 4, 0);
             label83.Name = "label83";
-            label83.Size = new Size(65, 15);
+            label83.Size = new Size(68, 17);
             label83.TabIndex = 14;
-            label83.Text = "Guild level:";
+            label83.Text = "行会等级：";
             // 
             // GuildLevelListcomboBox
             // 
             GuildLevelListcomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             GuildLevelListcomboBox.FormattingEnabled = true;
-            GuildLevelListcomboBox.Location = new Point(135, 18);
+            GuildLevelListcomboBox.Location = new Point(135, 20);
             GuildLevelListcomboBox.Margin = new Padding(4, 3, 4, 3);
             GuildLevelListcomboBox.Name = "GuildLevelListcomboBox";
-            GuildLevelListcomboBox.Size = new Size(63, 23);
+            GuildLevelListcomboBox.Size = new Size(63, 25);
             GuildLevelListcomboBox.TabIndex = 13;
             GuildLevelListcomboBox.SelectedIndexChanged += GuildLevelListcomboBox_SelectedIndexChanged;
             // 
@@ -461,18 +461,18 @@
             tabPage3.Controls.Add(BuffList);
             tabPage3.Controls.Add(BuffDelete);
             tabPage3.Controls.Add(BuffAdd);
-            tabPage3.Location = new Point(4, 24);
+            tabPage3.Location = new Point(4, 26);
             tabPage3.Margin = new Padding(4, 3, 4, 3);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(4, 3, 4, 3);
-            tabPage3.Size = new Size(848, 400);
+            tabPage3.Size = new Size(848, 455);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Buffs";
+            tabPage3.Text = "增益";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // NewbieGuildExptextBox
             // 
-            NewbieGuildExptextBox.Location = new Point(747, 9);
+            NewbieGuildExptextBox.Location = new Point(747, 10);
             NewbieGuildExptextBox.Name = "NewbieGuildExptextBox";
             NewbieGuildExptextBox.Size = new Size(48, 23);
             NewbieGuildExptextBox.TabIndex = 5;
@@ -481,20 +481,20 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Location = new Point(793, 13);
+            label29.Location = new Point(793, 15);
             label29.Name = "label29";
-            label29.Size = new Size(17, 15);
+            label29.Size = new Size(19, 17);
             label29.TabIndex = 6;
             label29.Text = "%";
             // 
             // NewbieGuildBuffEnabledcheckBox
             // 
             NewbieGuildBuffEnabledcheckBox.AutoSize = true;
-            NewbieGuildBuffEnabledcheckBox.Location = new Point(569, 11);
+            NewbieGuildBuffEnabledcheckBox.Location = new Point(569, 12);
             NewbieGuildBuffEnabledcheckBox.Name = "NewbieGuildBuffEnabledcheckBox";
-            NewbieGuildBuffEnabledcheckBox.Size = new Size(181, 19);
+            NewbieGuildBuffEnabledcheckBox.Size = new Size(159, 21);
             NewbieGuildBuffEnabledcheckBox.TabIndex = 4;
-            NewbieGuildBuffEnabledcheckBox.Text = "Enable NewbieGuild Exp Buff:";
+            NewbieGuildBuffEnabledcheckBox.Text = "启用新人行会经验加成：";
             NewbieGuildBuffEnabledcheckBox.UseVisualStyleBackColor = true;
             NewbieGuildBuffEnabledcheckBox.CheckedChanged += NewbieGuildBuffEnabledcheckBox_CheckedChanged;
             // 
@@ -514,15 +514,15 @@
             BuffPanel.Controls.Add(BufftxtName);
             BuffPanel.Controls.Add(label5);
             BuffPanel.Controls.Add(BufflblIndex);
-            BuffPanel.Location = new Point(198, 40);
+            BuffPanel.Location = new Point(198, 45);
             BuffPanel.Margin = new Padding(4, 3, 4, 3);
             BuffPanel.Name = "BuffPanel";
-            BuffPanel.Size = new Size(642, 344);
+            BuffPanel.Size = new Size(642, 390);
             BuffPanel.TabIndex = 3;
             // 
             // bufftxtIcon
             // 
-            bufftxtIcon.Location = new Point(155, 175);
+            bufftxtIcon.Location = new Point(155, 198);
             bufftxtIcon.Margin = new Padding(4, 3, 4, 3);
             bufftxtIcon.Name = "bufftxtIcon";
             bufftxtIcon.Size = new Size(48, 23);
@@ -532,16 +532,16 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(12, 179);
+            label28.Location = new Point(12, 203);
             label28.Margin = new Padding(4, 0, 4, 0);
             label28.Name = "label28";
-            label28.Size = new Size(30, 15);
+            label28.Size = new Size(33, 17);
             label28.TabIndex = 12;
             label28.Text = "Icon";
             // 
             // BufftxtActivationCost
             // 
-            BufftxtActivationCost.Location = new Point(155, 145);
+            BufftxtActivationCost.Location = new Point(155, 164);
             BufftxtActivationCost.Margin = new Padding(4, 3, 4, 3);
             BufftxtActivationCost.Name = "BufftxtActivationCost";
             BufftxtActivationCost.Size = new Size(48, 23);
@@ -551,7 +551,7 @@
             // 
             // BufftxtTimeLimit
             // 
-            BufftxtTimeLimit.Location = new Point(155, 115);
+            BufftxtTimeLimit.Location = new Point(155, 130);
             BufftxtTimeLimit.Margin = new Padding(4, 3, 4, 3);
             BufftxtTimeLimit.Name = "BufftxtTimeLimit";
             BufftxtTimeLimit.Size = new Size(48, 23);
@@ -561,7 +561,7 @@
             // 
             // BufftxtPointsReq
             // 
-            BufftxtPointsReq.Location = new Point(155, 88);
+            BufftxtPointsReq.Location = new Point(155, 100);
             BufftxtPointsReq.Margin = new Padding(4, 3, 4, 3);
             BufftxtPointsReq.Name = "BufftxtPointsReq";
             BufftxtPointsReq.Size = new Size(48, 23);
@@ -570,7 +570,7 @@
             // 
             // BuffTxtLevelReq
             // 
-            BuffTxtLevelReq.Location = new Point(155, 58);
+            BuffTxtLevelReq.Location = new Point(155, 66);
             BuffTxtLevelReq.Margin = new Padding(4, 3, 4, 3);
             BuffTxtLevelReq.Name = "BuffTxtLevelReq";
             BuffTxtLevelReq.Size = new Size(48, 23);
@@ -615,18 +615,18 @@
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(label10);
-            groupBox2.Location = new Point(211, 10);
+            groupBox2.Location = new Point(211, 11);
             groupBox2.Margin = new Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(413, 320);
+            groupBox2.Size = new Size(413, 363);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Available Buffs";
+            groupBox2.Text = "可用增益";
             // 
             // BufftxtGoldRate
             // 
-            BufftxtGoldRate.Location = new Point(338, 225);
+            BufftxtGoldRate.Location = new Point(338, 255);
             BufftxtGoldRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtGoldRate.Name = "BufftxtGoldRate";
             BufftxtGoldRate.Size = new Size(48, 23);
@@ -635,7 +635,7 @@
             // 
             // BufftxtDropRate
             // 
-            BufftxtDropRate.Location = new Point(338, 195);
+            BufftxtDropRate.Location = new Point(338, 221);
             BufftxtDropRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtDropRate.Name = "BufftxtDropRate";
             BufftxtDropRate.Size = new Size(48, 23);
@@ -644,7 +644,7 @@
             // 
             // BufftxtSkillRate
             // 
-            BufftxtSkillRate.Location = new Point(338, 165);
+            BufftxtSkillRate.Location = new Point(338, 187);
             BufftxtSkillRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtSkillRate.Name = "BufftxtSkillRate";
             BufftxtSkillRate.Size = new Size(48, 23);
@@ -653,7 +653,7 @@
             // 
             // BufftxtCraftRate
             // 
-            BufftxtCraftRate.Location = new Point(338, 136);
+            BufftxtCraftRate.Location = new Point(338, 154);
             BufftxtCraftRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtCraftRate.Name = "BufftxtCraftRate";
             BufftxtCraftRate.Size = new Size(48, 23);
@@ -662,7 +662,7 @@
             // 
             // BufftxtExpRate
             // 
-            BufftxtExpRate.Location = new Point(338, 106);
+            BufftxtExpRate.Location = new Point(338, 120);
             BufftxtExpRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtExpRate.Name = "BufftxtExpRate";
             BufftxtExpRate.Size = new Size(48, 23);
@@ -671,7 +671,7 @@
             // 
             // BufftxtFishRate
             // 
-            BufftxtFishRate.Location = new Point(338, 77);
+            BufftxtFishRate.Location = new Point(338, 87);
             BufftxtFishRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtFishRate.Name = "BufftxtFishRate";
             BufftxtFishRate.Size = new Size(48, 23);
@@ -680,7 +680,7 @@
             // 
             // BufftxtGemRate
             // 
-            BufftxtGemRate.Location = new Point(338, 47);
+            BufftxtGemRate.Location = new Point(338, 53);
             BufftxtGemRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtGemRate.Name = "BufftxtGemRate";
             BufftxtGemRate.Size = new Size(48, 23);
@@ -689,7 +689,7 @@
             // 
             // BufftxtMineRate
             // 
-            BufftxtMineRate.Location = new Point(338, 17);
+            BufftxtMineRate.Location = new Point(338, 19);
             BufftxtMineRate.Margin = new Padding(4, 3, 4, 3);
             BufftxtMineRate.Name = "BufftxtMineRate";
             BufftxtMineRate.Size = new Size(48, 23);
@@ -698,7 +698,7 @@
             // 
             // BufftxtMpRegen
             // 
-            BufftxtMpRegen.Location = new Point(110, 285);
+            BufftxtMpRegen.Location = new Point(110, 323);
             BufftxtMpRegen.Margin = new Padding(4, 3, 4, 3);
             BufftxtMpRegen.Name = "BufftxtMpRegen";
             BufftxtMpRegen.Size = new Size(48, 23);
@@ -707,7 +707,7 @@
             // 
             // BufftxtHpRegen
             // 
-            BufftxtHpRegen.Location = new Point(110, 255);
+            BufftxtHpRegen.Location = new Point(110, 289);
             BufftxtHpRegen.Margin = new Padding(4, 3, 4, 3);
             BufftxtHpRegen.Name = "BufftxtHpRegen";
             BufftxtHpRegen.Size = new Size(48, 23);
@@ -716,7 +716,7 @@
             // 
             // BufftxtMaxMp
             // 
-            BufftxtMaxMp.Location = new Point(110, 225);
+            BufftxtMaxMp.Location = new Point(110, 255);
             BufftxtMaxMp.Margin = new Padding(4, 3, 4, 3);
             BufftxtMaxMp.Name = "BufftxtMaxMp";
             BufftxtMaxMp.Size = new Size(48, 23);
@@ -725,7 +725,7 @@
             // 
             // BufftxtMaxHp
             // 
-            BufftxtMaxHp.Location = new Point(110, 195);
+            BufftxtMaxHp.Location = new Point(110, 221);
             BufftxtMaxHp.Margin = new Padding(4, 3, 4, 3);
             BufftxtMaxHp.Name = "BufftxtMaxHp";
             BufftxtMaxHp.Size = new Size(48, 23);
@@ -734,7 +734,7 @@
             // 
             // BufftxtAttack
             // 
-            BufftxtAttack.Location = new Point(110, 165);
+            BufftxtAttack.Location = new Point(110, 187);
             BufftxtAttack.Margin = new Padding(4, 3, 4, 3);
             BufftxtAttack.Name = "BufftxtAttack";
             BufftxtAttack.Size = new Size(48, 23);
@@ -743,7 +743,7 @@
             // 
             // BufftxtSc
             // 
-            BufftxtSc.Location = new Point(110, 135);
+            BufftxtSc.Location = new Point(110, 153);
             BufftxtSc.Margin = new Padding(4, 3, 4, 3);
             BufftxtSc.Name = "BufftxtSc";
             BufftxtSc.Size = new Size(48, 23);
@@ -752,7 +752,7 @@
             // 
             // BufftxtMc
             // 
-            BufftxtMc.Location = new Point(110, 106);
+            BufftxtMc.Location = new Point(110, 120);
             BufftxtMc.Margin = new Padding(4, 3, 4, 3);
             BufftxtMc.Name = "BufftxtMc";
             BufftxtMc.Size = new Size(48, 23);
@@ -761,7 +761,7 @@
             // 
             // BufftxtDc
             // 
-            BufftxtDc.Location = new Point(110, 77);
+            BufftxtDc.Location = new Point(110, 87);
             BufftxtDc.Margin = new Padding(4, 3, 4, 3);
             BufftxtDc.Name = "BufftxtDc";
             BufftxtDc.Size = new Size(48, 23);
@@ -770,7 +770,7 @@
             // 
             // BufftxtMac
             // 
-            BufftxtMac.Location = new Point(110, 47);
+            BufftxtMac.Location = new Point(110, 53);
             BufftxtMac.Margin = new Padding(4, 3, 4, 3);
             BufftxtMac.Name = "BufftxtMac";
             BufftxtMac.Size = new Size(48, 23);
@@ -779,7 +779,7 @@
             // 
             // BufftxtAc
             // 
-            BufftxtAc.Location = new Point(110, 17);
+            BufftxtAc.Location = new Point(110, 19);
             BufftxtAc.Margin = new Padding(4, 3, 4, 3);
             BufftxtAc.Name = "BufftxtAc";
             BufftxtAc.Size = new Size(48, 23);
@@ -789,226 +789,226 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(234, 228);
+            label27.Location = new Point(234, 258);
             label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new Size(74, 15);
+            label27.Size = new Size(79, 17);
             label27.TabIndex = 17;
-            label27.Text = "Gold Rate %:";
+            label27.Text = "金币倍率%：";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(234, 198);
+            label26.Location = new Point(234, 224);
             label26.Margin = new Padding(4, 0, 4, 0);
             label26.Name = "label26";
-            label26.Size = new Size(75, 15);
+            label26.Size = new Size(79, 17);
             label26.TabIndex = 16;
-            label26.Text = "Drop Rate %:";
+            label26.Text = "掉落倍率%：";
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(234, 168);
+            label25.Location = new Point(234, 190);
             label25.Margin = new Padding(4, 0, 4, 0);
             label25.Name = "label25";
-            label25.Size = new Size(67, 15);
+            label25.Size = new Size(68, 17);
             label25.TabIndex = 15;
-            label25.Text = "Skill Rate X:";
+            label25.Text = "技能倍率：";
             // 
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(234, 140);
+            label24.Location = new Point(234, 159);
             label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new Size(75, 15);
+            label24.Size = new Size(79, 17);
             label24.TabIndex = 14;
-            label24.Text = "Craft Rate %:";
+            label24.Text = "制造倍率%：";
             // 
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(234, 110);
+            label23.Location = new Point(234, 125);
             label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
-            label23.Size = new Size(67, 15);
+            label23.Size = new Size(79, 17);
             label23.TabIndex = 13;
-            label23.Text = "Exp Rate %:";
+            label23.Text = "经验倍率%：";
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(234, 81);
+            label22.Location = new Point(234, 92);
             label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
-            label22.Size = new Size(87, 15);
+            label22.Size = new Size(79, 17);
             label22.TabIndex = 12;
-            label22.Text = "Fishing Rate %:";
+            label22.Text = "钓鱼倍率%：";
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(234, 51);
+            label21.Location = new Point(234, 58);
             label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
-            label21.Size = new Size(74, 15);
+            label21.Size = new Size(79, 17);
             label21.TabIndex = 11;
-            label21.Text = "Gem Rate %:";
+            label21.Text = "宝石倍率%：";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(234, 21);
+            label20.Location = new Point(234, 24);
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new Size(76, 15);
+            label20.Size = new Size(79, 17);
             label20.TabIndex = 10;
-            label20.Text = "Mine Rate %:";
+            label20.Text = "挖矿倍率%：";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(13, 288);
+            label19.Location = new Point(13, 326);
             label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(64, 15);
+            label19.Size = new Size(68, 17);
             label19.TabIndex = 9;
-            label19.Text = "Mp Regen:";
+            label19.Text = "魔法恢复：";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(13, 258);
+            label18.Location = new Point(13, 292);
             label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(62, 15);
+            label18.Size = new Size(68, 17);
             label18.TabIndex = 8;
-            label18.Text = "Hp Regen:";
+            label18.Text = "生命恢复：";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(13, 228);
+            label17.Location = new Point(13, 258);
             label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new Size(50, 15);
+            label17.Size = new Size(68, 17);
             label17.TabIndex = 7;
-            label17.Text = "MaxMp:";
+            label17.Text = "最大魔法：";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(13, 198);
+            label16.Location = new Point(13, 224);
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(48, 15);
+            label16.Size = new Size(68, 17);
             label16.TabIndex = 6;
-            label16.Text = "MaxHp:";
+            label16.Text = "最大生命：";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(13, 168);
+            label15.Location = new Point(13, 190);
             label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(44, 15);
+            label15.Size = new Size(44, 17);
             label15.TabIndex = 5;
-            label15.Text = "Attack:";
+            label15.Text = "攻击：";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(13, 140);
+            label14.Location = new Point(13, 159);
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(24, 15);
+            label14.Size = new Size(44, 17);
             label14.TabIndex = 4;
-            label14.Text = "SC:";
+            label14.Text = "道术：";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(13, 110);
+            label13.Location = new Point(13, 125);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(29, 15);
+            label13.Size = new Size(44, 17);
             label13.TabIndex = 3;
-            label13.Text = "MC:";
+            label13.Text = "魔法：";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(13, 81);
+            label12.Location = new Point(13, 92);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(26, 15);
+            label12.Size = new Size(44, 17);
             label12.TabIndex = 2;
-            label12.Text = "DC:";
+            label12.Text = "攻击：";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(13, 51);
+            label11.Location = new Point(13, 58);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(37, 15);
+            label11.Size = new Size(44, 17);
             label11.TabIndex = 1;
-            label11.Text = "MAC:";
+            label11.Text = "魔御：";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(13, 21);
+            label10.Location = new Point(13, 24);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(26, 15);
+            label10.Size = new Size(44, 17);
             label10.TabIndex = 0;
-            label10.Text = "AC:";
+            label10.Text = "防御：";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(12, 149);
+            label9.Location = new Point(12, 169);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(91, 15);
+            label9.Size = new Size(68, 17);
             label9.TabIndex = 6;
-            label9.Text = "Activation Cost:";
+            label9.Text = "激活消耗：";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(12, 120);
+            label8.Location = new Point(12, 136);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(67, 15);
+            label8.Size = new Size(68, 17);
             label8.TabIndex = 5;
-            label8.Text = "Time Limit:";
+            label8.Text = "持续时间：";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 91);
+            label7.Location = new Point(12, 103);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(93, 15);
+            label7.Size = new Size(68, 17);
             label7.TabIndex = 4;
-            label7.Text = "Points Required:";
+            label7.Text = "所需积分：";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 61);
+            label6.Location = new Point(12, 69);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(133, 15);
+            label6.Size = new Size(92, 17);
             label6.TabIndex = 3;
-            label6.Text = "GuildLevelRequirement:";
+            label6.Text = "所需行会等级：";
             // 
             // BufftxtName
             // 
-            BufftxtName.Location = new Point(88, 28);
+            BufftxtName.Location = new Point(88, 32);
             BufftxtName.Margin = new Padding(4, 3, 4, 3);
             BufftxtName.Name = "BufftxtName";
             BufftxtName.Size = new Size(116, 23);
@@ -1018,65 +1018,65 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 31);
+            label5.Location = new Point(12, 35);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(42, 15);
+            label5.Size = new Size(44, 17);
             label5.TabIndex = 1;
-            label5.Text = "Name:";
+            label5.Text = "名称：";
             // 
             // BufflblIndex
             // 
             BufflblIndex.AutoSize = true;
-            BufflblIndex.Location = new Point(12, 10);
+            BufflblIndex.Location = new Point(12, 11);
             BufflblIndex.Margin = new Padding(4, 0, 4, 0);
             BufflblIndex.Name = "BufflblIndex";
-            BufflblIndex.Size = new Size(59, 15);
+            BufflblIndex.Size = new Size(51, 17);
             BufflblIndex.TabIndex = 0;
-            BufflblIndex.Text = "Index:     0";
+            BufflblIndex.Text = "编号：0";
             // 
             // BuffList
             // 
             BuffList.FormattingEnabled = true;
-            BuffList.ItemHeight = 15;
-            BuffList.Location = new Point(9, 40);
+            BuffList.ItemHeight = 17;
+            BuffList.Location = new Point(9, 45);
             BuffList.Margin = new Padding(4, 3, 4, 3);
             BuffList.Name = "BuffList";
-            BuffList.Size = new Size(181, 349);
+            BuffList.Size = new Size(181, 395);
             BuffList.TabIndex = 2;
             BuffList.SelectedIndexChanged += BuffList_SelectedIndexChanged;
             // 
             // BuffDelete
             // 
-            BuffDelete.Location = new Point(104, 7);
+            BuffDelete.Location = new Point(104, 8);
             BuffDelete.Margin = new Padding(4, 3, 4, 3);
             BuffDelete.Name = "BuffDelete";
-            BuffDelete.Size = new Size(88, 27);
+            BuffDelete.Size = new Size(88, 31);
             BuffDelete.TabIndex = 1;
-            BuffDelete.Text = "Delete";
+            BuffDelete.Text = "删除";
             BuffDelete.UseVisualStyleBackColor = true;
             BuffDelete.Click += BuffDelete_Click;
             // 
             // BuffAdd
             // 
-            BuffAdd.Location = new Point(9, 7);
+            BuffAdd.Location = new Point(9, 8);
             BuffAdd.Margin = new Padding(4, 3, 4, 3);
             BuffAdd.Name = "BuffAdd";
-            BuffAdd.Size = new Size(88, 27);
+            BuffAdd.Size = new Size(88, 31);
             BuffAdd.TabIndex = 0;
-            BuffAdd.Text = "Add";
+            BuffAdd.Text = "添加";
             BuffAdd.UseVisualStyleBackColor = true;
             BuffAdd.Click += BuffAdd_Click;
             // 
             // tabPage4
             // 
             tabPage4.Controls.Add(groupBox1);
-            tabPage4.Location = new Point(4, 24);
+            tabPage4.Location = new Point(4, 26);
             tabPage4.Margin = new Padding(4, 3, 4, 3);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(848, 400);
+            tabPage4.Size = new Size(848, 455);
             tabPage4.TabIndex = 3;
-            tabPage4.Text = "Wars";
+            tabPage4.Text = "行会战";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -1087,38 +1087,38 @@
             groupBox1.Controls.Add(WarLengthTextBox);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(6, 5);
+            groupBox1.Location = new Point(6, 6);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(394, 177);
+            groupBox1.Size = new Size(394, 201);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Wars";
+            groupBox1.Text = "行会战";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(197, 57);
+            label4.Location = new Point(197, 65);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(32, 15);
+            label4.Size = new Size(32, 17);
             label4.TabIndex = 5;
-            label4.Text = "Gold";
+            label4.Text = "金币";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(197, 27);
+            label3.Location = new Point(197, 31);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(50, 15);
+            label3.Size = new Size(32, 17);
             label3.TabIndex = 4;
-            label3.Text = "Minutes";
+            label3.Text = "分钟";
             // 
             // WarCostTextBox
             // 
-            WarCostTextBox.Location = new Point(74, 53);
+            WarCostTextBox.Location = new Point(74, 60);
             WarCostTextBox.Margin = new Padding(4, 3, 4, 3);
             WarCostTextBox.Name = "WarCostTextBox";
             WarCostTextBox.Size = new Size(116, 23);
@@ -1127,7 +1127,7 @@
             // 
             // WarLengthTextBox
             // 
-            WarLengthTextBox.Location = new Point(74, 23);
+            WarLengthTextBox.Location = new Point(74, 26);
             WarLengthTextBox.Margin = new Padding(4, 3, 4, 3);
             WarLengthTextBox.Name = "WarLengthTextBox";
             WarLengthTextBox.Size = new Size(116, 23);
@@ -1137,22 +1137,23 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 57);
+            label2.Location = new Point(8, 65);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(44, 17);
             label2.TabIndex = 1;
-            label2.Text = "Cost : ";
+            label2.Text = "花费：";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(8, 23);
+            label1.Location = new Point(0, 31);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(53, 15);
+            label1.Size = new Size(68, 17);
             label1.TabIndex = 0;
-            label1.Text = "Length : ";
+            label1.Text = "持续时间：";
+            label1.Click += label1_Click;
             // 
             // tabPage5
             // 
@@ -1162,17 +1163,17 @@
             tabPage5.Controls.Add(label32);
             tabPage5.Controls.Add(label31);
             tabPage5.Controls.Add(label30);
-            tabPage5.Location = new Point(4, 24);
+            tabPage5.Location = new Point(4, 26);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(848, 400);
+            tabPage5.Size = new Size(848, 455);
             tabPage5.TabIndex = 4;
-            tabPage5.Text = "GTs";
+            tabPage5.Text = "行会领地";
             tabPage5.UseVisualStyleBackColor = true;
             // 
             // GTExtendPriceBox
             // 
-            GTExtendPriceBox.Location = new Point(87, 42);
+            GTExtendPriceBox.Location = new Point(87, 48);
             GTExtendPriceBox.Name = "GTExtendPriceBox";
             GTExtendPriceBox.Size = new Size(100, 23);
             GTExtendPriceBox.TabIndex = 7;
@@ -1180,7 +1181,7 @@
             // 
             // GTDurationBox
             // 
-            GTDurationBox.Location = new Point(129, 69);
+            GTDurationBox.Location = new Point(87, 82);
             GTDurationBox.Name = "GTDurationBox";
             GTDurationBox.Size = new Size(58, 23);
             GTDurationBox.TabIndex = 6;
@@ -1188,7 +1189,7 @@
             // 
             // GTPriceBox
             // 
-            GTPriceBox.Location = new Point(57, 16);
+            GTPriceBox.Location = new Point(87, 20);
             GTPriceBox.Name = "GTPriceBox";
             GTPriceBox.Size = new Size(131, 23);
             GTPriceBox.TabIndex = 4;
@@ -1197,35 +1198,35 @@
             // label32
             // 
             label32.AutoSize = true;
-            label32.Location = new Point(7, 72);
+            label32.Location = new Point(7, 82);
             label32.Name = "label32";
-            label32.Size = new Size(116, 15);
+            label32.Size = new Size(68, 17);
             label32.TabIndex = 2;
-            label32.Text = "Ownership Duration:";
+            label32.Text = "占领时长：";
             // 
             // label31
             // 
             label31.AutoSize = true;
-            label31.Location = new Point(7, 45);
+            label31.Location = new Point(7, 51);
             label31.Name = "label31";
-            label31.Size = new Size(74, 15);
+            label31.Size = new Size(68, 17);
             label31.TabIndex = 1;
-            label31.Text = "Extend Price:";
+            label31.Text = "续费价格：";
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Location = new Point(7, 20);
+            label30.Location = new Point(7, 23);
             label30.Name = "label30";
-            label30.Size = new Size(36, 15);
+            label30.Size = new Size(68, 17);
             label30.TabIndex = 0;
-            label30.Text = "Price:";
+            label30.Text = "购买价格：";
             // 
             // GuildInfoForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 480);
+            ClientSize = new Size(878, 544);
             Controls.Add(tabControl1);
             Controls.Add(GuildExpratetextBox);
             Controls.Add(label82);
@@ -1235,7 +1236,7 @@
             Controls.Add(label80);
             Margin = new Padding(4, 3, 4, 3);
             Name = "GuildInfoForm";
-            Text = "GuildInfoForm";
+            Text = "行会信息";
             FormClosed += GuildInfoForm_FormClosed;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);

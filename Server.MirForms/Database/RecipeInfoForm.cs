@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -304,31 +304,36 @@ namespace Server.Database
         #endregion
 
         #region Populate Tools
-        private void PopulateToolComboBox(ComboBox toolComboBox, string toolName)
+        /// <summary>
+        /// 确保工具/材料下拉框只在第一次使用时填充，避免每次点击都重新遍历 ItemInfoList 导致卡顿。
+        /// </summary>
+        private void EnsureItemComboBoxPopulated(ComboBox comboBox)
         {
-            // Clear the ComboBox before adding new items
-            toolComboBox.Items.Clear();
+            if (comboBox.Items.Count > 0) return;
 
-            // Add "None" as the first item
-            toolComboBox.Items.Add("None");
+            comboBox.Items.Add("None");
 
-            // Add items from the item database
+            if (SMain.EditEnvir.ItemInfoList == null || SMain.EditEnvir.ItemInfoList.Count == 0)
+                return;
+
             foreach (var item in SMain.EditEnvir.ItemInfoList)
             {
                 if (!string.IsNullOrEmpty(item.Name))
-                {
-                    toolComboBox.Items.Add(item.Name);
-                }
+                    comboBox.Items.Add(item.Name);
             }
+        }
 
-            // Set the selected item if the tool name is valid
-            if (!string.IsNullOrEmpty(toolName))
+        private void PopulateToolComboBox(ComboBox toolComboBox, string toolName)
+        {
+            EnsureItemComboBoxPopulated(toolComboBox);
+
+            if (!string.IsNullOrEmpty(toolName) && toolComboBox.Items.Contains(toolName))
             {
                 toolComboBox.SelectedItem = toolName;
             }
             else
             {
-                toolComboBox.SelectedIndex = 0; // Default to "None"
+                toolComboBox.SelectedIndex = toolComboBox.Items.Count > 0 ? 0 : -1;
             }
         }
         #endregion
@@ -336,36 +341,15 @@ namespace Server.Database
         #region Populate Ingredients
         private void PopulateIngredientComboBox(ComboBox comboBox, string ingredientName)
         {
-            comboBox.Items.Clear(); // Clear the ComboBox first
+            EnsureItemComboBoxPopulated(comboBox);
 
-            // Add "None" as the first item
-            comboBox.Items.Add("None");
-
-            // Ensure ItemInfoList is populated
-            if (SMain.EditEnvir.ItemInfoList != null && SMain.EditEnvir.ItemInfoList.Count > 0)
+            if (!string.IsNullOrEmpty(ingredientName) && comboBox.Items.Contains(ingredientName))
             {
-                // Add item names to the ComboBox
-                foreach (var item in SMain.EditEnvir.ItemInfoList)
-                {
-                    if (!string.IsNullOrEmpty(item.Name))
-                    {
-                        comboBox.Items.Add(item.Name);
-                    }
-                }
-
-                // Set the selected item to the ingredient name (if it exists in the list)
-                if (!string.IsNullOrEmpty(ingredientName) && comboBox.Items.Contains(ingredientName))
-                {
-                    comboBox.SelectedItem = ingredientName;
-                }
-                else
-                {
-                    comboBox.SelectedIndex = 0; // Default to "None"
-                }
+                comboBox.SelectedItem = ingredientName;
             }
             else
             {
-                MessageBox.Show("No items found in the ItemInfoList.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comboBox.SelectedIndex = comboBox.Items.Count > 0 ? 0 : -1;
             }
         }
         #endregion
